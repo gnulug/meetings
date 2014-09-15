@@ -1,0 +1,41 @@
+Ask/Discuss:
+
+* How many found out about group from flyers
+* Github collaborators
+* Mention NSM group
+* Ask about OLF attendance
+
+Linux in the News:
+
+Proc Period:
+
+Talk - Shell Programming:
+
+* Bash in OSX, Cygwin for Windows
+* Standard unix toolset
+* Tool chaining, pipes, redirection
+* Interpreter
+	* Parsing, IFS, and execution
+* Variables
+	1. local and exported (subshell)
+	2. set and printenv
+* Flow constructs
+	1. if-then conditionals
+	2. loops
+	3. test
+* Bash built-ins, functions, and environment
+	1. enable
+	2. declare -f
+* Bash startup files
+	1. Interactive shell: ~/.bash_profile, ~/.bash_login,  and  ~/.profile
+	2. Non-interactive shell: ~/.bashrc or (global on some system: /etc/bashrc)
+* Bash Options
+	1. bash -c
+	2. bash --noprofile, --norc, --login
+	3. bash -r (restricted shell)
+
+Projects - Rsyslog:
+
+* Install and configure rsyslog for remote collection
+* Automate provisiong with shell, vagrant, and git workflow
+
