@@ -16,13 +16,14 @@ https://www.kernel.org/doc/Documentation/filesystems/proc.txt
 1. /proc/filesystems (supported filesystems)
 2. /proc/cpuinfo, /proc/meminfo
 3. /proc/net/dev (network stats)
-4. kernel thread vs. user-space thread:
+4. Find kernel thread vs. user-space thread - https://stackoverflow.com/questions/12213445/identifying-kernel-threads
    a.) /proc/$pid/exe - sym link to the executed command
    b.) Kernel tasks don't have an executable, user processes do
    c.) Test if the file the link exe points to exists, if it doesn't then it's a kernel thread, if it does it's a user thread
 	for i in /proc/[1-9]*/exe; do if [ -f $i ]; then echo "$i is a user task"; else echo "$i is a kernel task"; fi; done
    d.) Sort results by pid:
 	for i in /proc/[1-9]*/exe; do if [ -f $i ]; then echo "$i is a user task"; else echo "$i is a kernel task"; fi; done | sort -n -t "/" -k 3 
+   e.) View kernel tasks only: ps aux  | grep '\['
  
 Talk - Shell Programming:
 
