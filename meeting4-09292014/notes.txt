@@ -23,6 +23,15 @@ Talk - Docker:
 * Zookeeper: Linux training
 	https://github.com/jonschipp/zookeeper
 
+Committing changes to an image:
+
+	# Flow for committing container changes back to image
+	docker run -i -t jonschipp/latest-bro-sandbox /bin/bash
+	docker ps -a
+	docker commit 2a107bf744bc
+	docker images --tree
+	docker tag f541a6f5e7cc jonschipp/latest-bro-sandbox:latest
+
 History:
 
     1  apt-get update
