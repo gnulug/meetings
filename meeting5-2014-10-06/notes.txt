@@ -8,6 +8,8 @@ Linux in the News:
 	  a.) getrandom() http://lwn.net/Articles/606141/
 	  b.) Seccomp filters for multi-threaded programs http://lwn.net/Articles/600250/
 	  c.) Reworking kexec for signatures http://lwn.net/Articles/603116/
+	* Open Source Lab
+	   a.) http://osuosl.org/ 
 
 Cool Corner:
 
