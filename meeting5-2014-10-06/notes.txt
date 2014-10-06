@@ -1,0 +1,20 @@
+Ask/Discuss:
+
+* OLF notes and approval info
+
+Linux in the News:
+
+	* 3.17 kernel is out (mainline) https://www.kernel.org/
+	  a.) getrandom() http://lwn.net/Articles/606141/
+	  b.) Seccomp filters for multi-threaded programs http://lwn.net/Articles/600250/
+	  c.) Reworking kexec for signatures http://lwn.net/Articles/603116/
+
+Cool Corner:
+
+	* Shell scripts are a glue language. They're very important to Linux usability.
+	  a.) find $(echo $PATH | tr ':' ' ') -type f -exec file '{}' \; | grep shell
+
+Proc Period:
+
+
+Talk - Mutt:
