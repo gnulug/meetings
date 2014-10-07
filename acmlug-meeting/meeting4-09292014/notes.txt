@@ -1,0 +1,114 @@
+Ask/Discuss:
+
+* Ask about OLF attendance
+
+Linux in the News:
+
+	Bash Vulnerability - Shell Shock
+
+	* https://shellshocker.net/
+	* https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271
+	* Detection:
+		https://github.com/CriticalStack/bro-scripts/blob/cve-2014-6271/bash-cve-2014-6271/bash-cve-2014-6271.bro
+		http://www.volexity.com/blog/?p=19
+
+Talk - Docker:
+
+* Install
+	http://docs.docker.com/installation/ubuntulinux/
+* Dockerfile examples
+	https://github.com/jonschipp/docker-files
+* Slides:
+	http://jonschipp.com/talks/bro-live.pdf
+* Zookeeper: Linux training
+	https://github.com/jonschipp/zookeeper
+
+Committing changes to an image:
+
+	# Flow for committing container changes back to image
+	docker run -i -t jonschipp/latest-bro-sandbox /bin/bash
+	docker ps -a
+	docker commit 2a107bf744bc
+	docker images --tree
+	docker tag f541a6f5e7cc jonschipp/latest-bro-sandbox:latest
+
+History:
+
+    1  apt-get update
+    2  apt-get install lxc-docker
+    3  curl -sSL https://get.docker.io/ubuntu/ | sudo sh
+    4  status docker
+    5  docker help
+    6  docker images
+    7  docker pull ubuntu
+    8  docker images
+    9  docker run -h
+   10  docker run ubuntu ls
+   11  docker pd
+   12  docker ps
+   13  docker ps -a
+   14  docker run -i -t ubuntu bash
+   15  docker ps
+   16  docker ps -a
+   17  docker commit -n
+   18  docker commit -h
+   19  docker commit -m "install make" --author="Jon" c3ac01929c85 ubuntu
+   20  docker commit -h
+   21  docker images
+   22  docker images -h
+   23  docker images -a
+   24  docker help
+   25  docker history
+   26* docker history
+   27  docker history -h
+   28  docker images --tree
+   29  docker run -i -t bash
+   30  docker run -i -t ubuntu bash
+   31  ls
+   32  docker run -h
+   33  docker run -i -d -t ubuntu yes
+   34  docker ps
+   35  yes no
+   36  ls
+   37  docker
+   38  docker ps
+   39  docker stop 7bf01e74663c
+   40  docker rm 7bf01e74663c
+   41  git clone http://github.com/jonschipp/dockerfiles
+   42  docker run -i -t ubuntu bash
+   43  docker attach 0807e1a74f37
+   44* docker start
+   45  docker attach 0807e1a74f37
+   46  docker ps -a
+   47  docker commit 0807e1a74f37
+   48  ls
+   49  cd dockerfiles/
+   50  ls
+   51  cd sandbox-training/
+   52  ls
+   53  cat Dockerfile-argus
+   54  docker build -t argus - < Dockerfile-argus
+   55  cat Dockerfile-argus
+   56  cd
+   57*
+   58*
+   59  ls
+   60  vim dockerfiles/sandbox-training/Dockerfile-argus
+   61  docker build -t argus - < Dockerfile-argus
+   62  cd dockerfiles/sandbox-training/
+   63  docker build -t argus-13 - < Dockerfile-argus
+   64  docker images
+   65  vim dockerfiles/sandbox-training/Dockerfile-argus
+   66  vim Dockerfile-argus
+   67  docker build -t argus-13 - < Dockerfile-argus
+   68  cd
+   69  git clone http://github.com/jonschipp/zookeeper
+   70  cd zookeeper/
+   71  ls
+   72  make
+   73  make install
+   74  make user-config
+   75  make security-config
+   76  make install-sample-config
+   77  cd
+   78  history
