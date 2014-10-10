@@ -1,4 +1,0 @@
-meetings
-========
-
-Meeting notes

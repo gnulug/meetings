@@ -1,8 +1,0 @@
-Talk about what tmux is
-Talk about why you want to use tmux (applications, eg rtorrent, bad 
-connections, window management, multiple shells inside one ssh
-session, etc etc)
-Talk about why it's better than GNU screen (because screen is buggy as
-shit and sucks, that's why)
-introduce the tmux.conf
-show me being 31337 with tmux and general workflow with it.
