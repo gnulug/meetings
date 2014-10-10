@@ -11,12 +11,18 @@ Linux in the News:
 	* Open Source Lab
 	   a.) http://osuosl.org/ 
 
-Cool Corner:
+Education Epoch:
 
 	* Shell scripts are a glue language. They're very important to Linux usability.
 	  a.) find $(echo $PATH | tr ':' ' ') -type f -exec file '{}' \; | grep shell
+	* Self-Service Linux: The Art of Problem Determination
+	  a.) http://ptgmedia.pearsoncmg.com/images/013147751X/downloads/013147751X_book.pdf
 
 Proc Period:
 
+	* Linux Kernel Procfs Guide
+	  a.) http://kernelnewbies.org/Documents/Kernel-Docbooks?action=AttachFile&do=get&target=procfs-guide_2.6.29.pdf
+	* Process Viewer
+	  a.) for i in /proc/[0-9]*/; do echo -n "$(basename $i) "; paste -d " " $i/comm $i/cmdline; done | sort -n
 
 Talk - Mutt:

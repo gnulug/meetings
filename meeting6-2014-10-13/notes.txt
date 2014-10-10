@@ -1,0 +1,18 @@
+Ask/Discuss:
+
+* OLF Information
+
+Linux in the News:
+
+
+Education Epoch:
+
+	* Self-Service Linux: The Art of Problem Determination
+	  a.) http://ptgmedia.pearsoncmg.com/images/013147751X/downloads/013147751X_book.pdf
+	* Github Student Developer Pack
+	  a.) https://education.github.com/pack
+
+Proc Period:
+
+
+Talk - Nagios:
