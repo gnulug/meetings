@@ -3,9 +3,9 @@ Ask/Discuss:
 * OLF Information
 * Remote attendance
 * Twitter
+* Games e.g. trivia
 
 Linux in the News:
-
 
 Education Epoch:
 
@@ -16,5 +16,10 @@ Education Epoch:
 
 Proc Period:
 
+Shell Space:
+
+	* basename and dirname
+	* Stop doing mv file dest/file && chmod <modes> dest/file && chmod <root:group> dest/file
+	  a.) install -o <owner> -g <group> -m <modes> file dest/file
 
 Talk - Nagios:
