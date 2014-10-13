@@ -4,6 +4,7 @@ Ask/Discuss:
 * Remote attendance
 * Twitter
 * Games e.g. trivia
+* Discuss other unix-like operating systems (BSD's, OSX, etc.)
 
 Linux in the News:
 
