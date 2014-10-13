@@ -8,6 +8,16 @@ Ask/Discuss:
 
 Linux in the News:
 
+	* Users of Debian GNU/Linux will be able to continue using SysVinit
+	  a.) Support provided in systemd-shim package
+	  b.) http://www.itwire.com/business-it-news/open-source/65684-debian-leader-says-users-can-continue-with-sysvinit
+	* Netflix on Ubuntu with Google Chrome works
+	  a.) http://www.omgubuntu.co.uk/2014/10/psa-netflix-ubuntu-now-working-box
+	* Linux kernel 3.17 notable end-user features
+	  a.) Support for Microsoft Xbox One controller
+	  b.) "free fall" driver for Toshiba laptops
+	  c.) http://www.pcworld.com/article/2692882/meet-linux-kernel-317s-best-new-features-xbox-one-controller-support-laptop-free-fall-protection-an.html
+
 Education Epoch:
 
 	* Self-Service Linux: The Art of Problem Determination
