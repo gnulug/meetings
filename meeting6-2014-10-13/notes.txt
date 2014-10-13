@@ -1,10 +1,11 @@
-Ask/Discuss:
+Ask/Discuss/Group:
 
 * OLF Information
 * Remote attendance
 * Twitter
 * Games e.g. trivia
 * Discuss other unix-like operating systems (BSD's, OSX, etc.)
+* IRC - #acmlug on irc.freenode.net
 
 Linux in the News:
 
