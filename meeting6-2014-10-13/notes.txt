@@ -16,6 +16,9 @@ Education Epoch:
 
 Proc Period:
 
+	* Write to /proc/self/mem in OpenSSH
+	  a.) http://seclists.org/fulldisclosure/2014/Oct/35
+
 Shell Space:
 
 	* basename and dirname
