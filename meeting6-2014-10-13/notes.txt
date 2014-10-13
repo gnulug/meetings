@@ -16,8 +16,12 @@ Education Epoch:
 
 Proc Period:
 
-SSH Section: 
-	
+	* /proc/self/mem
+	* Write to /proc/self/mem in OpenSSH (vulnerability)
+	  a.) http://seclists.org/fulldisclosure/2014/Oct/35
+
+SSH Section:
+
 	* OpenSSH 6.7 released
 	  http://lwn.net/Articles/615173/
 
@@ -26,5 +30,14 @@ Shell Space:
 	* basename and dirname
 	* Stop doing mv file dest/file && chmod <modes> dest/file && chmod <root:group> dest/file
 	  a.) install -o <owner> -g <group> -m <modes> file dest/file
+
+VIM Vicinity:
+
+	* Whitespace highlighting
+	a.)
+		" Highlight trailing whitespaces
+        	let c_space_errors=1
+        	highlight WhitespaceEOL ctermbg=red guibg=red
+        	match WhitespaceEOL /\s\+$/
 
 Talk - Nagios:
