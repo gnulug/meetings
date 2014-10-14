@@ -9,20 +9,23 @@ Linux in the News:
 
 Education Epoch:
 
-	* Self-Service Linux: The Art of Problem Determination
-	  a.) http://ptgmedia.pearsoncmg.com/images/013147751X/downloads/013147751X_book.pdf
-	* Github Student Developer Pack
-	  a.) https://education.github.com/pack
+  * Self-Service Linux: The Art of Problem Determination
+    a.) http://ptgmedia.pearsoncmg.com/images/013147751X/downloads/013147751X_book.pdf
+  * Github Student Developer Pack
+    a.) https://education.github.com/pack
 
 Proc Period:
 
-	* Write to /proc/self/mem in OpenSSH
-	  a.) http://seclists.org/fulldisclosure/2014/Oct/35
+  * Write to /proc/self/mem in OpenSSH
+    a.) http://seclists.org/fulldisclosure/2014/Oct/35
 
 Shell Space:
 
-	* basename and dirname
-	* Stop doing mv file dest/file && chmod <modes> dest/file && chmod <root:group> dest/file
-	  a.) install -o <owner> -g <group> -m <modes> file dest/file
+  *  basename and dirname
+  * Stop doing mv file dest/file && chmod <modes> dest/file && chmod <root:group> dest/file
+     a.) install -o <owner> -g <group> -m <modes> file dest/file
 
 Talk - Nagios:
+
+* Vagrant box
+  a.) https://github.com/ACMLug/vagrant/tree/master/nagios
