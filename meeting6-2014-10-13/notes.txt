@@ -1,11 +1,23 @@
-Ask/Discuss:
+Ask/Discuss/Group:
 
 * OLF Information
 * Remote attendance
 * Twitter
 * Games e.g. trivia
+* Discuss other unix-like operating systems (BSD's, OSX, etc.)
+* IRC - #acmlug on irc.freenode.net
 
 Linux in the News:
+
+	* Users of Debian GNU/Linux will be able to continue using SysVinit
+	  a.) Support provided in systemd-shim package
+	  b.) http://www.itwire.com/business-it-news/open-source/65684-debian-leader-says-users-can-continue-with-sysvinit
+	* Netflix on Ubuntu with Google Chrome works
+	  a.) http://www.omgubuntu.co.uk/2014/10/psa-netflix-ubuntu-now-working-box
+	* Linux kernel 3.17 notable end-user features
+	  a.) Support for Microsoft Xbox One controller
+	  b.) "free fall" driver for Toshiba laptops
+	  c.) http://www.pcworld.com/article/2692882/meet-linux-kernel-317s-best-new-features-xbox-one-controller-support-laptop-free-fall-protection-an.html
 
 Education Epoch:
 
@@ -16,14 +28,29 @@ Education Epoch:
 
 Proc Period:
 
-  * Write to /proc/self/mem in OpenSSH
-    a.) http://seclists.org/fulldisclosure/2014/Oct/35
+	* /proc/self/mem
+	* Write to /proc/self/mem in OpenSSH (vulnerability)
+	  a.) http://seclists.org/fulldisclosure/2014/Oct/35
+
+SSH Section:
+
+	* OpenSSH 6.7 released
+	  http://lwn.net/Articles/615173/
 
 Shell Space:
 
   *  basename and dirname
   * Stop doing mv file dest/file && chmod <modes> dest/file && chmod <root:group> dest/file
      a.) install -o <owner> -g <group> -m <modes> file dest/file
+
+VIM Vicinity:
+
+	* Whitespace highlighting
+	a.)
+		" Highlight trailing whitespaces
+        	let c_space_errors=1
+        	highlight WhitespaceEOL ctermbg=red guibg=red
+        	match WhitespaceEOL /\s\+$/
 
 Talk - Nagios:
 
