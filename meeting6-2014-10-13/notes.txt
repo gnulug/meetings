@@ -56,3 +56,14 @@ Talk - Nagios:
 
 * Vagrant box
   a.) https://github.com/ACMLug/vagrant/tree/master/nagios
+
+Tricks:
+    Copy screenshots to clipboard
+    Name a file the next largest number using bash [see screenshot]
+
+    Type like a hacker: echo "Something" | pv -qL 10
+
+    gdb: You can use define a command so that you can do multiple things at
+    once, like continue to a break point and print some datastructure.
+
+    Use selenium to automatically login to uiucnet
