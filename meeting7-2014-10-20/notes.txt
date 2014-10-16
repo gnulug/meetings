@@ -1,0 +1,30 @@
+Ask/Discuss/Group:
+
+* OLF Information
+* Remote attendance
+* Twitter @UIUC_ACM_Bot
+* Games e.g. trivia
+* Discuss other unix-like operating systems (BSD's, OSX, etc.)
+* IRC - ##uiuclug on irc.freenode.net
+* Xen Project
+
+Linux in the News:
+
+
+Education Epoch:
+
+
+Proc Period:
+
+
+SSH Section:
+
+
+Shell Space:
+
+
+VIM Vicinity:
+
+C Corner:
+
+Big Talk - ?:
