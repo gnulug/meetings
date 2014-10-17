@@ -7,6 +7,7 @@ Ask/Discuss/Group:
 * Discuss other unix-like operating systems (BSD's, OSX, etc.)
 * IRC - ##uiuclug on irc.freenode.net
 * Xen Project
+* LUG Pool Party @OLF (Bring your trunks)
 
 Linux in the News:
 
@@ -25,6 +26,8 @@ Shell Space:
 
 VIM Vicinity:
 
+
 C Corner:
 
-Big Talk - ?:
+
+Big Talk - Rsyslog:
