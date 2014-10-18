@@ -28,6 +28,13 @@ VIM Vicinity:
 
 
 C Corner:
-
+Create several variations of "Hello World"
+Cover:
+    - Compilation
+    - External linkage
+    - Header files
+    - Functions
+    - Strings
+    - Intro to pointers
 
 Big Talk - Rsyslog:
