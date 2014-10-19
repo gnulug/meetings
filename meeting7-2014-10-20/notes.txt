@@ -46,3 +46,7 @@ Small talk on my experiences this week with:
 and why everything sucks when systemd gets involved.
 
 Big Talk - Rsyslog:
+	- Syslog Overview
+	- Remote Logging
+	- Syslog Message Format
+	- Logging Infrastructure
