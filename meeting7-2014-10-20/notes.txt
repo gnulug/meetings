@@ -1,35 +1,44 @@
+%YAML
+---
+
+Website: http://www.acm.uiuc.edu/lug/
+Meeting Info: 8 PM in 3403 Siebel on 10/20/2014
+
 Ask/Discuss/Group:
+- OLF Information
+- Remote attendance
+- Twitter @UIUC_ACM_Bot
+- Games e.g. trivia
+- Discuss other unix-like operating systems (BSD's, OSX, etc.)
+- IRC - ##uiuclug on irc.freenode.net
+- Xen Project
+- LUG Pool Party @OLF (Bring your trunks)
 
-* OLF Information
-* Remote attendance
-* Twitter @UIUC_ACM_Bot
-* Games e.g. trivia
-* Discuss other unix-like operating systems (BSD's, OSX, etc.)
-* IRC - ##uiuclug on irc.freenode.net
-* Xen Project
-* LUG Pool Party @OLF (Bring your trunks)
+Meeting Sections:
 
-Linux in the News:
-
-
-Education Epoch:
+    Linux in the News:
 
 
-Proc Period:
+	Education Epoch:
+    - Free Linux Foundation Training Videos:
+      https://training.linuxfoundation.org/free-linux-training/linux-training-videos
+    - Linux Kernel Networking: Implementation and Theory:
+      http://www.amazon.com/Linux-Kernel-Networking-Implementation-Experts/dp/143026196X
+
+    Proc Period:
+    - Process Environments:
+      cat /proc/3363/environ | tr "\000" "\n"
+
+    SSH Section:
 
 
-SSH Section:
+    Shell Space:
 
 
-Shell Space:
+    VIM Vicinity:
 
-
-VIM Vicinity:
-
-
-C Corner:
-Create several variations of "Hello World"
-Cover:
+    C Corner:
+    # Create several variations of "Hello World"
     - Compilation
     - External linkage
     - Header files
@@ -37,16 +46,22 @@ Cover:
     - Strings
     - Intro to pointers
 
-Software Salespitch:
-Small talk on my experiences this week with:
+    Software Salespitch:
+    # Small talk on my experiences this week with:
     - Docker
     - LXC
     - Packer
     - Vagrant
-and why everything sucks when systemd gets involved.
+    - and why everything sucks when systemd gets involved.
 
-Big Talk - Rsyslog:
-	- Syslog Overview
-	- Remote Logging
-	- Syslog Message Format
-	- Logging Infrastructure
+Talks:
+    Small Talks:
+    - Luggy, the LUG IRC bot
+      https://github.com/ACMLug/lugbot
+
+    Big Talks:
+        Rsyslog:
+	    - Syslog Overview
+	    - Remote Logging
+	    - Syslog Message Format
+	    - Logging Infrastructure
