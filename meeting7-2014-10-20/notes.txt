@@ -9,10 +9,12 @@ Ask/Discuss/Group:
 - Remote attendance
 - Twitter @UIUC_ACM_Bot
 - Games e.g. trivia
-- Discuss other unix-like operating systems (BSD's, OSX, etc.)
-- IRC - ##uiuclug on irc.freenode.net
+- Discuss other unix-like operating systems (BSD's, OSX, etc.), Mike will do OSX if remote attendance
+- Recordings
+- IRC ##uiuclug on irc.freenode.net
 - Xen Project
 - LUG Pool Party @OLF (Bring your trunks)
+- LUG Hack Night @OLF (Website, bot, presentations, etc.)
 
 Meeting Sections:
 
