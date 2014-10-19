@@ -37,4 +37,12 @@ Cover:
     - Strings
     - Intro to pointers
 
+Software Salespitch:
+Small talk on my experiences this week with:
+    - Docker
+    - LXC
+    - Packer
+    - Vagrant
+and why everything sucks when systemd gets involved.
+
 Big Talk - Rsyslog:
