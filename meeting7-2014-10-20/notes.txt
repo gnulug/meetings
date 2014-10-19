@@ -17,7 +17,10 @@ Ask/Discuss/Group:
 Meeting Sections:
 
     Linux in the News:
-
+    - Linus Torvalds Regrets Alienating Developers with Strong Language
+	<http://www.linuxtoday.com/upload/linus-torvalds-regrets-alienating-developers-with-strong-language-141015064006.html>
+    - Munich Mayor Still Wants to Find Out If Linux Is Economical
+	<http://www.linuxtoday.com/upload/munich-mayor-still-wants-to-find-out-if-linux-is-economical-141016012007.html>
 
 	Education Epoch:
     - Free Linux Foundation Training Videos:
