@@ -39,6 +39,11 @@ Meeting Sections:
 
 
     VIM Vicinity:
+    - Tabs
+    set smartindent # automatically inserts one extra level of indentation in some cases, and works for C-like files
+    set tabstop=4   # changes the width of the TAB character, plain and simple.
+    set shiftwidth=4 #
+    set expandtab   # is set, pressing the <TAB> key will always insert 'softtabstop' amount of space characters
 
     C Corner:
     # Create several variations of "Hello World"
@@ -49,18 +54,17 @@ Meeting Sections:
     - Strings
     - Intro to pointers
 
-    Software Salespitch:
-    # Small talk on my experiences this week with:
-    - Docker
-    - LXC
-    - Packer
-    - Vagrant
-    - and why everything sucks when systemd gets involved.
 
 Talks:
     Small Talks:
     - Luggy, the LUG IRC bot
       https://github.com/ACMLug/lugbot
+    - Container and VM Packaging:
+        - Docker
+        - LXC
+        - Packer
+        - Vagrant
+        - and why everything sucks when systemd gets involved.
 
     Big Talks:
         Rsyslog:
