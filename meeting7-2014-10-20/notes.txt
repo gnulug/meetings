@@ -1,76 +1,67 @@
-%YAML
 ---
 
 Website: http://www.acm.uiuc.edu/lug/
-Meeting Info: 8 PM in 3403 Siebel on 10/20/2014
+
+Meeting Info: 8 PM in 3403 Siebel in 10/20/2014
 
 Ask/Discuss/Group:
 - OLF Information
 - Remote attendance
 - Twitter @UIUC_ACM_Bot
 - Games e.g. trivia
-- Discuss other unix-like operating systems (BSD's, OSX, etc.), Mike will do OSX if remote attendance
+- Discuss other unix-like operating systems (BSD's, OSX, etc.), Mike will do OSX if
+  remote attendance
 - Recordings
-- IRC ##uiuclug on irc.freenode.net
+- 'IRC ##uiuclug on irc.freenode.net'
 - Xen Project
 - LUG Pool Party @OLF (Bring your trunks)
 - LUG Hack Night @OLF (Website, bot, presentations, etc.)
 
 Meeting Sections:
+  Linux in the News:
+  - 'Linus Torvalds Regrets Alienating Developers with Strong Language: <http://www.linuxtoday.com/upload/linus-torvalds-regrets-alienating-developers-with-strong-language-141015064006.html>'
+  - 'Munich Mayor Still Wants to Find Out If Linux Is Economical: <http://www.linuxtoday.com/upload/munich-mayor-still-wants-to-find-out-if-linux-is-economical-141016012007.html>'
 
-    Linux in the News:
-    - Linus Torvalds Regrets Alienating Developers with Strong Language
-	<http://www.linuxtoday.com/upload/linus-torvalds-regrets-alienating-developers-with-strong-language-141015064006.html>
-    - Munich Mayor Still Wants to Find Out If Linux Is Economical
-	<http://www.linuxtoday.com/upload/munich-mayor-still-wants-to-find-out-if-linux-is-economical-141016012007.html>
+  Education Epoch:
+  - 'Free Linux Foundation Training Videos: https://training.linuxfoundation.org/free-linux-training/linux-training-videos'
+  - 'Linux Kernel Networking: Implementation and Theory: http://www.amazon.com/Linux-Kernel-Networking-Implementation-Experts/dp/143026196X'
 
-	Education Epoch:
-    - Free Linux Foundation Training Videos:
-      https://training.linuxfoundation.org/free-linux-training/linux-training-videos
-    - Linux Kernel Networking: Implementation and Theory:
-      http://www.amazon.com/Linux-Kernel-Networking-Implementation-Experts/dp/143026196X
+  Proc Period:
+  - 'Process Environments: cat /proc/3363/environ | tr "\000" "\n"'
 
-    Proc Period:
-    - Process Environments:
-      cat /proc/3363/environ | tr "\000" "\n"
+  SSH Section:
 
-    SSH Section:
+  Shell Space:
 
+  Vim Vicinity:
+    Tabs:
+    - set smartindent # automatically inserts one extra level of indentation in some cases, and works for C-like files
+    - set tabstop=4 # changes the width of the TAB character, plain and simple
+    - set shiftwidth=4 #
+    - set expandtab # is set, pressing the <TAB> key will always insert 'softtabstop' amount of space characters
 
-    Shell Space:
-
-
-    VIM Vicinity:
-    - Tabs
-    set smartindent # automatically inserts one extra level of indentation in some cases, and works for C-like files
-    set tabstop=4   # changes the width of the TAB character, plain and simple.
-    set shiftwidth=4 #
-    set expandtab   # is set, pressing the <TAB> key will always insert 'softtabstop' amount of space characters
-
-    C Corner:
-    # Create several variations of "Hello World"
-    - Compilation
-    - External linkage
-    - Header files
-    - Functions
-    - Strings
-    - Intro to pointers
-
+  C Corner:
+  # Create several variations of "Hello World"
+  - Compilation
+  - External linkage
+  - Header files
+  - Functions
+  - Strings
+  - Intro to pointers
 
 Talks:
-    Small Talks:
-    - Luggy, the LUG IRC bot
-      https://github.com/ACMLug/lugbot
-    - Container and VM Packaging:
-        - Docker
-        - LXC
-        - Packer
-        - Vagrant
-        - and why everything sucks when systemd gets involved.
+  Small Talks:
+    Luggy, the LUG IRC bot: https://github.com/ACMLug/lugbot
+    Container and VM Packaging:
+    - Docker
+    - LXC
+    - Packer
+    - Vagrant
+    - and why everything sucks when systemd gets involved.
 
-    Big Talks:
-        Rsyslog:
-	    - Syslog Overview
-	    - Remote Logging
-	    - Syslog Message Format
-	    - Logging Infrastructure
+  Big Talks:
+    Rsyslog:
+    - Syslog Overview
+    - Remote Logging
+    - Syslog Message Format
+    - Logging Infrastructure
