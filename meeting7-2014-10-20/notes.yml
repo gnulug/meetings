@@ -32,6 +32,7 @@ Meeting Sections:
   SSH Section:
 
   Shell Space:
+  - 'Useless Use of Cat: http://www.smallo.ruhr.de/award.html'
 
   Vim Vicinity:
     Tabs:
@@ -51,6 +52,11 @@ Meeting Sections:
 
 Talks:
   Small Talks:
+    Xen:
+    - Overview
+    - Features
+    - Creating a VM
+
     Luggy, the LUG IRC bot: https://github.com/ACMLug/lugbot
     Container and VM Packaging:
     - Docker
