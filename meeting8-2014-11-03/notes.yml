@@ -1,0 +1,50 @@
+---
+
+Website: http://www.acm.uiuc.edu/lug/
+
+Meeting Info: 8 PM in 3403 Siebel on 11/03/2014
+
+Ask/Discuss/Group:
+- OLF Summary
+- Room 301 in CSL
+- 'IRC ##uiuclug on irc.freenode.net'
+- Xen Project
+
+Meeting Sections:
+  Linux in the News:
+  - 'Munich Mayor Still Wants to Find Out If Linux Is Economical: <http://www.linuxtoday.com/upload/munich-mayor-still-wants-to-find-out-if-linux-is-economical-141016012007.html>'
+
+  Education Epoch:
+  - 'Free Linux Foundation Training Videos: https://training.linuxfoundation.org/free-linux-training/linux-training-videos'
+
+  Proc Period:
+  - 'Process Environments: cat /proc/3363/environ | tr "\000" "\n"'
+
+  SSH Section:
+
+  Shell Space:
+  - 'Useless Use of Cat: http://www.smallo.ruhr.de/award.html'
+
+  Vim Vicinity:
+    Tabs:
+    - TBA
+
+  C Corner:
+  # Create several variations of "Hello World"
+  - Compilation
+  - External linkage
+  - Header files
+  - Functions
+  - Strings
+  - Intro to pointers
+
+Talks:
+  Small Talks:
+    Xen:
+    - Overview
+    - Features
+    - Creating a VM
+
+  Big Talks:
+    TBA:
+    - TBA
