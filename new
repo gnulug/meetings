@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+os=$(uname)
+file=notes.yml
+link=current
+
+get_monday(){
+if [[ $os == "Darwin" ]]; then
+	date=$(date -v +Mon +"%m-%d-%Y")
+elif [[ $os == "Linux" ]]; then
+	date=$(date -d next-monday "%m-%d-%Y")
+else
+	echo "$os not understood"
+fi
+
+if [[ "$date" == "$(date +"%m-%d-%Y")" ]]; then
+	date=$(date -v +7d +"%m-%d-%Y")
+fi
+}
+
+template(){
+cat <<EOF > $date/$file
+---
+
+Website: http://www.acm.uiuc.edu/lug/
+
+Meeting Info: 8 PM in 3403 Siebel on $date
+
+Ask/Discuss/Group:
+- Items
+- 'IRC ##uiuclug on irc.freenode.net'
+
+Meeting Sections:
+  Linux in the News:
+  - TBA
+
+  Education Epoch:
+  - TBA
+
+  Proc Period:
+  - TBA
+
+  SSH Section:
+  - TBA
+
+  Shell Space:
+  - TBA
+
+  Vim Vicinity:
+    Tabs:
+    - TBA
+
+  C Corner:
+  - TBA
+
+Talks:
+  Small Talks:
+    TBA:
+    - TBA
+
+  Big Talks:
+    TBA:
+    - TBA
+EOF
+}
+
+get_monday
+if ! [ -d $date ]
+then
+	mkdir $date && template
+	ln -f -s $date current
+else
+	echo "Meeting $date already exists"
+	exit 1
+fi
