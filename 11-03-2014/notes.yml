@@ -1,1 +1,57 @@
-11-03-2014/notes.yml
+---
+
+Website: http://www.acm.uiuc.edu/lug/
+
+Meeting Info: 8 PM in 3403 Siebel on 11-03-2014
+
+Group:
+- Items
+- 'IRC ##uiuclug on irc.freenode.net'
+- LPIC-1 exam summary
+- BSD-A exam summary
+
+Meeting Sections:
+  Linux in the News:
+  - 'CentOS 6.6: <http://lwn.net/Articles/618331/>'
+
+  Education Epoch:
+  - TBA
+
+  Proc Period:
+  - TBA
+
+  SSH Section:
+  - TBA
+
+  Shell Space:
+  - getent
+    if ! getent passwd $USER 1>/dev/null
+    then
+        adduser --disabled-login --gecos "" --shell $SHELL $USER
+        echo "$USER:$PASS" | chpasswd
+    fi
+    getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
+    getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
+
+    bash -v | set -o verbose # Print commands as they're executed
+    bash -x | set -o xtrace  # Trace
+    bash -n 		     # Syntax check
+
+  BSD Blueprint:
+  - Password files
+
+  Vim Vicinity:
+    Tabs:
+    - TBA
+
+  C Corner:
+  - TBA
+
+Talks:
+  Small Talks:
+    TBA:
+    - TBA
+
+  Big Talks:
+    TBA:
+    - TBA
