@@ -18,13 +18,15 @@ Meeting Sections:
   - TBA
 
   Proc Period:
-  - TBA
+   - Process limits
+    -  cat /proc/$pid/limits
+    -  cat /proc/$(pgrep -f "docker -d")/limits
 
   SSH Section:
   - TBA
 
   Shell Space:
-  - getent
+  - getent:
     if ! getent passwd $USER 1>/dev/null
     then
         adduser --disabled-login --gecos "" --shell $SHELL $USER
@@ -32,17 +34,19 @@ Meeting Sections:
     fi
     getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
     getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
-
-    bash -v | set -o verbose # Print commands as they're executed
-    bash -x | set -o xtrace  # Trace
-    bash -n 		     # Syntax check
+  - Bash debugging:
+    - 'bash -v | set -o verbose # Print commands as they're executed'
+    - 'bash -x | set -o xtrace  # Trace'
+    - 'bash -n 		        # Syntax check'
 
   BSD Blueprint:
-  - Password files
+  - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/master.passwd'
 
   Vim Vicinity:
     Tabs:
-    - TBA
+    - 'nnoremap <S-tab> :tabprevious<CR>'
+    - 'nnoremap <tab>   :tabnext<CR>'
+    - 'nnoremap <C-t>   :tabnew<CR>'
 
   C Corner:
   - TBA
