@@ -10,6 +10,7 @@ Group:
 - LPIC-1 exam summary
 - BSD-A exam summary
 - 301 in CSL has better facilities
+- Meeting sections notes deadline on Thursday
 
 Meeting Sections:
   Linux in the News:
@@ -18,7 +19,6 @@ Meeting Sections:
 
   Education Epoch:
   - A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition) <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>
- 
  - UNIX and Linux System Administration Handbook (4th Edition) <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>
 
   Proc Period:
@@ -40,12 +40,13 @@ Meeting Sections:
     getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
     getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
   - Bash debugging:
+    - '<http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful>'
     - 'bash -v | set -o verbose # Print commands as they're executed'
     - 'bash -x | set -o xtrace  # Trace'
-    - 'bash -n 		        # Syntax check'
+    - 'bash -n 		        			# Syntax check'
 
   BSD Blueprint:
-  - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/master.passwd'
+  - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/passwd, /etc/master.passwd'
 
   Vim Vicinity:
     Tabs:
