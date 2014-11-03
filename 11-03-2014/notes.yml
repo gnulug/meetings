@@ -45,6 +45,11 @@ Meeting Sections:
     - bash -v | set -o verbose # Print commands as they're executed
     - bash -x | set -o xtrace  # Trace
     - bash -n 		        			# Syntax check
+  - Portability:
+    - '<http://www.in-ulm.de/~mascheck/various/echo+printf/>'
+    - '<https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo>'
+    - echo -e '\tTest\n'
+    - printf '\tTest\n'
 
   BSD Blueprint:
   - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/passwd, /etc/master.passwd'
