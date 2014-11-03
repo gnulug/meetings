@@ -27,7 +27,8 @@ Meeting Sections:
     -  cat /proc/$(pgrep -f "docker -d")/limits
 
   SSH Section:
-  - TBD
+  - General Overview of SSH
+  - Tunneling insecure protocols over SSH: ssh -L 9999:192.168.1.1:3389 -N
 
   Shell Space:
   - getent:
