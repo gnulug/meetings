@@ -18,8 +18,8 @@ Meeting Sections:
   - 'OpenBSD 5.6: <http://www.openbsd.org/plus56.html>'
 
   Education Epoch:
-  - A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition) <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>
- - UNIX and Linux System Administration Handbook (4th Edition) <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>
+  - 'A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition): <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>'
+  - 'UNIX and Linux System Administration Handbook (4th Edition): <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>'
 
   Proc Period:
    - Process limits
@@ -41,9 +41,9 @@ Meeting Sections:
     getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
   - Bash debugging:
     - '<http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful>'
-    - 'bash -v | set -o verbose # Print commands as they're executed'
-    - 'bash -x | set -o xtrace  # Trace'
-    - 'bash -n 		        			# Syntax check'
+    - bash -v | set -o verbose # Print commands as they're executed
+    - bash -x | set -o xtrace  # Trace
+    - bash -n 		        			# Syntax check
 
   BSD Blueprint:
   - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/passwd, /etc/master.passwd'
