@@ -17,7 +17,9 @@ Meeting Sections:
   - 'OpenBSD 5.6: <http://www.openbsd.org/plus56.html>'
 
   Education Epoch:
-  - TBA
+  - A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition) <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>
+ 
+ - UNIX and Linux System Administration Handbook (4th Edition) <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>
 
   Proc Period:
    - Process limits
@@ -25,7 +27,7 @@ Meeting Sections:
     -  cat /proc/$(pgrep -f "docker -d")/limits
 
   SSH Section:
-  - TBA
+  - TBD
 
   Shell Space:
   - getent:
