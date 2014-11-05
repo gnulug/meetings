@@ -1,0 +1,73 @@
+---
+
+Website: http://www.acm.uiuc.edu/lug/
+
+Meeting Info: 8 PM in 3403 Siebel on 11-03-2014
+
+Group:
+- Items
+- 'IRC ##uiuclug on irc.freenode.net'
+- LPIC-1 exam summary
+- BSD-A exam summary
+- 301 in CSL has better facilities
+- Meeting sections notes deadline on Thursday
+
+Meeting Sections:
+  Linux in the News:
+  - 'CentOS 6.6: <http://lwn.net/Articles/618331/>'
+  - 'OpenBSD 5.6: <http://www.openbsd.org/plus56.html>'
+
+  Education Epoch:
+  - 'Introduction to Linux (version 2) LFS101x.2: https://www.edx.org/course/linuxfoundationx/linuxfoundationx-lfs101x-2-introduction-5386'
+  - 'A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition): <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>'
+  - 'UNIX and Linux System Administration Handbook (4th Edition): <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>'
+
+  Proc Period:
+   - Process limits
+    -  cat /proc/$pid/limits
+    -  cat /proc/$(pgrep -f "docker -d")/limits
+
+  SSH Section:
+  - General Overview of SSH
+  - Tunneling insecure protocols over SSH: ssh -L 9999:192.168.1.1:3389 -N
+
+  Shell Space:
+  - getent:
+    if ! getent passwd $USER 1>/dev/null
+    then
+        adduser --disabled-login --gecos "" --shell $SHELL $USER
+        echo "$USER:$PASS" | chpasswd
+    fi
+    getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
+    getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
+  - Bash debugging:
+    - '<http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful>'
+    - bash -v | set -o verbose # Print commands as they're executed
+    - bash -x | set -o xtrace  # Trace
+    - bash -n 		        			# Syntax check
+  - Portability:
+    - '<http://www.in-ulm.de/~mascheck/various/echo+printf/>'
+    - '<https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo>'
+    - echo -e '\tTest\n'
+    - printf '\tTest\n'
+
+  BSD Blueprint:
+  - 'Password files: /etc/spwd.db, /etc/pwd.db respectively, /etc/passwd, /etc/master.passwd'
+
+  Vim Vicinity:
+    Tabs:
+    - 'nnoremap <S-tab> :tabprevious<CR>'
+    - 'nnoremap <tab>   :tabnext<CR>'
+    - 'nnoremap <C-t>   :tabnew<CR>'
+
+  C Corner:
+  - TBA
+
+Talks:
+  Small Talks:
+    TBA:
+    - TBA
+
+  Big Talks:
+    Xen Project:
+    - A walkthrough of our Xen server
