@@ -22,8 +22,11 @@ Meeting Sections:
   - 'A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition): <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>'
   - 'UNIX and Linux System Administration Handbook (4th Edition): <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>'
 
+  Paper Period:
+  - 'An Updated Performance Comparison of Virtual Machines and Linux Containers: <http://domino.research.ibm.com/library/cyberdig.nsf/papers/0929052195DD819C85257D2300681E7B/$File/rc25482.pdf>'
+
   Proc Period:
-   - Process limits
+  - Process limits
     -  cat /proc/$pid/limits
     -  cat /proc/$(pgrep -f "docker -d")/limits
 
