@@ -21,9 +21,12 @@ Meeting Sections:
   - 'Introduction to Linux (version 2) LFS101x.2: https://www.edx.org/course/linuxfoundationx/linuxfoundationx-lfs101x-2-introduction-5386'
   - 'A Practical Guide to Linux Commands, Editors, and Shell Programming (3rd Edition): <http://www.amazon.com/Practical-Guide-Commands-Editors-Programming/dp/013308504X/>'
   - 'UNIX and Linux System Administration Handbook (4th Edition): <http://www.amazon.com/UNIX-Linux-System-Administration-Handbook/dp/0131480057>'
+  - 'GNU Tools Cauldron 2014: <https://gcc.gnu.org/wiki/cauldron2014>'
+  - 'Linux Foundationg Training Scholarships: <http://www.linux.com/news/featured-blogs/185-jennifer-cloer/793470-introducing-the-2014-linux-training-scholarship-winners/>'
 
   Paper Period:
   - 'An Updated Performance Comparison of Virtual Machines and Linux Containers: <http://domino.research.ibm.com/library/cyberdig.nsf/papers/0929052195DD819C85257D2300681E7B/$File/rc25482.pdf>'
+  - 'Performance Evaluation of Container-based Virtualization for High Performance Computing Environments:<http://dl.acm.org/citation.cfm?id=2497577>'
 
   Proc Period:
   - Process limits
