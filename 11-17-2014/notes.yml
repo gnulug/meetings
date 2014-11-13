@@ -1,5 +1,4 @@
-l---
-mem
+---
 Website: http://www.acm.uiuc.edu/lug/
 
 Meeting Info: 8 PM in 3403 Siebel on 11-17-2014
@@ -7,16 +6,18 @@ Meeting Info: 8 PM in 3403 Siebel on 11-17-2014
 Group:
 - Items
 - 'IRC ##uiuclug on irc.freenode.net'
+- Room 301 in CSL
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'Red Hat Enterprise Linux 7 Atomic Host Beta: <http://www.redhat.com/en/about/blog/small-footprint-big-impact-red-hat-enterprise-linux-7-atomic-host-beta-now-available>'
+  - 'Google Container Engine: <https://cloud.google.com/container-engine/>'
 
   Education Epoch:
   - TBA
 
   Proc Period:
-  - mem_lurk presentation - Shane
+  - 'mem_lurk presentation - Shane'
 
   SSH Section:
   - TBA
