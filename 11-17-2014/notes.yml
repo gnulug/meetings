@@ -34,9 +34,9 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Collectd and Graphite:
+    - Collecting system metrics and graphing them
 
   Big Talks:
-    TBA:
-    - TBA
+    Xen Project:
+    - A walkthrough of our Xen server
