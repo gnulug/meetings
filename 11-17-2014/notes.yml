@@ -1,7 +1,7 @@
 ---
 Website: http://www.acm.uiuc.edu/lug/
 
-Meeting Info: 8 PM in 3403 Siebel on 11-17-2014
+Meeting Info: 8 PM in 301 CSL on 11-17-2014
 
 Group:
 - Items
@@ -15,13 +15,21 @@ Meeting Sections:
   - '.NET Core is Open Source: <http://blogs.msdn.com/b/dotnet/archive/2014/11/12/net-core-is-open-source.aspx>'
 
   Education Epoch:
-  - TBA
+  - http://proquest.safaribooksonline.com/ - Amazing resource for University of Illinois students. Many free text books viewable right from your browser. 
 
   Proc Period:
   - 'mem_lurk presentation - Shane'
 
   SSH Section:
-  - TBA
+  -l user: specify your remote username; otherwise, ssh assumes your local username. you can also us the syntax username@host:
+$ ssh demo@example.com
+
+  -p port: Use a port number other than the default (22)
+  -t allocate a tty on the remote system; useful when trying to run a remote command with an interactive user interface, such as a text editor.
+  
+  -v produce verbose output, useful for debugging
+
+  ~/.ssh/config : add configuration options on a per host basis
 
   Shell Space:
   - TBA
