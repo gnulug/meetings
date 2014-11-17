@@ -40,6 +40,7 @@ Meeting Sections:
     Tabs:
     - Avoiding the Esc key, Ctrl-[
     - inomap jj <Esc>
+    - Indention: [count] >G, <G, >%, <%, >>, <<, Visual mode << >>
 
   C Corner:
   - Shared libraries and linking
