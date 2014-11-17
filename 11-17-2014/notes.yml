@@ -41,6 +41,10 @@ Meeting Sections:
     - Avoiding the Esc key, Ctrl-[
     - inomap jj <Esc>
     - Indention: [count] >G, <G, >%, <%, >>, <<, Visual mode << >>
+    Marks:
+    - m, ', and ` in normal mode
+    Etc:
+    - ~ to swap character case
 
   C Corner:
   - Shared libraries and linking
