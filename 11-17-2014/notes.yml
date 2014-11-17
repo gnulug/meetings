@@ -37,7 +37,8 @@ Meeting Sections:
 
   Vim Vicinity:
     Tabs:
-    - TBA
+    - Avoiding the Esc key, Ctrl-[
+    - inomap jj <Esc>
 
   C Corner:
   - Shared libraries and linking
