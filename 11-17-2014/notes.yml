@@ -34,6 +34,12 @@ Meeting Sections:
 
   ~/.ssh/config : add configuration options on a per host basis
 
+    Host
+    User
+    IdentityFile ~/.ssh/foo.bar.key
+    LocalForward 9999 127.0.0.1:3389
+
+
   Shell Space:
   - HISTCONTROL ignorespace,ignoredups,erasedups
 
