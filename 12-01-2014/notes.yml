@@ -14,21 +14,44 @@ Meeting Sections:
   - TBA
 
   Education Epoch:
-  - From now until December 1st you can get certified from the Linux Foundation as an adminstrator or engineer, or both for 100 dollars per exam. 
-	Check out: http://training.linuxfoundation.org/certification
+  - From now until December 1st you can get certified from the Linux Foundation as an adminstrator or engineer, or both for 100 dollars per exam.
+     Check out: http://training.linuxfoundation.org/certification
 
   Proc Period:
   - TBA
 
   SSH Section:
   - TBA
+    h1> usermod -s /usr/bin/nologin jon
+    h2> ssh -p 2222 jon@127.0.0.1 -o UserKnownHostsFile=/dev/null -N -L 55555:localhost:80
+    h2> http_proxy=127.0.0.1:55555
+    h2> wget google.com
+    # Fix, AllowTcpForwarding no in /etc/ssh/sshd_config
+
 
   Shell Space:
-  - TBA
+  - Cool Bash variables
+    $_ - Special variable set to final argument of previous command executed.
+    $SECONDS - The number of seconds the script has been running
+    $SHELLOPTS - List of enabled shell options, a readonly variable
+    $LINENO - This variable is the line number of the shell script in which this variable appears.
+    $CDPATH - A colon-separated list of search paths available to the cd command
+  - Limiting chsh
+    man 5 shells
+    man pam_shells
+    /etc/shells - Read by ftp and pam_shells
+    cat /etc/pam.d/chsh
+    h1> sed -i '/bash/d' /etc/shells
+    h1> useradd -m -p mypassword -s /etc/shells jon
+    h2> ssh -p 2222 jon@127.0.0.1 -o UserKnownHostsFile=/dev/null
+    h2> chsh -s /bin/sh
+    # Root can't change shell either with chsh if root's shells is not in /etc/shells,
+    # however, usermod will work because it doesn't check /etc/shells
 
   Vim Vicinity:
     Tabs:
-    - TBA
+    - 'Commentary plugin: <https://github.com/tpope/vim-commentary>'
+    - Operaters for code :help operators
 
   C Corner:
   - TBA
