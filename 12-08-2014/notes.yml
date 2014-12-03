@@ -23,11 +23,10 @@ Meeting Sections:
   - TBA
 
   Shell Space:
-  - TBA
+  - 'Counter: while true; do printf "$(tput civis -- invisible)${SECONDS}$(tput el)\r"; done'
 
   Vim Vicinity:
-    Tabs:
-    - TBA
+  - 'vim-surround: <https://github.com/tpope/vim-surround>'
 
   C Corner:
   - TBA
