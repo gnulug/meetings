@@ -24,6 +24,7 @@ Meeting Sections:
 
   Shell Space:
   - 'Counter: while true; do printf "$(tput civis -- invisible)${SECONDS}$(tput el)\r"; done'
+  - man terminfo
 
   Vim Vicinity:
   - 'vim-surround: <https://github.com/tpope/vim-surround>'
@@ -33,8 +34,8 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Effing Package Manager:
+    - fpm -s dir -t rpm -n "islet" -v 1.0.1 /etc/islet /opt/islet
 
   Big Talks:
     TBA:
