@@ -11,7 +11,8 @@ Group:
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'New Docker tools: <http://blog.docker.com/2014/12/announcing-docker-machine-swarm-and-compose-for-orchestrating-distributed-apps/>'
+  - 'CoreOS is building a container runtime, Rocket: <https://coreos.com/blog/rocket/>'
 
   Education Epoch:
   - TBA
