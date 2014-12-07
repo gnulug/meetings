@@ -26,10 +26,12 @@ Meeting Sections:
   Shell Space:
   - 'Counter: while true; do printf "$(tput civis -- invisible)${SECONDS}$(tput el)\r"; done'
   - man terminfo
-  - pushd, popd, shortcuts & aliases -Shane	
+  - pushd, popd, shortcuts & aliases -Shane
 
   Vim Vicinity:
   - 'vim-surround: <https://github.com/tpope/vim-surround>'
+  - Command output in editing file, stderr & stdout:
+    ':read!ls -l, :r!netstat -nt'
 
   C Corner:
   - TBA
