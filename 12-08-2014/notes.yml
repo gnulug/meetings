@@ -13,15 +13,17 @@ Meeting Sections:
   Linux in the News:
   - 'New Docker tools: <http://blog.docker.com/2014/12/announcing-docker-machine-swarm-and-compose-for-orchestrating-distributed-apps/>'
   - 'CoreOS is building a container runtime, Rocket: <https://coreos.com/blog/rocket/>'
+  - 'Is Docker Fundamentally Flawed?: <http://www.ibuildthecloud.com/blog/2014/12/03/is-docker-fundamentally-flawed'>
 
   Education Epoch:
-  - TBA
+  - 'Assembly Language and Shellcoding on Linux: <http://www.securitytube-training.com/online-courses/securitytube-linux-assembly-expert/>'
 
   Proc Period:
   - TBA
 
   SSH Section:
-  - TBA
+  - AcceptEnv, SendEnv, ssh vagrant@127.0.0.1 -o SendEnv=MYVAR
+  - PermitUserEnvironment and ~/.ssh/environment
 
   Shell Space:
   - 'Counter: while true; do printf "$(tput civis -- invisible)${SECONDS}$(tput el)\r"; done'
