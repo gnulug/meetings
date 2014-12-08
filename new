@@ -22,13 +22,14 @@ cat <<EOF > $date/$file
 ---
 
 Website: http://www.acm.uiuc.edu/lug/
-
 Meeting Info: 8 PM in 301 CSL on $date
 GoToMeeting: '+1 (646) 749-3131 - Access Code: 352-548-053 <https://global.gotomeeting.com/join/352548053>'
+Mailing List: http://www.acm.uiuc.edu/sigs/33
+Facebook: https://www.facebook.com/groups/uiuc.gluug/
+IRC: ##uiuclug on irc.freenode.net
 
 Group:
-- Items
-- 'IRC ##uiuclug on irc.freenode.net'
+- TBA
 
 Meeting Sections:
   Linux in the News:
