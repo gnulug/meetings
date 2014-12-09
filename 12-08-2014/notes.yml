@@ -36,7 +36,7 @@ Meeting Sections:
     ':read!ls -l, :r!netstat -nt'
 
   C Corner:
-  - TBA
+  - Function pointers
 
 Talks:
   Small Talks:
