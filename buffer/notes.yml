@@ -22,7 +22,10 @@ Meeting Sections:
   - Check for hardware virtualization: "egrep '^flags.*(vmx|svm)' /proc/cpuinfo"
 
   SSH Section:
-  - TBA
+  - Fastest cipher: -o Cipher=arcfour
+  - Compression: uses gzip levels 1-9 (def: 6), ~/.ssh/config
+      Compression      yes
+      CompressionLevel 9
 
   Shell Space:
   - TBA
