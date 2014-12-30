@@ -28,7 +28,8 @@ Meeting Sections:
       CompressionLevel 9
 
   Shell Space:
-  - TBA
+  - mktemp
+  - suspend
 
   Vim Vicinity:
   - Normal mode indention: '<<, >>, <}, >(, etc.'
@@ -38,10 +39,10 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Ganeti:
+    - An introduction
 
   Big Talks:
-    TBA:
-    - TBA
+    Sudo:
+    - Sudo in-depth
 
