@@ -29,20 +29,23 @@ Meeting Sections:
       CompressionLevel 9
 
   Shell Space:
-  - TBA
+  - mktemp
+  - Suspend shell: suspend, -f for login shell, to resume send SIGCONT
+  - Group commands: "{ true && false;} || echo executed"
 
   Vim Vicinity:
   - Normal mode indention: '<<, >>, <}, >(, etc.'
+  - Insert mode indention: 'Ctrl-T, Ctrl-D'
 
   C Corner:
   - TBA
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Ganeti:
+    - An introduction
 
   Big Talks:
-    TBA:
-    - TBA
+    Sudo:
+    - Sudo in-depth
 
