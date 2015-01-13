@@ -29,7 +29,8 @@ Meeting Sections:
 
   Shell Space:
   - mktemp
-  - suspend
+  - Suspend shell: suspend, -f for login shell, to resume send SIGCONT
+  - Group commands: "{ true && false;} || echo executed"
 
   Vim Vicinity:
   - Normal mode indention: '<<, >>, <}, >(, etc.'
