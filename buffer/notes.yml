@@ -34,6 +34,7 @@ Meeting Sections:
 
   Vim Vicinity:
   - Normal mode indention: '<<, >>, <}, >(, etc.'
+  - Insert mode indention: 'Ctrl-T, Ctrl-D'
 
   C Corner:
   - TBA
