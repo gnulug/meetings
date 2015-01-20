@@ -1,8 +1,8 @@
 ---
 
 Website: http://www.acm.uiuc.edu/lug/
-Meeting Info: 8 PM in 301 CSL on 01-26-2015
-Remote: '+1 (415) 762-9988 - Meeting ID: 983 180 265 <https://zoom.us/j/983180265>'
+Meeting Info: 8 PM in 301 CSL on $date
+Zoom.us: '+1 (415) 762-9988 - Meeting ID: 983 180 265 <https://zoom.us/j/983180265>'
 Mailing List: http://www.acm.uiuc.edu/sigs/33
 Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
@@ -12,31 +12,44 @@ Group:
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'Advancing docker security: docker 1.4.0 and 1.3.3 releases: <http://blog.docker.com/2014/12/advancing-docker-security-docker-1-4-0-and-1-3-3-releases/>'
+  - 'Vagrant Push: One Command to Deploy Any Application: <http://www.vagrantup.com/blog/vagrant-push-to-deploy.html>'
+  - 'Applied Crypto Hardening: <https://bettercrypto.org/>'
 
   Education Epoch:
   - TBA
 
   Proc Period:
-  - TBA
+  - Check for hardware virtualization: "egrep '^flags.*(vmx|svm)' /proc/cpuinfo"
 
   SSH Section:
-  - TBA
+  - Fastest cipher: -o Cipher=arcfour
+  - Compression: uses gzip levels 1-9 (def: 6), ~/.ssh/config
+      Compression      yes
+      CompressionLevel 9
 
   Shell Space:
-  - TBA
+  - mktemp
+  - Suspend shell: suspend, -f for login shell, to resume send SIGCONT
+  - Group commands: "{ true && false; } || echo executed"
 
   Vim Vicinity:
-  - TBA
+  - Normal mode indention: '<<, >>, <}, >(, etc.'
+  - Insert mode indention: 'Ctrl-T, Ctrl-D'
+  - Color schemes: ':colorscheme <tab>'
 
   C Corner:
   - TBA
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Docker:
+    - Docker directory layout
+
+  Small Talks:
+    Quiz:
+    - Retrieval practice program: 'https://github.com/jonschipp/quiz'
 
   Big Talks:
-    TBA:
-    - TBA
+    Sudo:
+    - Sudo in-depth
