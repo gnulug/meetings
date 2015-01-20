@@ -36,6 +36,7 @@ Meeting Sections:
   Vim Vicinity:
   - Normal mode indention: '<<, >>, <}, >(, etc.'
   - Insert mode indention: 'Ctrl-T, Ctrl-D'
+  - Color schemes: ':colorscheme <tab>'
 
   C Corner:
   - TBA
