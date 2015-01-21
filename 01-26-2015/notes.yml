@@ -1,7 +1,7 @@
 ---
 
 Website: http://www.acm.uiuc.edu/lug/
-Meeting Info: 8 PM in 301 CSL on $date
+Meeting Info: 8 PM in 301 CSL on 01-26-2015
 Zoom.us: '+1 (415) 762-9988 - Meeting ID: 983 180 265 <https://zoom.us/j/983180265>'
 Mailing List: http://www.acm.uiuc.edu/sigs/33
 Facebook: https://www.facebook.com/groups/uiuc.gluug/
@@ -21,6 +21,7 @@ Meeting Sections:
 
   Proc Period:
   - Check for hardware virtualization: "egrep '^flags.*(vmx|svm)' /proc/cpuinfo"
+  - System Load: '/proc/loadavg'
 
   SSH Section:
   - Fastest cipher: -o Cipher=arcfour
@@ -44,7 +45,7 @@ Meeting Sections:
 Talks:
   Small Talks:
     Docker:
-    - Docker directory layout
+    - More Docker stuff
 
   Small Talks:
     Quiz:
