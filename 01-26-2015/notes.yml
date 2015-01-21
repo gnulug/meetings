@@ -11,10 +11,12 @@ Group:
 - TBA
 
 Meeting Sections:
-  Linux in the News:
+  In the News:
   - 'Advancing docker security: docker 1.4.0 and 1.3.3 releases: <http://blog.docker.com/2014/12/advancing-docker-security-docker-1-4-0-and-1-3-3-releases/>'
   - 'Vagrant Push: One Command to Deploy Any Application: <http://www.vagrantup.com/blog/vagrant-push-to-deploy.html>'
   - 'Applied Crypto Hardening: <https://bettercrypto.org/>'
+  - 'Secure Secure Shell: <https://stribika.github.io/2015/01/04/secure-secure-shell.html>'
+  - 'Security: OpenBSD vs FreeBSD: <http://networkfilter.blogspot.com/2014/12/security-openbsd-vs-freebsd.html>'
 
   Education Epoch:
   - TBA
