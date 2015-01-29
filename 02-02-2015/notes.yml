@@ -8,7 +8,7 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
 
 Group:
-- TBA
+- Xen Project
 
 Meeting Sections:
   Linux in the News:
@@ -34,9 +34,9 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    PXE Boot Systems:
+    - Discuss single and multi boot PXE systems for easy Linux installations, and a live demonstration.
 
   Big Talks:
-    TBA:
-    - TBA
+    Vagrant:
+    - An introduction to creating portable development environments with Vagrant along with live demonstrations.
