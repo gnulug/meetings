@@ -21,7 +21,12 @@ Meeting Sections:
   - TBA
 
   SSH Section:
-  - TBA
+###Tell sshd where to keep its process id file
+PidFile /var/run/sshd.pid
+####Debug ssh client connection
+ssh -vvv user@host.example.tld 
+###Verifying login attempts against DNS
+UseDNS yes
 
   Shell Space:
   - TBA
