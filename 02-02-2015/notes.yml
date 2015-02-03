@@ -28,7 +28,15 @@ Meeting Sections:
   - Disable ASLR Globally and Persistently: 'echo "kernel.randomize_va_space = 0" >> /etc/sysctl.conf'
 
   SSH Section:
-  - TBA
+  - sshd network options:
+#AddressFamily refers to the version of TCP/IP that sshd uses
+#AddressFamily any(default)|inet(ipv4)|inet6(ipv6)
+AddressFamily any
+
+#ListenAddress - Many hosts have multiple IP addresses, by default sshd listens for incoming requests on all of them. If you want to limit the IP addresses that sshd attaches to, use this. This takes a single IP address as an argument but you can use as many keywords as necessary. You can also use this to specify additional ports for sshd to listen on. 
+ListenAddress 192.168.1.1      
+ListenAddress 192.268.1.1:2222
+
 
   Shell Space:
   - Helper functions: 'die, try, package_check'
