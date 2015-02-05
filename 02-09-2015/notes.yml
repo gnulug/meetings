@@ -39,7 +39,8 @@ Meeting Sections:
      - Succeeds: 'sudo sh -c "echo something >> /etc/passwd"'
 
   Vim Vicinity:
-  - TBA
+  - Visual Block mode
+  - Joining and separating lines
 
   C Corner:
   - TBA
