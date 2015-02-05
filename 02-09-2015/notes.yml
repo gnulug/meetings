@@ -34,7 +34,9 @@ Meeting Sections:
     - UseDNS yes
 
   Shell Space:
-  - TBA
+  - Redirection and sudo:
+     - Fails: 'sudo echo something >> /etc/passwd'
+     - Succeeds: 'sudo sh -c "echo something >> /etc/passwd"'
 
   Vim Vicinity:
   - TBA
