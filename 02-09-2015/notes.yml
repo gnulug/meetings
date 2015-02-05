@@ -12,14 +12,12 @@ Group:
 
 Meeting Sections:
   Linux in the News:
-###Raspberry PI v2 now on sale: 
-<http://www.raspberrypi.org/raspberry-pi-2-on-sale/>
-
-###FreeNAS — network-attached storage with ZFS
-<http://lwn.net/Articles/631216/>
-
-###You can now petition the European Union to 'fix my document' (Opensource.com)
-<http://lwn.net/Articles/631668/>
+    # Raspberry PI v2 now on sale:
+    - 'http://www.raspberrypi.org/raspberry-pi-2-on-sale/'
+    # FreeNAS — network-attached storage with ZFS
+    - 'http://lwn.net/Articles/631216/'
+    # You can now petition the European Union to 'fix my document' (Opensource.com)
+    - 'http://lwn.net/Articles/631668/'
 
   Education Epoch:
   - TBA
@@ -28,14 +26,12 @@ Meeting Sections:
   - TBA
 
   SSH Section:
-###Tell sshd where to keep its process id file
-PidFile /var/run/sshd.pid
-
-####Debug ssh client connection
-ssh -vvv user@host.example.tld 
-
-###Verifying login attempts against DNS
-UseDNS yes
+    # Tell sshd where to keep its process id file
+    - PidFile /var/run/sshd.pid
+    # Debug ssh client connection
+    - ssh -vvv user@host.example.tld
+    # Verifying login attempts against DNS
+    - UseDNS yes
 
   Shell Space:
   - TBA
