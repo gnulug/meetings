@@ -15,7 +15,7 @@ Meeting Sections:
   - 'Docker 1.5: ipv6 support, read-only containers, stats, and more: <https://blog.docker.com/2015/02/docker-1-5-ipv6-support-read-only-containers-stats-named-dockerfiles-and-more/>'
 
   Education Epoch:
-  - TBA
+  - 'Udemy: <https://www.udemy.com/courses/search/?ref=home&q=linux>'
 
   Proc Period:
   - TBA
@@ -24,7 +24,10 @@ Meeting Sections:
   - TBA
 
   Shell Space:
-  - TBA
+  - 'Namespaced, composable shell function libraries: <https://github.com/shellfire-dev/shellfire>'
+
+  Container City:
+  - 'boot2docker: <http://boot2docker.io/>'
 
   Vim Vicinity:
   - TBA
