@@ -21,7 +21,17 @@ Meeting Sections:
   - TBA
 
   SSH Section:
-  - TBA
+  ###Banners
+  #Banner /etc/ssh/ssh-banner
+  #
+  ###Show last time a user logged in
+  #PrintLastLog yes
+  #
+  ###Control how many times a user may attempt to authenticate in a single session
+  #MaxAuthTries 6
+  #
+  ###Resticting access by user or group
+  #DenyUsers, AllowUsers, DenyGroups, AllowGroups
 
   Shell Space:
   - 'Namespaced, composable shell function libraries: <https://github.com/shellfire-dev/shellfire>'
