@@ -41,7 +41,9 @@ Meeting Sections:
   - 'boot2docker: <http://boot2docker.io/>'
 
   Vim Vicinity:
-  - TBA
+   Working with the 0 register:
+   - 0 is only populated with yanked text
+   - Paste with "0p
 
   C Corner:
   - TBA
