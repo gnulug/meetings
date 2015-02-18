@@ -18,13 +18,14 @@ Meeting Sections:
   - TBA
 
   Proc Period:
-  - TBA
+  - Ptrace Scope 'cat /proc/sys/kernel/yama/ptrace_scope'
 
   SSH Section:
   - TBA
 
   Shell Space:
-  - TBA
+  - '[ and [['
+  - 'Performance: <https://github.com/jonschipp/mal-dnssearch/commit/d1b39f5f7bd0b19050881356f56d15960a8ec4bb>'
 
   Container City:
   - TBA
