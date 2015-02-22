@@ -32,7 +32,7 @@ Meeting Sections:
   - 'Performance: <https://github.com/jonschipp/mal-dnssearch/commit/d1b39f5f7bd0b19050881356f56d15960a8ec4bb>'
 
   Container City:
-  - TBA
+  - Setting capabilities in Docker: '--cap-add --cap-drop'
 
   Vim Vicinity:
   - TBA
