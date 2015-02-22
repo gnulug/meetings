@@ -20,6 +20,7 @@ Meeting Sections:
 
   Proc Period:
   - Ptrace Scope 'cat /proc/sys/kernel/yama/ptrace_scope'
+  - 'Kernel Hardending: <https://wiki.ubuntu.com/SecurityTeam/Roadmap/KernelHardening#ptrace_Protection>'
 
   SSH Section:
   - TBA
