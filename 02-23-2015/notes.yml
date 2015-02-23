@@ -35,7 +35,8 @@ Meeting Sections:
   - Setting capabilities in Docker: '--cap-add --cap-drop'
 
   Vim Vicinity:
-  - TBA
+  - 'Quick switch to normal mode: ^['
+  - 'Show compiled options :version'
 
   C Corner:
   - TBA
