@@ -18,7 +18,7 @@ Meeting Sections:
   - 'GDB 7.9 released:<http://lwn.net/Articles/634242/>'
 
   Education Epoch:
-  - TBA
+  - 'The VimL Primer: <https://pragprog.com/book/bkviml/the-viml-primer>'
 
   Proc Period:
   - Ptrace Scope 'cat /proc/sys/kernel/yama/ptrace_scope'
