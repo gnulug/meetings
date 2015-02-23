@@ -49,3 +49,10 @@ Talks:
   Big Talks:
     Linux Kernel Capabilities:
     - Talk about capabilities(7)
+      - 'File system capabilities in kernel 2.6.24: setcap, getcap'
+      - 'man 7 capabilities'
+      - 'Tools provided by libcap: apt-file list libcap2'
+      - '2 capabilities supersets: thread and file; 3 capability sets: permitted, effective, inherited'
+      - 'Capabilities are stored in inode so can't apply to symlinks to binary'
+      - 'File capabilities are disabled if LD_LIBRARY_PATH is set'
+      - 'Print capabilies for running processes: for i in $(pgrep -f ".*"); do /sbin/getpcaps $i; done'
