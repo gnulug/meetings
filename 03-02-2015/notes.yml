@@ -8,7 +8,11 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
 
 Group:
-- TBA
+- 'Github Organization: <https://github.com/acmlug>'
+- Xen Project system is back up
+- 'UIUC LUG Gitlab Server: <https://git.gnulug.org/>'
+- 'UIUC LUG Nagios Server: <https://nagios.gnulug.org/>'
+- 'UIUC LUG Privoxy/Tor Server: <https://proxy.gnulug.org/>'
 
 Meeting Sections:
   Linux in the News:
@@ -41,5 +45,8 @@ Talks:
     - TBA
 
   Big Talks:
-    TBA:
-    - TBA
+    Project Meeting:
+    - We will begin working on our Linux infstracture project. We will run through using
+      Vagrant to build development machines, working with Xen Project, accessing our Xen VM's,
+      customizing our Xen environment, and contributing to our various repositories. We will
+      be working together to teach and use these technologies.
