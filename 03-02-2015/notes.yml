@@ -9,26 +9,39 @@ IRC: ##uiuclug on irc.freenode.net
 
 Group:
 - 'Github Organization: <https://github.com/acmlug>'
-- Xen Project system is back up
+- Xen Project system is back up (w00t)
 - 'UIUC LUG Gitlab Server: <https://git.gnulug.org/>'
 - 'UIUC LUG Nagios Server: <https://nagios.gnulug.org/>'
 - 'UIUC LUG Privoxy/Tor Server: <https://proxy.gnulug.org/>'
 
 Meeting Sections:
   Linux in the News:
-  - TBA
-
+  - 'VLC gets first major cross-platform release:
+<http://venturebeat.com/2015/02/27/vlc-gets-first-major-release-across-windows-mac-linux-android-ios-windows-phone-windows-rt-and-android-tv/>'
+  - 'Snowdens favourite Linux - Tails rushes sec-fix version to market
+<http://www.theregister.co.uk/2015/02/25/tails_project_rushes_secfix_version_to_market/>'
+ 
   Education Epoch:
   - 'CopyrightX: <http://copyx.org/lectures/>'
+  - 'Learn Linux The Hard Way: <https://nixsrv.com/llthw>'
 
   Proc Period:
   - TBA
 
   SSH Section:
-  - TBA
+  ###Wilcards in SSH
+  '? Matches exactly one character: *.foo.bar.com'
+  '* Matches Zero or more characters: ?????.foo.bar.com'
+  ###Works for IP addresses too!
+  'Address 192.168.0.1?'
+  OR
+  '192.168.0.*'
+  ###You can also use ! to negate things - not supported everywhere. check your distribution.
+  'host !*.foo.bar.com'
+  'host !*.super.foo.bar.com *.bar.com' 
 
   Shell Space:
-  - TBA
+  - 'file is a standard Unix program for recognizing the type of data contained in a computer file: <http://www.computerhope.com/unix/ufile.htm>'
 
   Container City:
   - TBA
