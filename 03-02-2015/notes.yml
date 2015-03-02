@@ -20,7 +20,8 @@ Meeting Sections:
 <http://venturebeat.com/2015/02/27/vlc-gets-first-major-release-across-windows-mac-linux-android-ios-windows-phone-windows-rt-and-android-tv/>'
   - 'Snowdens favourite Linux - Tails rushes sec-fix version to market
 <http://www.theregister.co.uk/2015/02/25/tails_project_rushes_secfix_version_to_market/>'
- 
+  - 'The Difference Between Fedora, Redhat, and CentOS: <https://danielmiessler.com/study/fedora_redhat_centos/>'
+
   Education Epoch:
   - 'CopyrightX: <http://copyx.org/lectures/>'
   - 'Learn Linux The Hard Way: <https://nixsrv.com/llthw>'
@@ -38,7 +39,7 @@ Meeting Sections:
   '192.168.0.*'
   ###You can also use ! to negate things - not supported everywhere. check your distribution.
   'host !*.foo.bar.com'
-  'host !*.super.foo.bar.com *.bar.com' 
+  'host !*.super.foo.bar.com *.bar.com'
 
   Shell Space:
   - 'file is a standard Unix program for recognizing the type of data contained in a computer file: <http://www.computerhope.com/unix/ufile.htm>'
