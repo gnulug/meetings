@@ -23,6 +23,7 @@ Meeting Sections:
 
   SSH Section:
   ###chrooting users
+  'ChrootDirectory none' <--By default sshd does not chroot users
 
   Shell Space:
   - TBA
