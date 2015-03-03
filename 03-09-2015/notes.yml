@@ -30,7 +30,8 @@ Meeting Sections:
   - TBA
 
   Vim Vicinity:
-  - TBA
+  ###Use VIM as a Hex Editor
+  ':%!xxd'
 
   C Corner:
   - TBA
