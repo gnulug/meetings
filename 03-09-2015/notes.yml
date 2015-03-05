@@ -18,8 +18,10 @@ Meeting Sections:
   - TBA
 
   Education Epoch:
-  ###Linux Survival - Linux Survival(TM) is designed for people who have little or no experience with the Linux operating system. 
-  '<http://linuxsurvival.com>'
+ ###Linux Survival - Linux Survival(TM) is designed for people who have little or no experience with the Linux operating system. 
+ #'<http://linuxsurvival.com>'
+ ###Speaking Unix
+ #http://ss64.com/bash/syntax-pronounce.html
 
   Proc Period:
   - TBA
@@ -30,8 +32,17 @@ Meeting Sections:
 
   Shell Space:
   ###Decode Unix time with the 'date' command
-  'date -d @1425401785' 'Tue Mar  3 16:56:25 UTC 2015'i
+  #'date -d @1425401785' 'Tue Mar  3 16:56:25 UTC 2015'i
   ###Unix time (a.k.a. POSIX time or Epoch time) is a system for describing instants in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970,
+
+###Run a previously run command from your history without typing it out
+#'root@host:~/dockerfiles# history | grep -i bro
+#  659  mkdir islet-bro
+#  666  docker build -t bro - < islet-bro/Dockerfile
+#  693  history | grep -i bro
+
+root@host:~/dockerfiles# !666' <--- Specifying a bang and the history # will run that command. Bang is unix speak for exclamation point.
+
 
   Container City:
   - TBA
