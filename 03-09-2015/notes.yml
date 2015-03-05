@@ -8,49 +8,47 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
 
 Group:
-### Richard Stallman to speak in Champaign-Urbana, IL - Brought to you by GnuLug
-'Grainger Auditorium, Room 1002 ECE Building, 306 N. Wright St'
-'Richard Stallmans speech will be nontechnical, admission is gratis, and the public is encouraged to attend.'
-'<http://www.fsf.org/events/rms-20150316-champaign-urbana>'
+- 'Richard Stallman to speak in Champaign-Urbana, IL: <http://www.fsf.org/events/rms-20150316-champaign-urbana>'
+  # Grainger Auditorium, Room 1002 ECE Building, 306 N. Wright St'
+  # Richard Stallmans speech will be nontechnical, admission is gratis, and the public is encouraged to attend.'
 
 Meeting Sections:
   Linux in the News:
   - TBA
 
   Education Epoch:
- ###Linux Survival - Linux Survival(TM) is designed for people who have little or no experience with the Linux operating system. 
- #'<http://linuxsurvival.com>'
- ###Speaking Unix
- #http://ss64.com/bash/syntax-pronounce.html
+  - 'Linux Survival: <http://linuxsurvival.com>'
+  - 'Speaking Unix: <http://ss64.com/bash/syntax-pronounce.html>'
 
   Proc Period:
   - TBA
 
   SSH Section:
-  ###chrooting users
-  'ChrootDirectory none' <--By default sshd does not chroot users
+  - Chrooting users
+    - 'ChrootDirectory none' # By default sshd does not chroot users
 
   Shell Space:
-  ###Decode Unix time with the 'date' command
-  #'date -d @1425401785' 'Tue Mar  3 16:56:25 UTC 2015'i
-  ###Unix time (a.k.a. POSIX time or Epoch time) is a system for describing instants in time, defined as the number of seconds that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970,
+  - Decode Unix time with the 'date' command
+    - 'date -d @1425401785'
+  - Unix time (a.k.a. POSIX time or Epoch time)
+    - is a system for describing instants in time, defined as the number of seconds that
+      have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970
   - 'System make/model: dmidecode | grep -A3 "^System Information"'
 
-###Run a previously run command from your history without typing it out
-#'root@host:~/dockerfiles# history | grep -i bro
-#  659  mkdir islet-bro
-#  666  docker build -t bro - < islet-bro/Dockerfile
-#  693  history | grep -i bro
+  ###Run a previously run command from your history without typing it out
+  #'root@host:~/dockerfiles# history | grep -i bro
+  #  659  mkdir islet-bro
+  #  666  docker build -t bro - < islet-bro/Dockerfile
+  #  693  history | grep -i bro
 
-root@host:~/dockerfiles# !666' <--- Specifying a bang and the history # will run that command. Bang is unix speak for exclamation point.
+  # root@host:~/dockerfiles# !666' <--- Specifying a bang and the history # will run that command. Bang is unix speak for exclamation point.
 
 
   Container City:
   - TBA
 
   Vim Vicinity:
-  ###Use VIM as a Hex Editor
-  ':%!xxd'
+  - 'Use VIM as a Hex Editor: %!xxd'
 
   C Corner:
   - TBA
