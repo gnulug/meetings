@@ -11,6 +11,8 @@ Group:
 - 'Richard Stallman to speak in Champaign-Urbana, IL: <http://www.fsf.org/events/rms-20150316-champaign-urbana>'
   # Grainger Auditorium, Room 1002 ECE Building, 306 N. Wright St'
   # Richard Stallmans speech will be nontechnical, admission is gratis, and the public is encouraged to attend.'
+- 'Apt-cacher: <https://git.gnulug.org/lug/puppet/tree/master/modules/repo>'
+- 'Repo Server: <repo.gnulug.org>'
 
 Meeting Sections:
   Linux in the News:
