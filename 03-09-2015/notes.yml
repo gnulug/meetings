@@ -47,7 +47,8 @@ Meeting Sections:
 
 
   Container City:
-  - TBA
+  - 'OpenVZ: <http://openvz.org/Main_Page>'
+  - 'OpenVZ Vagrant: <https://github.com/jonschipp/vagrant/tree/master/openvz>'
 
   Vim Vicinity:
   - 'Use VIM as a Hex Editor: %!xxd'
