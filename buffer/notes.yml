@@ -1,0 +1,38 @@
+# Add notes while on breaks
+
+Group:
+- 'Documentation: <https://github.com/acmlug/docs>'
+
+Meeting Sections:
+  Linux in the News:
+  - 'Kitematic a Docker GUI joins the Docker family: <http://blog.docker.com/2015/03/kitematic-a-docker-gui-joins-the-docker-family/>'
+
+  Education Epoch:
+  - TBA
+
+  Proc Period:
+  - TBA
+
+  SSH Section:
+  - TBA
+
+  Shell Space:
+  - 'Hide process name: exec -a dontmindme < <(cat /etc/*) nc 127.0.0.1 4444'
+
+  Container City:
+  - TBA
+
+  Vim Vicinity:
+  - TBA
+
+  C Corner:
+  - TBA
+
+Talks:
+  Small Talks:
+    TBA:
+    - TBA
+
+  Big Talks:
+    Project Meeting:
+    - Work on projects together
