@@ -26,7 +26,8 @@ Meeting Sections:
   - 'Build a dynamically linked Docker: <http://sickbits.net/build-a-dynamically-linked-docker/>'
 
   Vim Vicinity:
-  - TBA
+  - 'Window Split: vim -[oO], :sp, :vsp'
+  - 'Window Movement: C-w [hjkl]'
 
   C Corner:
   - TBA
