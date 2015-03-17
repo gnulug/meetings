@@ -2,10 +2,13 @@
 
 Group:
 - 'Documentation: <https://github.com/acmlug/docs>'
+- RMS Roundup
 
 Meeting Sections:
   Linux in the News:
   - 'Kitematic a Docker GUI joins the Docker family: <http://blog.docker.com/2015/03/kitematic-a-docker-gui-joins-the-docker-family/>'
+  - 'VirtualBox 4.3.26 released: <http://www.virtualbox.org/wiki/Changelog>'
+  - 'LXC 1.1.1 has been released: <https://linuxcontainers.org/lxc/news/>'
 
   Education Epoch:
   - TBA
@@ -20,7 +23,7 @@ Meeting Sections:
   - 'Hide process name: exec -a dontmindme < <(cat /etc/*) nc 127.0.0.1 4444'
 
   Container City:
-  - TBA
+  - 'Build a dynamically linked Docker: <http://sickbits.net/build-a-dynamically-linked-docker/>'
 
   Vim Vicinity:
   - TBA
