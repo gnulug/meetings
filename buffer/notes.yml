@@ -9,6 +9,7 @@ Meeting Sections:
   - 'Kitematic a Docker GUI joins the Docker family: <http://blog.docker.com/2015/03/kitematic-a-docker-gui-joins-the-docker-family/>'
   - 'VirtualBox 4.3.26 released: <http://www.virtualbox.org/wiki/Changelog>'
   - 'LXC 1.1.1 has been released: <https://linuxcontainers.org/lxc/news/>'
+  - 'Announce: OpenSSH 6.8 released: <https://lists.mindrot.org/pipermail/openssh-unix-announce/2015-March/000120.html>'
 
   Education Epoch:
   - TBA
@@ -21,6 +22,7 @@ Meeting Sections:
 
   Shell Space:
   - 'Hide process name: exec -a dontmindme < <(cat /etc/*) nc 127.0.0.1 4444'
+  - 'Using Named Pipes and Process Substitution: <http://vincebuffalo.com/2013/08/08/the-mighty-named-pipe.html>'
 
   Container City:
   - 'Build a dynamically linked Docker: <http://sickbits.net/build-a-dynamically-linked-docker/>'
@@ -34,8 +36,8 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Gnu Plot:
+    - Overview and basic examples using gnuplot
 
   Big Talks:
     Project Meeting:
