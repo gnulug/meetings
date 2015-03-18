@@ -10,6 +10,7 @@ Meeting Sections:
   - 'VirtualBox 4.3.26 released: <http://www.virtualbox.org/wiki/Changelog>'
   - 'LXC 1.1.1 has been released: <https://linuxcontainers.org/lxc/news/>'
   - 'Announce: OpenSSH 6.8 released: <https://lists.mindrot.org/pipermail/openssh-unix-announce/2015-March/000120.html>'
+  - 'Github PDF Viewing: <https://github.com/blog/1974-pdf-viewing>'
 
   Education Epoch:
   - TBA
@@ -38,6 +39,8 @@ Talks:
   Small Talks:
     Gnu Plot:
     - Overview and basic examples using gnuplot
+    LaTeX:
+    - Overview and basic examples of LaTeX
 
   Big Talks:
     Project Meeting:
