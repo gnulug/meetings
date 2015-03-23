@@ -13,7 +13,7 @@ Meeting Sections:
   - 'Github PDF Viewing: <https://github.com/blog/1974-pdf-viewing>'
 
   Education Epoch:
-  - TBA
+  - 'Howdoi: <http://blog.gleitzman.com/post/43330157197/howdoi-instant-coding-answers-via-the-command>'
 
   Proc Period:
   - TBA
@@ -31,6 +31,7 @@ Meeting Sections:
   Vim Vicinity:
   - 'Window Split: vim -[oO], :sp, :vsp'
   - 'Window Movement: C-w [hjkl]'
+  - 'Reformat lines by width: :set textwidth=80, v - highlight lines, gq'
 
   C Corner:
   - TBA
