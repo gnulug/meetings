@@ -8,14 +8,20 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
 
 Group:
-- TBA
+- 'Documentation: <https://github.com/acmlug/docs>'
+- 'InfluxDB-Grafana: <grafana.gnulug.org>'
+- RMS Roundup
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'Kitematic a Docker GUI joins the Docker family: <http://blog.docker.com/2015/03/kitematic-a-docker-gui-joins-the-docker-family/>'
+  - 'VirtualBox 4.3.26 released: <http://www.virtualbox.org/wiki/Changelog>'
+  - 'LXC 1.1.1 has been released: <https://linuxcontainers.org/lxc/news/>'
+  - 'Announce: OpenSSH 6.8 released: <https://lists.mindrot.org/pipermail/openssh-unix-announce/2015-March/000120.html>'
+  - 'Github PDF Viewing: <https://github.com/blog/1974-pdf-viewing>'
 
   Education Epoch:
-  - TBA
+  - 'Howdoi: <http://blog.gleitzman.com/post/43330157197/howdoi-instant-coding-answers-via-the-command>'
 
   Proc Period:
   - TBA
@@ -24,22 +30,27 @@ Meeting Sections:
   - TBA
 
   Shell Space:
-  - TBA
+  - 'Hide process name: exec -a dontmindme < <(cat /etc/*) nc 127.0.0.1 4444'
+  - 'Using Named Pipes and Process Substitution: <http://vincebuffalo.com/2013/08/08/the-mighty-named-pipe.html>'
 
   Container City:
-  - TBA
+  - 'Build a dynamically linked Docker: <http://sickbits.net/build-a-dynamically-linked-docker/>'
 
   Vim Vicinity:
-  - TBA
+  - 'Window Split: vim -[oO], :sp, :vsp'
+  - 'Window Movement: C-w [hjkl]'
+  - 'Reformat lines by width: :set textwidth=80, v - highlight lines, gq'
 
   C Corner:
   - TBA
 
 Talks:
   Small Talks:
-    TBA:
-    - TBA
+    Gnu Plot:
+    - Overview and basic examples using gnuplot
+    LaTeX:
+    - Overview and basic examples of LaTeX
 
   Big Talks:
-    TBA:
-    - TBA
+    InfluxDB and Grafana:
+    - An introduction to using Grafana and InfluxDB
