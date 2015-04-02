@@ -19,6 +19,7 @@ Meeting Sections:
   - 'LXC 1.1.1 has been released: <https://linuxcontainers.org/lxc/news/>'
   - 'Announce: OpenSSH 6.8 released: <https://lists.mindrot.org/pipermail/openssh-unix-announce/2015-March/000120.html>'
   - 'Github PDF Viewing: <https://github.com/blog/1974-pdf-viewing>'
+  - 'Coherent Unix clone Open Sourced: <http://www.nesssoftware.com/home/mwc/source.php>'
 
   Education Epoch:
   - 'Howdoi: <http://blog.gleitzman.com/post/43330157197/howdoi-instant-coding-answers-via-the-command>'
@@ -48,8 +49,6 @@ Talks:
   Small Talks:
     Gnu Plot:
     - Overview and basic examples using gnuplot
-    LaTeX:
-    - Overview and basic examples of LaTeX
 
   Big Talks:
     InfluxDB and Grafana:
