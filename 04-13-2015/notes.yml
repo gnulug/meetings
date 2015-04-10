@@ -27,10 +27,16 @@ Meeting Sections:
   - 'jq: <https://stedolan.github.io/jq/>
 
   Container City:
-  - TBA
+  - 'Docker kernel capabilities: <https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go#L16-L29>'
+  - 'Container Memory limits: cat /sys/fs/cgroup/memory/docker/<id>/memory.limit_in_bytes'
 
   Vim Vicinity:
   - 'View hidden characters: set list, set nolist'
+  - 'Pipelines: :write | !gcc %'
+  - 'Repeat substitution: :&&<CR>'
+  - Remap:
+    nnoremap & :&&<CR>
+    xnoremap & :&&<CR>
 
   C Corner:
   - TBA
