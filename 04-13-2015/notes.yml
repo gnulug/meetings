@@ -28,6 +28,7 @@ Meeting Sections:
   Shell Space:
   - 'jq: <https://stedolan.github.io/jq/>'
   - 'MegaRaid: megacli -AdpAllinfo  -aALL, megacli -LDInfo -Lall -aALL, megacli -AdpBbuCmd -aALL, megacli -PDList  -aALL'
+  - Lucian's 'l' script (if it works)
 
   Container City:
   - 'Docker kernel capabilities: <https://github.com/docker/docker/blob/master/daemon/execdriver/native/template/default_template.go#L16-L29>'
