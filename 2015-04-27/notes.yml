@@ -8,14 +8,18 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 IRC: ##uiuclug on irc.freenode.net
 
 Group:
-- TBA
+- Jenkins
+- 'Proxy PAC file <https://github.com/ACMLug/docs/blob/master/proxy.md>'
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'Ardour 4.0 released: <https://ardour.org/whatsnew.html>'
+  - 'Grafana 2.0 Released: <http://grafana.org/blog/2015/04/20/Grafana-2-Released.html>'
+  - 'Docker 1.6: <https://blog.docker.com/2015/04/docker-release-1-6/>'
+  - 'ISLET menu rework: <https://github.com/jonschipp/ISLET/commit/607819a5b7ea7a90f08945984bac2cf1b62dcb34>'
 
   Education Epoch:
-  - TBA
+  - 'Semantic Versioning: <http://semver.org/>'
 
   Proc Period:
   - TBA
@@ -24,7 +28,7 @@ Meeting Sections:
   - TBA
 
   Shell Space:
-  - TBA
+  - Rename dated folders
 
   Container City:
   - TBA
@@ -41,5 +45,5 @@ Talks:
     - TBA
 
   Big Talks:
-    TBA:
-    - TBA
+    Project Meeting:
+    - Work on projects
