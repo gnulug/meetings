@@ -44,6 +44,5 @@ Meeting Sections:
 
 Talks:
   - Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
-  - Jon Schipp and Jon Klem: WordPress exploit incidence response
   - Jon Schipp and Jon Klem: Web hosting with Docker containers
   - Jon Schipp: Sysdig, a new system tracing tool
