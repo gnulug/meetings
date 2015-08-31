@@ -24,7 +24,7 @@ Meeting Sections:
 
   Education Epoch:
    - Learn the command line with CodeAcademy
-        <https://www.codecademy.com/courses/learn-the-command-line>
+     <https://www.codecademy.com/courses/learn-the-command-line>
 
   Proc Period:
    - TBA
@@ -36,13 +36,14 @@ Meeting Sections:
    - TBA
 
   Container City:
-   - TBA
+   - Announcing Docker 1.8: <https://blog.docker.com/2015/08/docker-1-8-content-trust-toolbox-registry-orchestration/>
+   - Docker labels: <https://docs.docker.com/userguide/labels-custom-metadata/>
 
   Vim Vicinity:
    - TBA
 
 Talks:
-
-	- Devin Akman C debugging and profiling tools  gdb, valgrind, gprof
-	- Jon Schipp and Jon Klem WordPress exploit incidence response
-	- Jon Schipp and Jon Klem Hosting with Docker containers
+  - Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
+  - Jon Schipp and Jon Klem: WordPress exploit incidence response
+  - Jon Schipp and Jon Klem: Web hosting with Docker containers
+  - Jon Schipp: Sysdig, a new system tracing tool
