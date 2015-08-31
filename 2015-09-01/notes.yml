@@ -5,48 +5,43 @@ Meeting Info: 8CT/9ET/6PT PM in 216 Siebel on 2015-09-01
 Remote: '+1 (415) 762-9988 - Meeting ID: 983 180 265 <https://zoom.us/j/983180265>'
 Mailing List: http://www.acm.uiuc.edu/sigs/33
 Facebook: https://www.facebook.com/groups/uiuc.gluug/
-IRC: ##uiuclug on irc.freenode.net
+Slack: glug-members.slack.com
 
 Group:
 - Welcome back
-- Communciations: Slack, IRC, FB, Mailinglist, etc
+- Communciations: Slack replaces IRC
+   - Glug-members.slack.com - sign up using your @illinois.edu address
+   - We will no longer use IRC for group comms
 - Website
 - Ohio Linux Fest 
 
 Meeting Sections:
   Linux in the News:
-  - NVIDIA reveals GPUs for blade servers, Linux desktop support
+   - NVIDIA reveals GPUs for blade servers, Linux desktop support
         <http://www.theregister.co.uk/2015/08/30/nvidia_reveals_gpus_for_blade_servers_linux_desktop_support/>
-  - Linux 4.2 is out
+   - Linux 4.2 is out
         <http://lkml.iu.edu/hypermail/linux/kernel/1508.3/04416.html>
 
   Education Epoch:
-  - Learn the command line with CodeAcademy
+   - Learn the command line with CodeAcademy
         <https://www.codecademy.com/courses/learn-the-command-line>
 
   Proc Period:
-  - TBA
+   - TBA
 
   SSH Section:
-  - TBA
+   - TBA
 
   Shell Space:
-  - TBA
+   - TBA
 
   Container City:
-  - TBA
+   - TBA
 
   Vim Vicinity:
-  - TBA
-
-  C Corner:
-  - TBA
+   - TBA
 
 Talks:
-  Small Talks:
-    TBA:
-    - TBA
 
-  Big Talks:
-    TBA:
-    - TBA
+Devin Akman - C debugging and profiling tools
+  - gdb, valgrind, gprof
