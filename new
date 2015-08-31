@@ -3,11 +3,11 @@ os=$(uname)
 file=notes.yml
 link=current
 
-get_monday(){
+get_tuesday(){
 if [[ $os == "Darwin" ]]; then
 	date=$(date -v +Mon +"%Y-%m-%d")
 elif [[ $os == "Linux" ]]; then
-	date=$(date -d next-monday +"%Y-%m-%d")
+	date=$(date -d next-tuesday +"%Y-%m-%d")
 else
 	echo "$os not understood"
 fi
@@ -67,7 +67,7 @@ Talks:
 EOF
 }
 
-get_monday
+get_tuesday
 if ! [ -d $date ]
 then
 	mkdir $date && template
