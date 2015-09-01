@@ -9,9 +9,9 @@ Slack: glug-members.slack.com
 
 Group:
 - Welcome back
-- Communciations: Slack replaces IRC
+- Communications: Slack replaces IRC
    - Glug-members.slack.com - sign up using your @illinois.edu address
-   - We will no longer use IRC for group comms
+   - We will no longer use IRC for group communications
 - Website
 - Ohio Linux Fest 
 
@@ -22,24 +22,24 @@ Meeting Sections:
    - Linux 4.2 is out
         <http://lkml.iu.edu/hypermail/linux/kernel/1508.3/04416.html>
 
-  Education Epoch:
+  Education and Learning:
    - Learn the command line with CodeAcademy
      <https://www.codecademy.com/courses/learn-the-command-line>
 
-  Proc Period:
+  Proc filesystem:
    - TBA
 
-  SSH Section:
+  SSH:
    - TBA
 
-  Shell Space:
+  Shell:
    - iTerm2: <https://www.iterm2.com/>
 
-  Container City:
+  Containers:
    - Announcing Docker 1.8: <https://blog.docker.com/2015/08/docker-1-8-content-trust-toolbox-registry-orchestration/>
    - Docker labels: <https://docs.docker.com/userguide/labels-custom-metadata/>
 
-  Vim Vicinity:
+  Vim:
    - emacs: evil-mode (again)
 
 Talks:
