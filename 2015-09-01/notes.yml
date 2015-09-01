@@ -40,7 +40,7 @@ Meeting Sections:
    - Docker labels: <https://docs.docker.com/userguide/labels-custom-metadata/>
 
   Vim Vicinity:
-   - TBA
+   - emacs: evil-mode (again)
 
 Talks:
   - Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
