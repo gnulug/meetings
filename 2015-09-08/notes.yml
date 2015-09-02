@@ -38,5 +38,8 @@ Meeting Sections:
 
 Talks:
   Talks:
+    Vim (@incertia):
+    - This talk will be an introduction to VIM and will go over common customizations.
+
     Emacs (@azy2):
     - This talk will discuss ways to reduce emacs start up time and as well as quick tips for seamlessly swapping the emacs GUI with your terminal.
