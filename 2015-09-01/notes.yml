@@ -30,7 +30,7 @@ Meeting Sections:
    - TBA
 
   SSH:
-   - TBA
+   - CanonicalDomain: <https://www.freebsd.org/cgi/man.cgi?query=ssh_config&sektion=5>
 
   Shell:
    - iTerm2: <https://www.iterm2.com/>
@@ -45,4 +45,3 @@ Meeting Sections:
 Talks:
   - Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
   - Jon Schipp and Jon Klem: Web hosting with Docker containers
-  - Jon Schipp: Sysdig, a new system tracing tool
