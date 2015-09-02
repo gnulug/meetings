@@ -8,7 +8,8 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 Team Chat: slack.gnulug.org (use your @illinois account to sign up)
 
 Group:
-- TBA
+- Website
+- Ohio Linux Fest
 
 Meeting Sections:
   Linux in the News:
@@ -36,10 +37,6 @@ Meeting Sections:
   - TBA
 
 Talks:
-  Small Talks:
-    TBA:
-    - TBA
-
-  Big Talks:
-    TBA:
-    - TBA
+  Talks:
+    Emacs (@azy2):
+    - This talk will discuss ways to reduce emacs start up time and as well as quick tips for seamlessly swapping the emacs GUI with your terminal.
