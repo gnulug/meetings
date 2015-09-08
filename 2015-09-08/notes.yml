@@ -16,16 +16,16 @@ Meeting Sections:
   - TBA
 
   Education/Learning tools:
-  - TBA
+  - Introduction to Computer Science and Programming Using Python: <https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-5>
 
   Filesystems:
-  - TBA
+  - /proc/[pid]/exe: symbolic link to process mapped in memory
 
   SSH:
-  - TBA
+  - sshmuxd: <https://github.com/joushou/sshmuxd>
 
   Shell:
-  - TBA
+  - ctypes.sh: <https://github.com/taviso/ctypes.sh>
 
   Containers:
   - TBA
