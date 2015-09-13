@@ -21,7 +21,7 @@ Meeting Sections:
   - TBA
 
   SSH:
-  - TBA
+  - ControlMaster
 
   Shell:
   - TBA
@@ -41,5 +41,6 @@ Talks:
     - TBA
 
   Big Talks:
-    TBA:
-    - TBA
+
+  Jekyll Intro (@jonathonklem):
+    - An overview of Jekyll and why static content generators are awesome
