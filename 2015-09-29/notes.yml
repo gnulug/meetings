@@ -41,5 +41,5 @@ Talks:
     - TBA
 
   Big Talks:
-    TBA:
-    - TBA
+    Infrastructure:
+    - Discussion of our infrastructure, it's technologies (Vagrant, Puppet, Xen Project), and how to contribute and run your own server.
