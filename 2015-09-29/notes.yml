@@ -8,23 +8,24 @@ Facebook: https://www.facebook.com/groups/uiuc.gluug/
 Team Chat: slack.gnulug.org (use your @illinois account to sign up)
 
 Group:
-- TBA
+- Ohio Linux Fest
 
 Meeting Sections:
   Linux in the News:
   - TBA
 
   Education/Learning tools:
-  - TBA
+  - https://twitter.com/climagic
 
   Filesystems:
   - TBA
 
   SSH:
-  - TBA
+  - Multiplexing SSH connections with ControlMaster
 
   Shell:
-  - TBA
+  - Command Line Magic One-liner: zcat *access_log*.gz |cat - *access_log* |awk '$9==400||$9==413{print $1}' |sort |uniq
+  - Use a # to comment/tag a command for easier searching with [Ctrl-r]
 
   Containers:
   - TBA
