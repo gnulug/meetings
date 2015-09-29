@@ -22,6 +22,14 @@ Meeting Sections:
 
   SSH:
   - Multiplexing SSH connections with ControlMaster
+  - What is multiplexing? Why might you want to multiplex your ssh connections? multiplexing (sometimes contracted to muxing) is a method by which multiple analog message signals or digital data streams are combined into one signal over a shared medium. The aim is to share an expensive resource.
+  - mkdir ~/.ssh/cm_socket
+  - Host *
+        ControlMaster auto
+        ControlPath ~/.ssh/cm_socket/%r@%h:%p
+  - Specify the path to the control socket used for connection sharing. In the path, ‘%h will be substituted by the target host name, %p the port, and %r by the remote login username. It is recommended that any ControlPath used for opportunistic connection sharing include at least %h, %p, and %r. This ensures that shared connections are uniquely identified.
+  - This tells your ssh client to always use a ControlMaster on all hosts. 
+  - NOTE: You will need to specify -o ControlMaster=no when using ssh to do ssh tunneling otherwise multiple tunnels to a particular host will not work.
 
   Shell:
   - Command Line Magic One-liner: zcat *access_log*.gz |cat - *access_log* |awk '$9==400||$9==413{print $1}' |sort |uniq
