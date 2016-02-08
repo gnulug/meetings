@@ -12,13 +12,13 @@ Group:
 
 Meeting Sections:
   Linux in the News:
-  - TBA
+  - 'Docker 1.10 released: <https://blog.docker.com/2016/02/docker-1-10/>'
 
   Education/Learning tools:
   - TBA
 
   Filesystems:
-  - unix permissions
+  - Filesystem permissions
 
   SSH:
   - TBA
@@ -27,7 +27,7 @@ Meeting Sections:
   - TBA
 
   Containers:
-  - TBA
+  - Using containers to build packages
 
   Vim/Emacs:
   - TBA
