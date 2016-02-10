@@ -40,6 +40,9 @@ Talks:
     Title: Package content verification
     - Verify the contents of a package using checksums for RPM and DEB.
 
+    Title: Prelinking
+    - Describe and demo prelinking
+
   Big Talks:
     TBA:
     - TBA
