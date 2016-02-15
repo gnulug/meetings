@@ -1,0 +1,48 @@
+---
+
+Website: www.gnulug.org
+Meeting Info: 8CT/9ET/6PT PM in 216 Siebel on 2016-02-16
+Remote: '+1 (415) 762-9988 - Meeting ID: 983 180 265 <https://zoom.us/j/983180265>'
+Mailing List: http://www.acm.uiuc.edu/sigs/33
+Facebook: https://www.facebook.com/groups/uiuc.gluug/
+Team Chat: slack.gnulug.org (use your @illinois account to sign up)
+
+Group:
+- TBA
+
+Meeting Sections:
+  Linux in the News:
+  - TBA
+
+  Education/Learning tools:
+  - Filesystem permissions
+
+  Filesystems:
+  - TBA
+
+  SSH:
+  - TBA
+
+  Shell:
+  - 'TCP port scanning in pure bash'
+
+  Containers:
+  - Using containers to build packages
+
+  Vim/Emacs:
+  - TBA
+
+  C coding:
+  - Appending to a file (O_APPEND)
+
+Talks:
+  Small Talks:
+    Title: Package content verification
+    - Verify the contents of a package using checksums for RPM and DEB.
+
+    Title: Prelinking
+    - Describe and demo prelinking
+
+  Big Talks:
+    Title:
+    - TBA
