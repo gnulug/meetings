@@ -30,7 +30,8 @@ Meeting Sections:
   - TBA
 
   Vim/Emacs:
-  - TBA
+  - leader mapping
+  - remote control
 
   C coding:
   - TBA
@@ -38,7 +39,7 @@ Meeting Sections:
 Talks:
   Small Talks:
     Title:
-    - TBA
+    - understanding `/dev/tcp` further (deedar, lbontu)
 
   Big Talks:
     Title:
