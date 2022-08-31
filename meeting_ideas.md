@@ -1,0 +1,271 @@
+- Installfest
+  - Decide between
+    - Dual-booting
+    - Nix or Guix setup
+    - WSL
+  - What is a Daemon?
+  - GitHub setup
+  - UIUC setup
+    - UIUC email in Thunderbird
+    - UIUC WiFi
+    - EWS machines
+    - rclone bisync
+- Dotfiles session
+  - Editors
+    - https://missing.csail.mit.edu/2020/editors/
+  - Shells
+  - Terminal multiplexers
+	- https://reddit.com/r/unixporn
+- Remote access
+  - SSH
+    - keys
+    - ~/.ssh/config
+    - /etc/sshd/config
+    - Debugging
+  - Mosh
+  - Transferring files
+    - scp
+    - rsync
+    - sshfs
+    - Tramp mode
+    - r
+    - Termbin
+    - Magic wormhole
+  - Port forwarding
+  - ngrok
+  - Tmux pair coding
+- Package manager
+  - System package manager
+  - Language package manager
+  - Build from source
+  - Functional package manager
+    - Nix
+      - Do together: write a Nix package?
+      - Devshell
+    - Guix
+    - Spack
+  - Containers
+    - Flatpak
+    - Snap
+    - AppImage
+    - Docker
+- Desktop and GUIs
+  - RDP (on our cluster?)
+  - Lightest possible desktop env competition
+  - Launcher
+  - Browsers
+    - Vimium, Vimperator
+  - Terminal emulator
+  - XPSWriter
+- Attach to existing meeting: open source software
+  - OSS revolution. Computing for users not corporations
+  - SIG POL
+	- Free as in speech vs free as in beer
+  - What is copyleft?
+	- MPL vs LGPL vs GPL
+- Containers and virtualization
+  - Virtual machines vs containers
+  - Virtual machines
+    - VirtualBox
+    - QEMU
+    - Vagrant
+  - Containers
+    - Nix
+    - Docker
+      - Namespaces https://website.peterjin.org/wiki/Notes_about_namespaces
+      - cgroups
+    - Podman
+    - OCI
+    - systemd containers
+    - chroot
+    - BSD jail
+- DevOps
+  - Use case for AWS/GCP/Azure/Openstack services
+  - Experiment on our Openstack?
+  - Terraform
+  - Helm
+  - Compute resource managers
+    - Docker compose
+    - Docker swarm
+    - k8s
+  - Google SRE book
+  - Cool systems
+    - Ceph
+    - IPFS
+    - Hadoop
+    - Spark
+    - Dask
+  - Explain data sharding
+- Distributed computing
+  - Schedulers
+    - k8s
+    - Slurm
+    - Hadoop
+    - Spark
+    - Dask
+  - Get time on campus cluster?
+  - Mirai botnet
+  - Processing big data processing on Linux
+    - Go through EDGAR-analysis
+    - Dask
+    - Slurm
+    - k8s
+    - S3
+    - charmonium.cache
+- Do together: Set up Minecraft server
+- Do together: Set up personal media server
+  - Music
+    - Do first, use in background for rest of meeting
+  - Movies/TV
+    - Wargames
+    - https://www.blender.org/about/studio/
+    - Silicon Valley
+- Do together: Setup a Matrix <-> {Discord, IRC, ...}
+  - Client
+  - Server
+- Do together: Pi-hole
+  - DNS
+  - Pinhole
+- Linux games
+  - Sauerbraten
+  - Minecraft
+- Cybersecurity
+  - Famous examples
+    - Mirai botnet
+    - Stuxnet
+- Distributed network
+  - WWW
+    - Mastedon
+    - Diaspora
+    - Micropub
+  - Scuttlebutt
+  - IPFS
+  - Bittorent
+  - TOR
+- Personal security
+  - Personal security
+  - Yubikey vs HTOP vs TOTP
+  - Full disk encryption
+  - GPG
+    - Just signing/verifying a file from command line
+    - Thunderbrid + GPG
+    - Git + GPG
+    - Keybase
+  - SIG PWNY
+  - TOR vs VPN
+  - Torrenting safely
+    - https://security.stackexchange.com/questions/129762/is-malware-distributed-with-pirated-software-actually-common
+  - Amnesic Live OS (Tails)
+  - How to set up and use dead drops (like Wikileaks)
+- Shell usage and scripting
+  - https://github.com/gnulug/cli-cheatsheet
+  - Scrpiting pitfalls
+    - `test` or `[`
+    - Why quotes around variable
+    - Why braces around variable
+    - Bash variable substitutions
+    - Subshells
+    - Functions
+    - Portability
+      - Bash: `$(())`
+      - Bash: `[[`
+    - `set -eoux NOUNSET PIPFAIL`
+    - `set +x`
+    - `cd $(dirname $0)`
+    - https://samgrayson.me/2021-01-01-shell/
+	- https://missing.csail.mit.edu/2020/shell-tools/
+	- https://missing.csail.mit.edu/2020/data-wrangling/
+  - https://missing.csail.mit.edu/2020/command-line/
+  - Unix Readline
+  - Alternative shells
+    - Ammonite
+    - Xonsh
+- Systems researchers
+  - Tianyin Xu or students
+  - Microkernels, GNU Hurd, FUSE
+  - Novel virtual memory schemes
+  - Elastic Cuckoo page tables
+- Systems tools
+  - ELF
+  - DWARF
+  - https://github.com/ajaymt/thorin
+  - ldd and `LD_LIBRARY_PATH`
+  - strace, ptrace
+- How to debug system software
+  - `set -eoux NOUNSET PIPFAIL`
+  - ldd and `LD_LIBRARY_PATH`
+  - `objdump`, `elfdump`, and `readelf`
+  - `dmesg` and `journalctl`
+  - strace, ptrace
+  - gdb
+  - `-g` builds
+  - `env`
+  - https://missing.csail.mit.edu/2020/debugging-profiling/
+  - GitHub issues
+  - E.g.
+    - https://github.com/spack/spack/issues/30373
+    - https://github.com/spack/spack/pull/30418
+    - https://github.com/dimitri/el-get/pull/2865
+- Kernel security and research
+  - SIG PWNY
+  - ASLR and KASLR
+- Do together: Implement a FUSE
+- Do together: Implement a syscall
+- Git session
+  - git config
+  - gitflow
+  - git bisect
+  - SRE thoughts
+    - Continuous integration
+  - GitHub pull requests
+- Data backups?
+  - rsync
+  - rclone
+- Do together: server security
+  - SIG PWNY
+  - sshd security
+    - Only ssh user group, not root
+	- Disable password login
+    - Complex logon protocols like SSO and 2FA
+    - Discuss alternative ports, port knocking
+  - fail2ban
+  - Monitoring
+    - Grafana
+    - Nagios
+- Writing in Linux
+  - Features:
+    - Plaintext (Git tracked)
+	  - Separate style from content
+    - Rich vs plain text
+    - Programmable
+	    - Bibliography management
+  - Presentations
+    - Revealjs
+      - Markdown
+    - Beamer + LaTeX
+  - Writing
+    - Markdown
+    - LaTeX
+    - Pandoc
+- Writing CLIs
+  - https://samgrayson.me/2021-01-01-shell/
+	- https://clig.dev/
+	- Typer, Typer-rich
+- Sysadmin careers
+  - SRE
+  - DevOps
+	- Ops
+	- Sysadmin
+	- SWE
+  - Guest speaker?
+- History of UNIX
+- Non-Linux Unixes?
+  - OpenBSD
+  - MINIX
+  - Dragonfly BSD
+  - Plan 9
+- Writing opensource packages
+  - Do together?
+  - Nix
+  - Guix
+  - Spack
