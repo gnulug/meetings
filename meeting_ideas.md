@@ -15,7 +15,7 @@
     - https://missing.csail.mit.edu/2020/editors/
   - Shells
   - Terminal multiplexers
-	- https://reddit.com/r/unixporn
+    - https://reddit.com/r/unixporn
 - Remote access
   - SSH
     - keys
@@ -57,12 +57,29 @@
     - Vimium, Vimperator
   - Terminal emulator
   - XPSWriter
-- Attach to existing meeting: open source software
+- Open source software revolution
   - OSS revolution. Computing for users not corporations
   - SIG POL
-	- Free as in speech vs free as in beer
-  - What is copyleft?
-	- MPL vs LGPL vs GPL
+  - History of Stallman and the FSF
+    - Free as in speech vs free as in beer
+    - Copyleft
+    - MPL vs LGPL vs GPL
+    - Proprietary BLOBs in Linux
+    - Proprietary firmware
+  - RevolutionOS
+  - Open hardware
+  - Opencola/Freebeer
+  - Creative Commons
+    - Blender movies
+    - Music
+  - Open standards
+    - Ogg, Vorbis, Matroska, Webm, PNG
+  - Linked data
+    - https://www.w3.org/DesignIssues/LinkedData.html
+  - US sanction on tornado cash
+  - Totalitarian governments
+  - Aaron Swartz
+  - CSS
 - Containers and virtualization
   - Virtual machines vs containers
   - Virtual machines
@@ -138,6 +155,8 @@
     - Mastedon
     - Diaspora
     - Micropub
+    - Indieweb
+    - https://www.w3.org/DesignIssues/LinkedData.html
   - Scuttlebutt
   - IPFS
   - Bittorent
@@ -173,8 +192,8 @@
     - `set +x`
     - `cd $(dirname $0)`
     - https://samgrayson.me/2021-01-01-shell/
-	- https://missing.csail.mit.edu/2020/shell-tools/
-	- https://missing.csail.mit.edu/2020/data-wrangling/
+    - https://missing.csail.mit.edu/2020/shell-tools/
+    - https://missing.csail.mit.edu/2020/data-wrangling/
   - https://missing.csail.mit.edu/2020/command-line/
   - Unix Readline
   - Alternative shells
@@ -222,10 +241,11 @@
   - rsync
   - rclone
 - Do together: server security
+  - https://github.com/gnulug/website/blob/master/presentations/security/index.html
   - SIG PWNY
   - sshd security
     - Only ssh user group, not root
-	- Disable password login
+    - Disable password login
     - Complex logon protocols like SSO and 2FA
     - Discuss alternative ports, port knocking
   - fail2ban
@@ -235,10 +255,10 @@
 - Writing in Linux
   - Features:
     - Plaintext (Git tracked)
-	  - Separate style from content
+      - Separate style from content
     - Rich vs plain text
     - Programmable
-	    - Bibliography management
+        - Bibliography management
   - Presentations
     - Revealjs
       - Markdown
@@ -249,14 +269,14 @@
     - Pandoc
 - Writing CLIs
   - https://samgrayson.me/2021-01-01-shell/
-	- https://clig.dev/
-	- Typer, Typer-rich
+    - https://clig.dev/
+    - Typer, Typer-rich
 - Sysadmin careers
   - SRE
   - DevOps
-	- Ops
-	- Sysadmin
-	- SWE
+    - Ops
+    - Sysadmin
+    - SWE
   - Guest speaker?
 - History of UNIX
 - Non-Linux Unixes?
@@ -269,3 +289,6 @@
   - Nix
   - Guix
   - Spack
+- Previous meetings
+  - https://github.com/gnulug/website/tree/master/guides
+  - https://github.com/gnulug/website/tree/master/presentations
