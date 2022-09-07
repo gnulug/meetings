@@ -3,7 +3,16 @@ Meeting Info: See website
 Date: 2022-09-07
 
 Talks:
-  - TBA
+  - ./options_for_running_linux.md
+  - ./dotfiles.md
 
 Next Meeting Topics:
-  - TBA (0)
+  - topic: Remote access
+    votes:
+    presenters:
+  - topic: Package management (system package managers, Spack, Nix, app containers)
+    votes:
+    presenters:
+  - topic: Deep dive on desktop environments (X11 vs Wayland, remote desktop protocol)
+    votes:
+    presenters:

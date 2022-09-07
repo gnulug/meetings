@@ -31,7 +31,7 @@ Next Meeting Topics:
 EOF
 }
 
-if ! [ -z $date ]
+if [ -z $date ]
 then
     get_day
 fi
