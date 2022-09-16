@@ -7,7 +7,42 @@
   - System-wide config file (/etc, /usr/local/etc)
     - Needs root
   - User config file (~/.thing or ~/.config/thing)
-  - Project-local config file (.envrc, .gitconfig)
+    - xdg specification is to use ~/.config/thing, which cleans up your home directory.
+    - https://github.com/b3nj5m1n/xdg-ninja
+  - Project-local config file (direnv)
+    -
+	```
+# Create a new folder for demo purposes.
+$ mkdir ~/my-project
+$ cd ~/my-project
+
+# Show that the FOO environment variable is not loaded.
+$ echo ${FOO}
+
+# Create a new .envrc. This file is bash code that is going to be loaded by
+# direnv.
+$ echo export FOO=foo > .envrc
+.envrc is not allowed
+
+# The security mechanism didn't allow to load the .envrc. Since we trust it,
+# let's allow its execution.
+$ direnv allow .
+direnv: reloading
+direnv: loading .envrc
+direnv export: +FOO
+
+# Show that the FOO environment variable is loaded.
+$ echo $FOO
+foo
+
+# Exit the project
+$ cd ..
+direnv: unloading
+
+# And now FOO is unset again
+$ echo $FOO
+
+	```
 
 - Dotfile management
   - Symlinks
@@ -34,7 +69,7 @@
         cd ~
     ```
   - Nix for dotfiles
-    - Demo
+    - https://github.com/charmoniumQ/dotfiles.nix/tree/main/home.nix
 
 - Dotfiles for:
   - Editor
