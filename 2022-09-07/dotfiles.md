@@ -10,7 +10,34 @@
   - Project-local config file (.envrc, .gitconfig)
 
 - Dotfile management
-  - Dotfiles for: editor, shell (aliases, env vars, UI), Git, terminal, terminal multiplexer
-  - Symlinks or copy?
-    - Hard to install on a new machine
-  - Manual, DIY own script, or use a dotfile manager?
+  - Symlinks
+    - Demo
+  - GNU Stow?
+    - Demo
+    -
+      ```
+        # Install Stow
+        sudo apt install -y stow
+
+        # Create the Stow directory
+        mkdir -p dotfiles
+        cd dotfiles
+
+        # Create an epic Bash config
+        mkdir bash
+        echo 'export PS1="\e[45m\u@\h :\w$ \e[m"' >> bash/.bash_profile
+
+        # Deploy our config
+        stow bash
+
+        # Test it out
+        cd ~
+    ```
+  - Nix for dotfiles
+    - Demo
+
+- Dotfiles for:
+  - Editor
+  - Shell (aliases, env vars, UI)
+  - Terminal
+  - Terminal multiplexer

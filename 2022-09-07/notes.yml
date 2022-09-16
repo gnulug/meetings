@@ -8,11 +8,13 @@ Talks:
 
 Next Meeting Topics:
   - topic: Remote access
-    votes:
+    votes: 0
     presenters:
   - topic: Package management (system package managers, Spack, Nix, app containers)
-    votes:
+    votes: 4
     presenters:
   - topic: Deep dive on desktop environments (X11 vs Wayland, remote desktop protocol)
-    votes:
-    presenters:
+    votes: 7
+    presenters: Russel
+  - topic: Linux from scratch
+    votes: 7
