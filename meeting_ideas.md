@@ -1,15 +1,3 @@
-- Installfest
-  - Decide between
-    - Dual-booting
-    - Nix or Guix setup
-    - WSL
-  - What is a Daemon?
-  - GitHub setup
-  - UIUC setup
-    - UIUC email in Thunderbird
-    - UIUC WiFi
-    - EWS machines
-    - rclone bisync
 - Dotfiles session
   - Editors
     - https://missing.csail.mit.edu/2020/editors/
@@ -158,7 +146,7 @@
   - TOR
 - Personal security
   - Personal security
-  - Yubikey vs HTOP vs TOTP
+  - Yubikey vs HOTP vs TOTP
   - Full disk encryption
   - GPG
     - Just signing/verifying a file from command line
