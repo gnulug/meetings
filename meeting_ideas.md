@@ -96,6 +96,12 @@
     - Spark
     - Dask
   - Explain data sharding
+- What is compiler bootstrapping?
+  - Reflections on Trusting Trust
+  - LLVM
+  - https://guix.gnu.org/blog/2018-bootstrapping-rust/
+  - Cross-compiling
+  - PyPy
 - Distributed computing
   - Schedulers
     - k8s
