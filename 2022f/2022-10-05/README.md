@@ -7,7 +7,7 @@ author: Samuel Grayson
 # You can read this file in plaintext or you can render it with `pandoc --standalone --to revealjs --output index.html README.md`
 ---
 
-# First projects
+# First, projects
 
 - Evan: 
 
