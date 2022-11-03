@@ -9,7 +9,7 @@ author: Samuel Grayson
 
 # First, projects
 
-- Evan: 
+- Evan: <https://github.com/evidlo/nanpa_lookup>
 
 # Monolithic, modular, or microkernel?
 
