@@ -55,3 +55,8 @@ clone(...)
 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1892568
 write(1, "ls done\n", 8) = 8
 ```
+
+# Using this for auditing
+
+- <akulg2@illinois.edu>
+- [STS Lab](https://sts.cs.illinois.edu/projects/)
