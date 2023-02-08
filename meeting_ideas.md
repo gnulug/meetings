@@ -1,3 +1,21 @@
+- General
+  - https://www.win.tue.nl/~aeb/linux/lk/lk.html
+- Async I/O
+  - https://libevent.org/
+  - https://github.com/thlorenz/libuv-dox
+  - http://www.kegel.com/c10k.html
+  - http://www.citi.umich.edu/projects/linux-scalability/reports/accept.html
+- Threads
+  - https://akkadia.org/drepper/nptl-design.pdf
+  - https://akkadia.org/drepper/glibcthreads.html
+  - https://dl.acm.org/doi/abs/10.1145/146941.146944
+  - https://dl.acm.org/doi/abs/10.1145/121132.121115
+- Select
+  - https://idea.popcount.org/2016-11-01-a-brief-history-of-select2/
+  - https://idea.popcount.org/2017-01-06-select-is-fundamentally-broken/
+  - https://idea.popcount.org/2017-02-20-epoll-is-fundamentally-broken-12/
+  - https://idea.popcount.org/2017-03-20-epoll-is-fundamentally-broken-22/
+  - https://idndx.com/the-implementation-of-epoll-1/
 - Dotfiles session
   - Editors
     - https://missing.csail.mit.edu/2020/editors/
@@ -11,14 +29,6 @@
     - /etc/sshd/config
     - Debugging
   - Mosh
-  - Transferring files
-    - scp
-    - rsync
-    - sshfs
-    - Tramp mode
-    - r
-    - Termbin
-    - Magic wormhole
   - Port forwarding
   - ngrok
   - Tmux pair coding
@@ -72,12 +82,20 @@
   - Containers
     - Nix
     - Docker
-      - Namespaces https://website.peterjin.org/wiki/Notes_about_namespaces
+      - Namespaces
+        - https://website.peterjin.org/wiki/Notes_about_namespaces
+        - https://en.wikipedia.org/wiki/Linux_namespaces
+        - https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs
+        - https://unix.stackexchange.com/questions/9714/what-is-the-need-for-fakeroot-command-in-linux
+        - https://wiki.debian.org/FakeRoot
+        - https://github.com/lethalman/nix-user-chroot/blob/master/main.c
       - cgroups
     - Podman
     - OCI
     - systemd containers
     - chroot
+      - https://medium.com/100-days-of-linux/chroot-a-linux-wonder-fc36ed08087e
+      - https://en.wikipedia.org/wiki/Chroot#Limitations
     - BSD jail
 - DevOps
   - Use case for AWS/GCP/Azure/Openstack services
@@ -193,6 +211,13 @@
   - Microkernels, GNU Hurd, FUSE
   - Novel virtual memory schemes
   - Elastic Cuckoo page tables
+- threads in the kernel
+  - Scheduler activations
+  - M:N threading
+  - Pthreads
+  - In other kernels
+- The Loader
+  - http://netwinder.osuosl.org/users/p/patb/public_html/elf_relocs.html
 - Systems tools
   - ELF
   - DWARF
