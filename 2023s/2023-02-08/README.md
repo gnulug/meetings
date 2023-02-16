@@ -1,5 +1,7 @@
 # Open source news
 
+- <https://docs.google.com/presentation/d/1ER1_F32MM9U7ucVI0BqKLFXszMeGwcc5SJV6U59I0ng/edit?usp=sharing>
+
 # Getting started in Linux
 
 - Meld
