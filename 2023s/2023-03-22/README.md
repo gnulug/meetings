@@ -1,11 +1,11 @@
-|                    | Apt/Dnf | Portage/AUR | Nix/Guix | Flatpak/Snappy | Docker/Podman | Spack | Static/Cosmopolitan |
-|--------------------+---------+-------------+----------+----------------+---------------+-------+---------------------|
-|                    |         |             |          |                |               |       |                     |
-|                    |         |             |          |                |               |       |                     |
-|                    |         |             |          |                |               |       |                     |
-|                    |         |             |          |                |               |       |                     |
-|                    |         |             |          |                |               |       |                     |
-|                    |         |             |          |                |               |       |                     |
+|                           | Apt/Dnf/PM | Portage/Ports/... | Nix/Guix | AppImage | Flatpak | Docker/Podman |
+|---------------------------+------------+-------------------+----------+----------+---------+---------------|
+| Reproducible builds       | No (guess) | No (guess)        | Yes!     | N/A      | N/A     | N/A           |
+| Is it fast?               | mid        | fast if $$$       | Fast     | Fast     | Fast    | Can be        |
+| Ecosystem completeness?   | YMMV       | Better maybe?     | Good     | Bad      | Good    | Good          |
+| Ecosystem up-to-dateness? | YMMV       | Better maybe?     | Good     | Ok?      | Good    | Good          |
+| Multiple simul versions   | No         |                   | Yes!     |          |         |               |
+|                           |            |                   |          |          |         |               |
 
 
 * Questions
