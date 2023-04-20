@@ -22,6 +22,52 @@
   - Shells
   - Terminal multiplexers
     - https://reddit.com/r/unixporn
+- Virt memory
+  - `/proc/$PID_OR_SELF/maps`
+  -
+  ```
+<address start>-<address end>  <mode>  <offset>   <major id:minor id>   <inode id>   <file path>
+559b8c418000-559b8c41a000      r--p    00000000          08:30               1708     /usr/bin/cat
+```
+  -
+```
+import re, pathlib, collections, shlex
+shared_paths = {}
+for proc_dir in pathlib.Path("/proc").iterdir():
+    if re.match("[0-9]+", proc_dir.name) and (proc_dir / "maps").exists():
+        try:
+            map_text = (proc_dir / "maps").read_text()
+        except PermissionError:
+            pass
+        else:
+            # yay, the read_text succeeded
+            proc_name = shlex.join((proc_dir / "cmdline").read_text().split("\x00"))
+            this_shared_paths = set()
+            for line in map_text.strip().split("\n"):
+                m = re.match("([a-z0-9]+)-([a-z0-9]+) +([a-z-]{4}) +([0-9a-z]+) +([0-9a-z]+):([0-9a-z]+) +([0-9]+) +([^ ].+|)", line)
+                if m is not None:
+                    addr_begin, addr_end, mode, offset, major, minor, inode, path = m.groups()
+                    path = path.partition(" ")[0]
+                    if mode[3] == "s":
+                        shared_paths.setdefault(path, set()).add(proc_name)
+                elif line.strip():
+                    print("Failed to parse:", line)
+k = 10
+print("printing top", k, "shared libraries")
+for path in sorted(shared_paths, key=lambda path: len(shared_paths[path]), reverse=True)[:k]:
+    processes = shared_paths[path]
+    print(path, "is used by", len(processes), "processes")
+    for process in processes:
+        print("  ", process)
+    print()
+```
+  - Contiguity
+  - write xor execute
+  - private xor shared
+  - Dynamic library loads
+  - Query dynamic library sharing?
+  - Fragmentation
+  - ELF specification
 - Remote access
   - SSH
     - keys
