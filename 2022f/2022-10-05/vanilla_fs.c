@@ -12,6 +12,8 @@
 #define MESSAGE_LEN 29
 char message[MESSAGE_LEN] = "Hello world!\nThis is a test.\n";
 
+char x = 4.0;
+
 int bb_getattr(const char* path, struct stat* stbuf, struct fuse_file_info*) {
 	if (strcmp(path, "/") == 0) {
 		stbuf->st_mode = S_IFDIR | 0777;

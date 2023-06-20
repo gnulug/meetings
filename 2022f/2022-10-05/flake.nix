@@ -11,7 +11,6 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system}; in
       rec {
-        # Use `nix develop` to get this shell.
         packages = {
           vanilla_fs = pkgs.stdenv.mkDerivation {
             name = "vanilla_fs";
@@ -26,6 +25,13 @@
               mkdir -p $out/bin
               mv vanilla_fs $out/bin
             '';
+          };
+          image = pkgs.dockerTools.buildLayeredImage {
+            contents = [
+              pkgs.dockerTools.binSh
+              packages.vanilla_fs
+            ];
+            name = "image";
           };
           default = packages.vanilla_fs;
         };

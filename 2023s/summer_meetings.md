@@ -1,0 +1,12 @@
+- 2023-05-17: No meeting
+- 2023-05-24: Work on servers
+- 2023-05-30: Work on servers
+- 2023-06-07: Tools (Nathan)
+- 2023-06-14: Nix
+- 2023-06-21: Work on servers (5 -- 6pm)
+- 2023-06-28: TBD
+- 2023-07-05: TBD
+- 2023-07-12: Sam is gone
+- 2023-07-19: Sam is gone
+- 2023-07-26: Sam is gone
+- 2023-08-02: TBD

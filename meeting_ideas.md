@@ -1,3 +1,49 @@
+- Self-hosted
+  - Mosh
+  - Router security
+  - Router port forwarding
+  - Docker compose vs Swarm vs Kubernetes
+  - Dynamic DNS
+  - ddclient
+  - Traefik vs NGINX vs HAProxy
+  - Letsencrypt
+  - httpbin
+  - HTTP basic auth vs Google OAuth
+  - SQL Databases (MySQL, MariaDB, PostgreSQL, SQLite)
+  - pwgen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - General
   - https://www.win.tue.nl/~aeb/linux/lk/lk.html
 - Async I/O
