@@ -1,3 +1,13 @@
+### Meeting types
+- Presentation on topics
+- Presentation on personal project / work / research
+- Installfest
+- Open source game night
+- Guest speaker
+- Documentary, FOSDEM screenings
+
+### Meeting ideas
+
 - Self-hosted
   - Mosh
   - Router security
@@ -11,39 +21,6 @@
   - HTTP basic auth vs Google OAuth
   - SQL Databases (MySQL, MariaDB, PostgreSQL, SQLite)
   - pwgen
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - General
   - https://www.win.tue.nl/~aeb/linux/lk/lk.html
 - Async I/O
@@ -71,7 +48,7 @@
 - Virt memory
   - `/proc/$PID_OR_SELF/maps`
   -
-  ```
+```
 <address start>-<address end>  <mode>  <offset>   <major id:minor id>   <inode id>   <file path>
 559b8c418000-559b8c41a000      r--p    00000000          08:30               1708     /usr/bin/cat
 ```
