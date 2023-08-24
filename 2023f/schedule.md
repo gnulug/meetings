@@ -23,7 +23,7 @@
 ### 2023-08-23
 - Discuss semestral plan
 - Discuss open house booth plans
-    - Russelll thinkpad
+    - Ruselll thinkpad
     - shkype demo just 1-1
     - Logo, Tux keyboard sticker, Tux, Linux Inside, GNU, NCSA Mosaic, LLVM - theta
     - site:github.com, filetype:svg
@@ -51,6 +51,8 @@
 - Cool people: 
     - Ed Krol - Hitchhiker's guide to the internet
     - Michelle Butler
+- IPv6
+- syscalls tracing
 
 
 
