@@ -6,20 +6,19 @@
 | 2023-08-30 (Wed) | avahi | charmomium, evidlo | - |
 | 2023-09-05 (Tues) | ACM Open House | - | We need to setup a booth and some activities |
 | 2023-09-06 (Wed) | Rice demo, shkype | - | 1st official meeting, expect increase from open house |
-| 2023-09-13 (Wed) | Intro to Linux | - | ? |
+| 2023-09-13 (Wed) | Intro to Linux | - | ? [see also](https://github.com/gnulug/meetings/tree/master/2023s/2023-02-08) |
 | 2023-09-20 (Wed) | Puppet | pngdeity | ? |
 | 2023-09-27 (Wed) | eBPF | Ruselll | ? |
 | 2023-10-04 (Wed) | Desktop Linux viruses | theta, charmomium | ? |
-| 2023-10-11 (Wed) | Shells | Everyone | Everyone talk about their favourite shells |
+| 2023-10-11 (Wed) | Shells | Everyone  | Everyone talk about their favourite shells [see also](https://github.com/gnulug/meetings/tree/master/2022f/2022-09-28) |
 | 2023-10-18 (Wed) | PostScript | evidlo | ? |
 | 2023-10-25 (Wed) | ? | - | ? |
 | 2023-11-01 (Wed) | Funny Hardware Day | - | ? |
 | 2023-11-08 (Wed) | System-level provenance | charmomium | Research |
-| 2023-11-15 (Wed) | Kernel types | - | ? |
+| 2023-11-15 (Wed) | Microkernels vs Linux | charmonium | [see also](https://github.com/gnulug/meetings/tree/master/2022f/2022-10-05) |
 | 2023-11-22 (Wed) | Give thanks | - | Fall break |
 | 2023-11-29 (Wed) | Linux Jeopardy | All members | - |
 | 2023-12-06 (Wed) | Open Source Game Night! | - | Last meeting of semester |
-
 ### 2023-08-23
 - Discuss semestral plan
 - Discuss open house booth plans
@@ -52,7 +51,12 @@
     - Ed Krol - Hitchhiker's guide to the internet
     - Michelle Butler
 - IPv6
-- syscalls tracing
+- The Linux Loader, ELF, LD_PRELOAD: https://github.com/gnulug/meetings/tree/master/2022f/2022-11-16
+- Syscalls:
+  - https://github.com/gnulug/meetings/tree/master/2022f/2022-10-26
+  - https://github.com/gnulug/meetings/tree/master/2022f/2022-11-02
+- I/O Multiplexing (select, poll, epoll, kqueue): https://github.com/gnulug/meetings/tree/master/2023s/2023-08-09
+- Virtualization: https://github.com/gnulug/meetings/tree/master/2023s/2023-02-15
 
 
 
