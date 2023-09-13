@@ -1,3 +1,10 @@
+# Shkype
+
+- [Repository](https://github.com/Evidlo/shkype/)
+
+
+# Ricing shell demo
+
 1. Choose shell: Bash, Zsh, Fish, Xonsh, others
   - Bash: standard, exists everywhere
   - Fish: good out-of-the-box configuration
