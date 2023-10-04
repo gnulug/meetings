@@ -2,7 +2,6 @@
 
 - [Repository](https://github.com/Evidlo/shkype/)
 
-
 # Ricing shell demo
 
 1. Choose shell: Bash, Zsh, Fish, Xonsh, others
