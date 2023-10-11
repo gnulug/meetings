@@ -1,0 +1,48 @@
+%!
+
+/longline {
+    0 1000 rlineto
+    stroke
+} def
+
+/numlines 100 def
+/degrees {360 numlines div} def
+
+/star {
+    numlines {
+        gsave
+        longline
+        grestore
+        degrees rotate
+        0 1 rmoveto
+    } repeat
+} def
+
+% 200 500 moveto
+% star
+
+300 500 moveto
+star
+
+% 400 500 moveto
+% star
+
+200 400 moveto
+star
+
+% 300 400 moveto
+% star
+
+% 400 400 moveto
+% star
+
+200 300 moveto
+star
+
+300 300 moveto
+star
+
+400 300 moveto
+star
+
+showpage
