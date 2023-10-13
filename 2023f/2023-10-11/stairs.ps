@@ -1,0 +1,23 @@
+%!
+
+/stepsize 15 def
+
+/stairs {
+    gsave
+    {
+        0 stepsize rlineto
+        stepsize 0 rlineto
+    } repeat
+    stroke
+    grestore
+} def
+
+400 0 moveto
+
+600 {
+    20 stairs
+    -4 10 rmoveto
+    4 rotate
+} repeat
+
+showpage
