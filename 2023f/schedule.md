@@ -13,7 +13,7 @@
 | 2023-10-11 (Wed) | PostScript | evidlo | ? |
 | 2023-10-18 (Wed) | Ricing 101 | Jenna | ? |
 | 2023-10-25 (Wed) | Provenance systems in Linux | charmomium  | - |
-| 2023-11-01 (Wed) | Shells | Everyone | Everyone talk about their favourite shells [see also](https://github.com/gnulug/meetings/tree/master/2022f/2022-09-28) |
+| 2023-11-01 (Wed) | GNU coreutils | Everyone | Mini presentations |
 | 2023-11-08 (Wed) | Funny Hardware Day | - | ? |
 | 2023-11-15 (Wed) | Microkernels vs Linux | charmonium | [see also](https://github.com/gnulug/meetings/tree/master/2022f/2022-10-05) |
 | 2023-11-22 (Wed) | Give thanks | - | Fall break |
