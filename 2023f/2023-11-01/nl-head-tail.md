@@ -1,5 +1,6 @@
 # `nl`
 - `nl` numbers lines
+- **Note** that `cat -n` or `cat --number` is an easier way to number the lines.
 - ```
   $ echo -e 'a\nb\nc'
   a
