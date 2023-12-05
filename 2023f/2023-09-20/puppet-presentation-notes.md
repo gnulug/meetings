@@ -76,7 +76,7 @@ A software *system*. Or, in it's own words, a "system configuration management t
 
 ---
 
-Models for applying change (see [the video](the video))
+Models for applying change (see [the recording](https://youtube.com/live/7fKXYXHBN6g?feature=share))
 * push/pull
 * Divergence/Confluence/Congruence
 EXIT METHOD Systems Theory
