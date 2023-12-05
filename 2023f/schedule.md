@@ -7,7 +7,7 @@
 | 2023-09-05 (Tues) | ACM Open House | - | We need to setup a booth and some activities |
 | 2023-09-06 (Wed) | Rice demo, shkype | - | 1st official meeting, expect increase from open house |
 | 2023-09-13 (Wed) | Intro to Linux | - | ? [see also](https://github.com/gnulug/meetings/tree/master/2023s/2023-02-08) |
-| 2023-09-20 (Wed) | Puppet | pngdeity | ? |
+| 2023-09-20 (Wed) | Puppet | [pngdeity](github.com/pngdeity) | [Slides & notes](https://github.com/gnulug/meetings/tree/master/2023f/2023-09-20/) [Recording](https://www.youtube.com/watch?v=7fKXYXHBN6g) |
 | 2023-09-27 (Wed) | eBPF | Ruselll | ? |
 | 2023-10-04 (Wed) | Desktop Linux viruses | theta, charmomium | ? |
 | 2023-10-11 (Wed) | PostScript | evidlo | ? |
