@@ -1,6 +1,6 @@
 Category, Points, Question, Answer
-Note, Note, Note, Note, Only read this file if you do not intend to play jeopardy, in which case, scroll down.
-Note, Note, Note, Note, Use ﹐ U+FE50 SMALL COMMA (sparingly) when you absolutely must write a comma without disrupting the CSV format
+Note, Note, Note, Only read this file if you do not intend to play jeopardy--in which case scroll down.
+Note, Note, Note, Use ﹐ U+FE50 SMALL COMMA (sparingly) when you absolutely must write a comma without disrupting the CSV format
 
 
 
@@ -107,7 +107,7 @@ Name the GLUGger, 1000, This username belongs to a GLUGger that has over 2000 ed
 
 ASCIIbetical,200,Expand the acronym ASCII,American Standard Code for Information Interchange
 ASCIIbetical,400,Give the C escape sequence that rings a bell when printed,\adisdusok`
-ASCIIbetical,600,Give the character sequences used to represent newlines on Windows, Mac, and Linux respectively,CR LF; LF; CR; accept answers that use C escape sequences \r\n; …
+ASCIIbetical,600,Give the character sequences used to represent newlines on Windows Mac pre-OS X and Linux respectively,CR LF; CR; LF; accept answers that use C escape sequences \r\n; …
 ASCIIbetical,800,This encoding is used to represent Unicode website hostnames within the ASCII character groups permitted in hostnames?,Punycode
 ASCIIbetical,1000,CSV uses a comma to separate fields which means commas can’t be used within the fields except for vendor-specific escape sequences; What character does ASCII introduce – which is sadly rarely used – to address this problem?,Record separator and Group separator characters
 
@@ -117,7 +117,7 @@ Keepin’ it in the family,600,Arthur C. Clarke’s antagonist AI from Urbana IL
 Keepin’ it in the family,800,Wide-area packet-switched network; also brought UIUC online,ARPANET
 Keepin’ it in the family,1000,This early computer-assisted instruction system developed at UIUC included many modern concepts such as forums﹐ message boards﹐ online testing﹐ email﹐ chat rooms﹐ picture languages﹐ instant messaging﹐ remote screen sharing﹐ and multiplayer video games in the 1960s and ‘70s.,PLATO
 
-UNIX powertools II,200,Find the PID of the Python process in a script,pgrep python # note that ps | grep python | cut would show the PID of the calling process too, so unless the answerer writes a filter to handle that, it is wrong
+UNIX powertools II,200,Find the PID of the Python process in a script,pgrep python # note that ps | grep python | cut would show the PID of the calling process too; unless the answerer writes a filter to handle that it is wrong
 UNIX powertools II,400,(Assuming only POSIX utils) how much space does this huge directory consume–briefly,du -sh # note the answer should include -s or else it will display the size of every file in the directory
 UNIX powertools II,600,Convert file.csv to file.tsv,tr﹐‘\t’ < file.csv > file.tsv # other solutions are possible
 UNIX powertools II,800,Print the UNIX timestamp,date +%s # this is very useful if you need a unique number to name log files since PIDs can be reused
