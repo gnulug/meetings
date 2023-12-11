@@ -1,6 +1,8 @@
 Category, Points, Question, Answer
 Note, Note, Note, Only read this file if you do not intend to play jeopardy--in which case scroll down.
-Note, Note, Note, Use ﹐ U+FE50 SMALL COMMA (sparingly) when you absolutely must write a comma without disrupting the CSV format
+Note, Note, Note, Use ﹐ U+FE50 SMALL COMMA when you absolutely must write a comma without disrupting the CSV format
+Note, Note, Note, Use single-quotes ' because GitHub treats double-quotes as an escape character.
+Note, Note, Note, This file can be rendered using https://uh.edu/~smiertsc/jeopardy/#
 
 
 
@@ -79,7 +81,7 @@ Jargon File, 200, This kind of program can be written in one line of C (main() {
 Jargon File, 400, The command interpreter used to pass commands to an operating system; so called because it is the part of the operating system that interfaces with the outside world., Shell
 Jargon File, 600, A language based on the ideas of (a) variable-length lists and trees as fundamental data types and (b) the interpretation of code as data and vice-versa., LISP
 Jargon File, 800, A clever programming trick intended to solve a particular nasty case in an expedient–if unclear–manner. Often used to repair bugs. Often involves ad-hockery, Kludge or kluge
-Jargon File, 1000, Eponymous law that software and the organization of the software team will be congruent; commonly stated as "If you have four groups working on a compiler you'll get a 4-pass compiler", Conway’s Law
+Jargon File, 1000, Eponymous law that software and the organization of the software team will be congruent; commonly stated as 'If you have four groups working on a compiler you'll get a 4-pass compiler', Conway’s Law
 
 Distrowars, 200, This distribution is the oldest one that is still maintained, Slackware
 Distrowars, 400, This discontinued OS was based on Research Unix and is developed and distributed by the Computer Systems Research Group at a prominent university in California, BSD
@@ -89,14 +91,14 @@ Distrowars, 1000, This distro is built from the source code of Red Hat Enterpris
 
 UNIX powertools,200,Test if files are identical,diff file0 file1 && echo ‘identical’ || echo ‘not identical’
 UNIX powertools,400,Use GNU tar to extract a compressed archive verbosely,tar xzvf
-UNIX powertools,600,Use rsync to copy the directory "work" to a new directory named "work_backup" in the remote host "remote",rsync -avz work/ remote:work_backup # note the answer must contain the trailing slash on work
+UNIX powertools,600,Use rsync to copy the directory 'work' to a new directory named 'work_backup' in the remote host 'remote',rsync -avz work/ remote:work_backup # note the answer must contain the trailing slash on work
 UNIX powertools,800,Your photo album is taking up too much space; reencode file.jpg file in the current directory at a higher compression level,convert file.jpg -quality 80% file_compressed.jpg ; rm file.jpg # Note convert cannot read and write to the same file. Accept any quality reduction in place of 80%
 UNIX powertools,1000,Apply a command $cmd (perhaps the one from CLI 800) to every *.jpg file in a directory,find . -name ‘*.jpg’ -exec $cmd \; or ls *.jpg | xargs -n 1 $cmd
 
 That’s not POSIX,200,When a C function returns NULL on error it will often use this to indicate what kind of error occurred,errno
 That’s not POSIX,400,POSIX incompliant implementation of POSIX commands that most Linuxes use,GNU Coreutils
 That’s not POSIX,600,Two of these characters where the shell expects a conditional invokes a POSIX incompliant feature of Bash,[Square] brackets
-That’s not POSIX,800,Most popular implementation of the C standard POSIX library "with extensions" for Linux,GNU Libc or glibc
+That’s not POSIX,800,Most popular implementation of the C standard POSIX library 'with extensions' for Linux,GNU Libc or glibc
 That’s not POSIX,1000,Give a POSIX incompliant non-empty path; try to think about what would confuse a C programmer,Answer must contain ASCII null byte
 
 Name the GLUGger, 200, This GLUGger owns a piece of Free Software Foundation apparel, Russel
@@ -127,24 +129,24 @@ Net working,200,Transport and internet layer used for the capital-I Internet,TCP
 Net working,400,We used to use TCP but speed is more important than reliability so we switched to ___,UDP
 Net working,600,HTTP connections consist of a host name like bank.com and data like a password; which of these are encrypted by HTTPS,Just the password
 Net working,800,What tool would one use to hide the host names of the sites they were visiting?,HTTPS proxy or VPN or TOR
-Net working,1000,This network is a peer-to-peer distributed hash where users "collaboratively" distribute a file,BitTorrent aka torrent
+Net working,1000,This network is a peer-to-peer distributed hash where users 'collaboratively' distribute a file,BitTorrent aka torrent
 
-i-luv-lee-nux, 200, Torvalds famously said "F*** you" to this company during a QnA session, Nvidia
+i-luv-lee-nux, 200, Torvalds famously said 'F*** you' to this company during a QnA session, Nvidia
 i-luv-lee-nux, 400, This line is the first sentence of a (in)-famous Linux copypasta - proposing the term GNU/Linux instead of just Linux, I'd just like to interject for a moment.
 i-luv-lee-nux, 600, This prominent OS professor got into a usenet debate with Linux Torvalds - his claim was that Linux’s design was obsolete, Andrew S. Tanenbaum
 i-luv-lee-nux, 800, The original name that Torvalds gave to the OS he wrote, Freax
-i-luv-lee-nux, 1000, This company is the originator of the leaked "Halloween documents" - documenting strategies to counter OSS and specifically Linux, Microsoft
+i-luv-lee-nux, 1000, This company is the originator of the leaked 'Halloween documents' - documenting strategies to counter OSS and specifically Linux, Microsoft
 
 OS Research, 200, Last year we discussed a kind of kernel which seeks to remain as small as possible and delegate almost everything else to userspace, Microkernel
 OS Research, 400, The default O(1) scheduler in Linux until 6.6, Completely Fair Scheduler
 OS Research, 600, The new scheduler used by Linux after 6.6 which improves latency for latency-sensitive tasks, Earliest eligible virtual deadline first scheduler
-OS Research, 800, A kind of virtualization where the guest OS "knows" it is running on virtual hardware and provides optimizations for that case, Paravirtualization
+OS Research, 800, A kind of virtualization where the guest OS 'knows' it is running on virtual hardware and provides optimizations for that case, Paravirtualization
 OS Research, 1000, This feature of Linux makes the dynamically allocated pointers used by a program unpredictable even if an attacker knows the arguments of every call to malloc(), Address-space layout randomization
 
-"Smart" people, 200, He created the python language and was known as "Benevolent Dictator for Life", Guido Van Rossum
-"Smart" people, 400, This person was once a professor in UIUC and is primarily famous for creating a mathematical software system and a programming language to use it, Stephen Wolfram
-"Smart" people, 600, He founded Canonical - the parent company behind Ubuntu and other derivatives, Mark Shuttleworth
-"Smart" people, 800, He is famous for writing vi - the visual editor for ex, Bill Joy
-"Smart" people, 1000, This Canadian programmer wrote pacman – the package management software that eventually spawned distros like Arch Linux, Judd Vinet
+'Smart' people, 200, He created the python language and was known as 'Benevolent Dictator for Life', Guido Van Rossum
+'Smart' people, 400, This person was once a professor in UIUC and is primarily famous for creating a mathematical software system and a programming language to use it, Stephen Wolfram
+'Smart' people, 600, He founded Canonical - the parent company behind Ubuntu and other derivatives, Mark Shuttleworth
+'Smart' people, 800, He is famous for writing vi - the visual editor for ex, Bill Joy
+'Smart' people, 1000, This Canadian programmer wrote pacman – the package management software that eventually spawned distros like Arch Linux, Judd Vinet
 
 Final Jeopardy,1,,Name as many browsers as you can (duplicate engines allowed)
