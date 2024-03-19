@@ -51,3 +51,31 @@ A package manager is a program that can install, update, and remove other progra
 - Parameterized via the `spec` argument of the `install` method
 
 ![](SpackPackage.png)
+
+## Spack Specs
+
+- Specification on an install supplied after `spack install`
+  - Small enough usually to be a command line parameter
+  
+##
+
+![](Specs.png)
+
+##
+
+![](MoreSpecs.png)
+![](SpecsInDependsOn.png)
+
+## Concretization
+
+1. Spack intersects the DAG from the user's specs and another DAG created from directives in the package files
+  - There may be conflicts if the user inadvertedly requests two versions of the same package, for example
+2. Resolve virtual dependencies into normal dependencies
+  - Select a particular implementation of MPI, BLAS, etc.
+3. Greedily select concrete versions of packages until entire DAG is concrete
+  - NOTE: this is all from their 2015 paper - "We leave automatic constraint space exploration for future work."
+
+##
+
+![](ConcreteAlgo.png)
+![](ConcreteExample.png)
