@@ -69,10 +69,10 @@ A package manager is a program that can install, update, and remove other progra
 - Binary: faster, requires centralized repo
 - Centralized repos are expensive, get purged, require trust
 - ```Dockerfile
-FROM debian:stretch
-RUN apt-get update
-# hangs forever after 2024 :)
-```
+  FROM debian:stretch
+  RUN apt-get update
+  # hangs forever after 2024 :)
+  ```
 - From-source with binary cache is almost as fast
   - Public cache or site-wide cache
 
@@ -81,7 +81,7 @@ RUN apt-get update
 - Priv: Write pkgs to `/bin` ([Filesystem Standard](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html))
   - Share packages between users
   - Makes sense when disk space was expensive; Now its hard to change
-- Unprivi: Write pkgs to `$PREFIX` & add to `$PATH`
+- Unpriv: Write pkgs to `$PREFIX` & add to `$PATH`
   - Principle of least privilege
   - Allows multiple envs
   - Optional privileged daemon, still share packages between users
@@ -96,6 +96,7 @@ RUN apt-get update
   - Some algos using SAT-solvers ([1](https://hal.science/hal-00149566/document) [2](https://ieeexplore.ieee.org/abstract/document/4222580) [3](https://docs.0install.net/developers/solver/) [4](https://github.com/openSUSE/libsolv))
 - After 2020, Pip uses SAT solve
 - Slowest part of conda is often solving!
+- [APT can solve sudoku](https://web.archive.org/web/20160329115022/http://algebraicthunk.net/~dburrows/blog/entry/package-management-sudoku/)
 
 ## Avoid dep solves: 1 version
 
