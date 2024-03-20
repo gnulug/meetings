@@ -2,26 +2,156 @@
 title: "Package Managers"
 ---
 
+##
+
 Compile me with:
 
 ```
 pandoc --standalone --to=revealjs --output=README.html README.md
 ```
 
----
+## Objectives
+
+- Why are there so many package managers?
+- How do their design choices differ?
+- Take only 20 mins
 
 ## Definition
 
-A package manager is a program that can install, update, and remove other programs
+A package manager is a program that can install, update, and remove other programs. Installation should also install the program's dependencies at compatible versions.
 
-## Axes of differentiation
+- Excludes dpkg/RPM in favor of APT/YUM
+- Excludes frontends (Aptitude, ...)
+- Excludes XStow/GNU Stow
+
+## Major axes of differentiation
 
 - Binary or from source
-  - If from source: reproducible, locally optimized, or neither
-  - If from source: binary cache or not
-- Requires superuser or not
-- Supports multiple environments or not
-- Resolves dependency versions or single consistent version
+- Requires privilege or not
+- Dependency solver (multiple installable versions) or not
+
+##
+
+<style>
+#sams-matrix {
+  font-size: 4vh;
+}
+</style>
+<table id="sams-matrix">
+<thead>
+<tr><th>Source?</th><th>Unpriv?</th><th>Dep solv?</th><th>Examples</th></tr>
+</thead>
+<tbody>
+<tr><td>N</td><td>N</td><td>N</td><td>Distro pkg mgrs (XBPS, Pacman)</td></tr>
+<tr><td>N</td><td>N</td><td>Y</td><td>Distro pkg mgrs (APT, DNF, APK)</td></tr>
+<tr><td>N</td><td>Y</td><td>N</td><td></td></tr>
+<tr><td>N</td><td>Y</td><td>Y</td><td>Conda, 0install</td></tr>
+<tr><td>Y</td><td>N</td><td>N</td><td>XBPS-src</td></tr>
+<tr><td>Y</td><td>N</td><td>Y</td><td></td></tr>
+<tr><td>Y</td><td>Y</td><td>N</td><td>Ports-inspired (pkgsrc, Portage, MacPorts, Home/Linuxbrew), Functional pkg mgrs (Nix, Guix)</td></tr>
+<tr><td>Y</td><td>Y</td><td>Y</td><td>Spack, 0install, $lang-level</td></tr>
+</tbody>
+</table>
+
+## Caveats
+
+- Based on how they are used not theoretical capabilities.
+
+- If install build-deps and invoke compiler is not automatic, it's not build-from-source
+  - e.g., I call APT "not from source" even though apt-source exists
+
+- [Gentoo Prefix on other OSes](https://wiki.gentoo.org/wiki/Project:Prefix/Use_cases)
+
+- [0install comparison matrix](https://docs.0install.net/about/comparison/)
+
+## Binary vs source
+
+- Binary: faster, requires centralized repo
+- Centralized repos are expensive, get purged, require trust
+- ```Dockerfile
+FROM debian:stretch
+RUN apt-get update
+# hangs forever after 2024 :)
+```
+- From-source with binary cache is almost as fast
+  - Public cache or site-wide cache
+
+## Privilege vs unprivileged
+
+- Priv: Write pkgs to `/bin` ([Filesystem Standard](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html))
+  - Share packages between users
+  - Makes sense when disk space was expensive; Now its hard to change
+- Unprivi: Write pkgs to `$PREFIX` & add to `$PATH`
+  - Principle of least privilege
+  - Allows multiple envs
+  - Optional privileged daemon, still share packages between users
+
+## Dependency solving: Diamonds
+
+<img src="https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/media/dependencies/diamond-dependency.png" alt="App deps on Web lib; App deps on Logging lib; Web lib deps on JSON lib &gt;=1.0; Logging lib deps on JSON &gt;= 2.0" />
+
+## Dependency solving is NP-complete
+
+- Solving dep versions is NP-complete. [Proof](https://research.swtch.com/version-sat)
+  - Some algos using SAT-solvers ([1](https://hal.science/hal-00149566/document) [2](https://ieeexplore.ieee.org/abstract/document/4222580) [3](https://docs.0install.net/developers/solver/) [4](https://github.com/openSUSE/libsolv))
+- After 2020, Pip uses SAT solve
+- Slowest part of conda is often solving!
+
+## Avoid dep solves: 1 version
+
+- [Golden Rule: globally coherent versions](https://www.haskellforall.com/2022/05/the-golden-rule-of-software.html)
+  - E.g., [Stackage](https://www.fpcomplete.com/blog/stackage-server/), globally coherent set of Hackage packages (Haskell)
+- Distro pkg mgrs (APT, DNF) and functional pkg mgrs (Nix, Guix) get on fine
+- Volunteer developers maintaining more than one release? Hard
+
+## Avoid dep solves: Semver
+
+- Semver dictates same major-version, at least greater bugfix/patch >=3.7.1,<4
+- Don't know when breaking compatibility ([Hyrum's law](https://www.hyrumslaw.com/))
+  - E.g., [1](https://github.com/pyca/cryptography/issues/5771#issuecomment-775990406), [2](https://github.com/ipython/ipython/issues/12740), [3 ](https://twitter.com/brettsky/status/1262077534797041665) , 
+
+## 
+
+<a href="https://xkcd.com/1172/">
+<img src="https://imgs.xkcd.com/comics/workflow_2x.png" alt="There are probably children out there holding down spacebar to stay warm in the winter! YOUR UPDATE MURDERS CHILDREN. (copied image and alt from XKCD)"/>
+</a>
+
+<!--
+## $Lang package managers
+
+- Library development vs application deployment
+  - Spec file vs lock file
+  - Known to be compatible vs known to be incompatible
+- Are version caps bad?
+  - [Should Stackage ignore version bounds?](https://www.stackage.org/blog/2018/01/ignore-version-bounds)
+  - [Lenient lower bounds](https://www.fpcomplete.com/blog/lenient-lower-bounds/)
+  - [Never version cap](https://iscinumpy.dev/post/bound-version-constraints/#tldr)
+-->
+
+## Avoid dep solves: Private deps
+
+- "Private" deps
+  - No types or fns in public interface (or split into two libraries) and no globals
+- [Why does this not cause problems in JS?](https://stackoverflow.com/questions/25268545/why-does-npms-policy-of-duplicated-dependencies-work)
+- [NPM deps vs peer-deps; can other languages?](https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/)
+- [npm dedupe](https://docs.npmjs.com/cli/v10/commands/npm-dedupe)
+- [Can Haskell do that too](https://www.reddit.com/r/haskell/comments/4zc6y3/comment/d6vkm62/)
+- Could deps be classified pub/priv with static analysis?
+
+## Bootstrapping
+
+- Nix, Spack: prerequisites including C compiler [Nix](https://nixos.org/manual/nix/stable/installation/prerequisites-source) and [Spack](https://spack.readthedocs.io/en/latest/getting_started.html)
+- [Reflections on Trusting Trust](https://dl.acm.org/doi/abs/10.1145/358198.358210)
+- [Guix full-source bootstrap](https://guix.gnu.org/en/blog/2023/the-full-source-bootstrap-building-from-source-all-the-way-down/)
+
+## $lang pkg mgrs
+
+- Examples: Pip, Cargo, NPM, Yarn, RubyGems, CPAN, Stack, Cabal, opam, Maven, SBT, tlmgr
+- Supports multiple environments (usually)
+- Downloads/builds source (usually)
+- Privs only required for global env (usually)
+- Shoddy support for native code (usually)
+- Has dep solver (usually)
 
 ## Spack
 
