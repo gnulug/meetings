@@ -85,3 +85,16 @@ A package manager is a program that can install, update, and remove other progra
 
 ![](ConcreteAlgo.png)
 ![](ConcreteExample.png)
+
+## Concretization Today
+
+- Uses a logic solver to support full backtracing and optimization
+  - Called `clingo`
+- Written using Prolog
+
+## Concretization Today
+
+- Unfortunately, there isn't much public writing about `clingo`
+- Gist: express constraints on concrete spec based on abstract DAG
+- Dispatch logic solver (Prolog) to solve all of the constraints
+- NP-complete, but fast in practice
