@@ -10,6 +10,8 @@ Compile me with:
 pandoc --standalone --to=revealjs --output=README.html README.md
 ```
 
+Or view [here](https://htmlpreview.github.io/?https://github.com/gnulug/meetings/blob/master/2024s/2024-03-20/README.html)
+
 ## Objectives
 
 - Why are there so many package managers?
@@ -45,8 +47,8 @@ A package manager is a program that can install, update, and remove other progra
 <tr><td>N</td><td>N</td><td>N</td><td>Distro pkg mgrs (XBPS, Pacman)</td></tr>
 <tr><td>N</td><td>N</td><td>Y</td><td>Distro pkg mgrs (APT, DNF, APK)</td></tr>
 <tr><td>N</td><td>Y</td><td>N</td><td></td></tr>
-<tr><td>N</td><td>Y</td><td>Y</td><td>Conda, 0install</td></tr>
-<tr><td>Y</td><td>N</td><td>N</td><td>XBPS-src</td></tr>
+<tr><td>N</td><td>Y</td><td>Y</td><td>Conda</td></tr>
+<tr><td>Y</td><td>N</td><td>N</td><td></td></tr>
 <tr><td>Y</td><td>N</td><td>Y</td><td></td></tr>
 <tr><td>Y</td><td>Y</td><td>N</td><td>Ports-inspired (pkgsrc, Portage, MacPorts, Home/Linuxbrew), Functional pkg mgrs (Nix, Guix)</td></tr>
 <tr><td>Y</td><td>Y</td><td>Y</td><td>Spack, 0install, $lang-level</td></tr>

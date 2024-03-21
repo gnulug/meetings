@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Package Managers</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Package Managers</h1>
+</section>
+
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Compile me with:</p>
+<pre><code>pandoc --standalone --to=revealjs --output=README.html README.md</code></pre>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<ul>
+<li>Why are there so many package managers?</li>
+<li>How do their design choices differ?</li>
+<li>Take only 20 mins</li>
+</ul>
+</section>
+<section id="definition" class="slide level2">
+<h2>Definition</h2>
+<p>A package manager is a program that can install, update, and remove
+other programs. Installation should also install the program’s
+dependencies at compatible versions.</p>
+<ul>
+<li>Excludes dpkg/RPM in favor of APT/YUM</li>
+<li>Excludes frontends (Aptitude, …)</li>
+<li>Excludes XStow/GNU Stow</li>
+</ul>
+</section>
+<section id="major-axes-of-differentiation" class="slide level2">
+<h2>Major axes of differentiation</h2>
+<ul>
+<li>Binary or from source</li>
+<li>Requires privilege or not</li>
+<li>Dependency solver (multiple installable versions) or not</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<style>
+#sams-matrix {
+  font-size: 4vh;
+}
+</style>
+<table id="sams-matrix">
+<thead>
+<tr>
+<th>
+Source?
+</th>
+<th>
+Unpriv?
+</th>
+<th>
+Dep solv?
+</th>
+<th>
+Examples
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+Distro pkg mgrs (XBPS, Pacman)
+</td>
+</tr>
+<tr>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+Distro pkg mgrs (APT, DNF, APK)
+</td>
+</tr>
+<tr>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Conda, 0install
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+XBPS-src
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+Ports-inspired (pkgsrc, Portage, MacPorts, Home/Linuxbrew), Functional
+pkg mgrs (Nix, Guix)
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Spack, 0install, $lang-level
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="caveats" class="slide level2">
+<h2>Caveats</h2>
+<ul>
+<li><p>Based on how they are used not theoretical capabilities.</p></li>
+<li><p>If install build-deps and invoke compiler is not automatic, it’s
+not build-from-source</p>
+<ul>
+<li>e.g., I call APT “not from source” even though apt-source
+exists</li>
+</ul></li>
+<li><p><a
+href="https://wiki.gentoo.org/wiki/Project:Prefix/Use_cases">Gentoo
+Prefix on other OSes</a></p></li>
+<li><p><a href="https://docs.0install.net/about/comparison/">0install
+comparison matrix</a></p></li>
+</ul>
+</section>
+<section id="binary-vs-source" class="slide level2">
+<h2>Binary vs source</h2>
+<ul>
+<li>Binary: faster, requires centralized repo</li>
+<li>Centralized repos are expensive, get purged, require trust</li>
+<li><div class="sourceCode" id="cb2"><pre
+class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> debian:stretch</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RUN</span> <span class="ex">apt-get</span> update</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># hangs forever after 2024 :)</span></span></code></pre></div></li>
+<li>From-source with binary cache is almost as fast
+<ul>
+<li>Public cache or site-wide cache</li>
+</ul></li>
+</ul>
+</section>
+<section id="privilege-vs-unprivileged" class="slide level2">
+<h2>Privilege vs unprivileged</h2>
+<ul>
+<li>Priv: Write pkgs to <code>/bin</code> (<a
+href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html">Filesystem
+Standard</a>)
+<ul>
+<li>Share packages between users</li>
+<li>Makes sense when disk space was expensive; Now its hard to
+change</li>
+</ul></li>
+<li>Unpriv: Write pkgs to <code>$PREFIX</code> &amp; add to
+<code>$PATH</code>
+<ul>
+<li>Principle of least privilege</li>
+<li>Allows multiple envs</li>
+<li>Optional privileged daemon, still share packages between users</li>
+</ul></li>
+</ul>
+</section>
+<section id="dependency-solving-diamonds" class="slide level2">
+<h2>Dependency solving: Diamonds</h2>
+<p><img src="https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/media/dependencies/diamond-dependency.png" alt="App deps on Web lib; App deps on Logging lib; Web lib deps on JSON lib &gt;=1.0; Logging lib deps on JSON &gt;= 2.0" /></p>
+</section>
+<section id="dependency-solving-is-np-complete" class="slide level2">
+<h2>Dependency solving is NP-complete</h2>
+<ul>
+<li>Solving dep versions is NP-complete. <a
+href="https://research.swtch.com/version-sat">Proof</a>
+<ul>
+<li>Some algos using SAT-solvers (<a
+href="https://hal.science/hal-00149566/document">1</a> <a
+href="https://ieeexplore.ieee.org/abstract/document/4222580">2</a> <a
+href="https://docs.0install.net/developers/solver/">3</a> <a
+href="https://github.com/openSUSE/libsolv">4</a>)</li>
+</ul></li>
+<li>After 2020, Pip uses SAT solve</li>
+<li>Slowest part of conda is often solving!</li>
+<li><a
+href="https://web.archive.org/web/20160329115022/http://algebraicthunk.net/~dburrows/blog/entry/package-management-sudoku/">APT
+can solve sudoku</a></li>
+</ul>
+</section>
+<section id="avoid-dep-solves-1-version" class="slide level2">
+<h2>Avoid dep solves: 1 version</h2>
+<ul>
+<li><a
+href="https://www.haskellforall.com/2022/05/the-golden-rule-of-software.html">Golden
+Rule: globally coherent versions</a>
+<ul>
+<li>E.g., <a
+href="https://www.fpcomplete.com/blog/stackage-server/">Stackage</a>,
+globally coherent set of Hackage packages (Haskell)</li>
+</ul></li>
+<li>Distro pkg mgrs (APT, DNF) and functional pkg mgrs (Nix, Guix) get
+on fine</li>
+<li>Volunteer developers maintaining more than one release? Hard</li>
+</ul>
+</section>
+<section id="avoid-dep-solves-semver" class="slide level2">
+<h2>Avoid dep solves: Semver</h2>
+<ul>
+<li>Semver dictates same major-version, at least greater bugfix/patch
+&gt;=3.7.1,&lt;4</li>
+<li>Don’t know when breaking compatibility (<a
+href="https://www.hyrumslaw.com/">Hyrum’s law</a>)
+<ul>
+<li>E.g., <a
+href="https://github.com/pyca/cryptography/issues/5771#issuecomment-775990406">1</a>,
+<a href="https://github.com/ipython/ipython/issues/12740">2</a>, <a
+href="https://twitter.com/brettsky/status/1262077534797041665">3</a>
+,</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><a href="https://xkcd.com/1172/">
+<img src="https://imgs.xkcd.com/comics/workflow_2x.png" alt="There are probably children out there holding down spacebar to stay warm in the winter! YOUR UPDATE MURDERS CHILDREN. (copied image and alt from XKCD)"/>
+</a></p>
+<!--
+## $Lang package managers
+
+- Library development vs application deployment
+  - Spec file vs lock file
+  - Known to be compatible vs known to be incompatible
+- Are version caps bad?
+  - [Should Stackage ignore version bounds?](https://www.stackage.org/blog/2018/01/ignore-version-bounds)
+  - [Lenient lower bounds](https://www.fpcomplete.com/blog/lenient-lower-bounds/)
+  - [Never version cap](https://iscinumpy.dev/post/bound-version-constraints/#tldr)
+-->
+</section>
+<section id="avoid-dep-solves-private-deps" class="slide level2">
+<h2>Avoid dep solves: Private deps</h2>
+<ul>
+<li>“Private” deps
+<ul>
+<li>No types or fns in public interface (or split into two libraries)
+and no globals</li>
+</ul></li>
+<li><a
+href="https://stackoverflow.com/questions/25268545/why-does-npms-policy-of-duplicated-dependencies-work">Why
+does this not cause problems in JS?</a></li>
+<li><a
+href="https://lexi-lambda.github.io/blog/2016/08/24/understanding-the-npm-dependency-model/">NPM
+deps vs peer-deps; can other languages?</a></li>
+<li><a href="https://docs.npmjs.com/cli/v10/commands/npm-dedupe">npm
+dedupe</a></li>
+<li><a
+href="https://www.reddit.com/r/haskell/comments/4zc6y3/comment/d6vkm62/">Can
+Haskell do that too</a></li>
+<li>Could deps be classified pub/priv with static analysis?</li>
+</ul>
+</section>
+<section id="bootstrapping" class="slide level2">
+<h2>Bootstrapping</h2>
+<ul>
+<li>Nix, Spack: prerequisites including C compiler <a
+href="https://nixos.org/manual/nix/stable/installation/prerequisites-source">Nix</a>
+and <a
+href="https://spack.readthedocs.io/en/latest/getting_started.html">Spack</a></li>
+<li><a
+href="https://dl.acm.org/doi/abs/10.1145/358198.358210">Reflections on
+Trusting Trust</a></li>
+<li><a
+href="https://guix.gnu.org/en/blog/2023/the-full-source-bootstrap-building-from-source-all-the-way-down/">Guix
+full-source bootstrap</a></li>
+</ul>
+</section>
+<section id="lang-pkg-mgrs" class="slide level2">
+<h2>$lang pkg mgrs</h2>
+<ul>
+<li>Examples: Pip, Cargo, NPM, Yarn, RubyGems, CPAN, Stack, Cabal, opam,
+Maven, SBT, tlmgr</li>
+<li>Supports multiple environments (usually)</li>
+<li>Downloads/builds source (usually)</li>
+<li>Privs only required for global env (usually)</li>
+<li>Shoddy support for native code (usually)</li>
+<li>Has dep solver (usually)</li>
+</ul>
+</section>
+<section id="spack" class="slide level2">
+<h2>Spack</h2>
+</section>
+<section id="requirements-for-hpc-systems" class="slide level2">
+<h2>Requirements for HPC systems</h2>
+<ul>
+<li>Manage extremely complex package dependencies
+<ul>
+<li>Need multiple versions of the same package installed at once</li>
+</ul></li>
+<li>Automate the build process of packages</li>
+<li>Install multiple complex pieces of software at once
+<ul>
+<li>Cope with combinatorial versioning</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><img data-src="ARES-dependencies.png" /></p>
+</section>
+<section id="spacks-key-innovations" class="slide level2">
+<h2>Spack’s Key Innovations</h2>
+<ul>
+<li>Composable package descriptions
+<ul>
+<li>Packages are described parametrically</li>
+<li>Same idea as templates in C++ or generics in Rust</li>
+</ul></li>
+<li>Spec syntax for specifying depedency graphs and constraints</li>
+<li>A concretization process to stamp out a concrete build
+specification</li>
+</ul>
+</section>
+<section id="package-descriptions" class="slide level2">
+<h2>Package descriptions</h2>
+<ul>
+<li>Embedded DSL inside Python</li>
+<li>Parameterized via the <code>spec</code> argument of the
+<code>install</code> method</li>
+</ul>
+<p><img data-src="SpackPackage.png" /></p>
+</section>
+<section id="spack-specs" class="slide level2">
+<h2>Spack Specs</h2>
+<ul>
+<li>Specification on an install supplied after
+<code>spack install</code>
+<ul>
+<li>Small enough usually to be a command line parameter</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><img data-src="Specs.png" /></p>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p><img data-src="MoreSpecs.png" /> <img
+data-src="SpecsInDependsOn.png" /></p>
+</section>
+<section id="concretization" class="slide level2">
+<h2>Concretization</h2>
+<ol type="1">
+<li>Spack intersects the DAG from the user’s specs and another DAG
+created from directives in the package files</li>
+</ol>
+<ul>
+<li>There may be conflicts if the user inadvertedly requests two
+versions of the same package, for example</li>
+</ul>
+</section>
+<section id="concretization-1" class="slide level2">
+<h2>Concretization</h2>
+<ol start="2" type="1">
+<li>Resolve virtual dependencies into normal dependencies</li>
+</ol>
+<ul>
+<li>Select a particular implementation of MPI, BLAS, etc.</li>
+</ul>
+</section>
+<section id="concretization-2" class="slide level2">
+<h2>Concretization</h2>
+<ol start="3" type="1">
+<li>Greedily select concrete versions of packages until entire DAG is
+concrete</li>
+</ol>
+<ul>
+<li>NOTE: this is all from their 2015 paper - “We leave automatic
+constraint space exploration for future work.”</li>
+</ul>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p><img data-src="ConcreteAlgo.png" /> <img
+data-src="ConcreteExample.png" /></p>
+</section>
+<section id="concretization-today" class="slide level2">
+<h2>Concretization Today</h2>
+<ul>
+<li>Uses a logic solver to support full backtracing and optimization
+<ul>
+<li>Called <code>clingo</code></li>
+</ul></li>
+<li>Written using Prolog</li>
+</ul>
+</section>
+<section id="concretization-today-1" class="slide level2">
+<h2>Concretization Today</h2>
+<ul>
+<li>Unfortunately, there isn’t much public writing about
+<code>clingo</code></li>
+<li>Gist: express constraints on concrete spec based on abstract
+DAG</li>
+<li>Dispatch logic solver (Prolog) to solve all of the constraints</li>
+<li>NP-complete, but fast in practice</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
