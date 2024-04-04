@@ -10,8 +10,6 @@ Compile me with:
 pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 ```
 
-Or view [here](https://htmlpreview.github.io/?https://github.com/gnulug/meetings/blob/master/2024s/2024-03-20/README.html)
-
 ## Objectives
 
 - Mostly OS primitives
@@ -25,7 +23,7 @@ Or view [here](https://htmlpreview.github.io/?https://github.com/gnulug/meetings
 
 - How to launch processes?
 - `fork()`
-- → `clone()` [A fork in the road](https://dl.acm.org/doi/abs/10.1145/3317550.3321435))
+- → `clone()` [A fork in the road](https://dl.acm.org/doi/abs/10.1145/3317550.3321435)
 
 :::
 
