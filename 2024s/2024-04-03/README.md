@@ -113,7 +113,6 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 ::: {.incremental}
 
 - Sequential (unlike random-access mmap)
-- Single producer, single consumer
 - Finite capacity
   - Why?
   - Backpressure
@@ -126,7 +125,6 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 
 - `mq_open()`, `mq_send()/mq_recv()`, `mq_unlink()`
 - Sequential
-- **Multiple** producers, **multiple** consumers
 - Finite capacity
 - Blocking/non-blocking
 
