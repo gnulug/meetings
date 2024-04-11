@@ -14,9 +14,9 @@
 | 2024-03-06 (Wed) | TraceWeaver: Blackbox Request Tracing for Modern Microservices | Sachin Ashok | - |
 | 2024-03-13 (Wed) | Spring break! | - | No meeting on Spring break |
 | 2024-03-20 (Wed) | How package managers works | Russel & charmonium | - |
-| 2024-03-27 (Wed) | TBD | pngdeity | - |
+| 2024-03-27 (Wed) | Managing local music libraries with beets | pngdeity | - |
 | 2024-04-03 (Wed) | IPC, shmopen & mkfifo | charmonium | - |
-| 2024-04-10 (Wed) | IPv6, Rant about IllinoisNet IPv6 | jenna | 20 mins |
+| 2024-04-10 (Wed) | Gaming on Linux, Rant about IllinoisNet IPv6 | Quan Hao & Russel, jenna | 20 mins for rant |
 | 2024-04-17 (Wed) | mDNS | evan | - |
 | 2024-04-24 (Wed) | Jason's awesome VPS, Homelab & VPSes | jason | - |
 | 2024-05-01 (Wed) | Open Source Game Night | - | - |
