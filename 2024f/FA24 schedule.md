@@ -11,7 +11,7 @@
 | 2024-10-16 | Understanding the Data Plane Development Kit (dpdk) | hickhackz | - |
 | 2024-10-23 | {Free,Open}BSD and Linux | Jenna | - |
 | 2024-10-30 | Network Address Translation: A practical guide | Leslie | - |
-| 2024-11-06 | eGPU? | Adhi | - |
+| 2024-11-06 | eGPU? on Linux‽ | Adhi | - |
 | 2024-11-13 | Provenance and reproducibility in computing | Sam & Jenna | - |
 | 2024-11-20 | Funny/Retro Hardware night | - | come show off your weird/old hardware |
 | 2024-11-27 | Thanksgiving | - | **no meeting** |
