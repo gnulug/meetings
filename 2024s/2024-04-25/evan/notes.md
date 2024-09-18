@@ -20,6 +20,8 @@
 Example multicast groups
 - 224.0.0.1   - All
 - 224.0.0.251 - mDNS
+
+<!-- https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml -->
   
 ```
 # joining a multicast group
@@ -34,9 +36,49 @@ ip maddress show
 
 <!-- https://castr.com/blog/unicast-vs-multicast-vs-broadcast/ -->
 
+IP Multicast Demo
+
+```
+# on host
+sudo python multicastdemo.py
+xterm h1 h2
+
+# in terminal for h1 machine
+nc -l -p 1234 -u
+# in terminal for h2 machine
+nc 224.0.0.100 1234 <<< hello
+# nothing happens.  h1 is not part of multicast group
+
+# in terminal for h1 machine
+ip addr add 224.0.0.100/32 dev h1-eth0 autojoin
+nc -l -p 1234 -u
+# in terminal for h2 machine
+nc 224.0.0.100 1234 <<< hello
+# hello appears on h1 because h1 has joined the .100 multicast group
+```
+
+# mDNS overview
+- make a DNS request to multicast group 224.0.0.251
+
+```
+# on host
+systemctl disable avahi-daemon --now
+sudo python multicastdemo.py
+>>> xterm h1 h2
+
+# in terminal for h2 machine
+nc -l -p 5353 -u
+# in terminal for h1 machine
+avahi-resolve --name foobar.local
+# DNS query appears in netcat on h2.  We can manually craft a fixed DNS response
+```
+
 # Avahi
 
 - created by Lennart Poettering and others starting in 2005
+
+```
+```
 
 ## advertising services with Avahi
 
