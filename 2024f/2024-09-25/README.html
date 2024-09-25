@@ -103,18 +103,14 @@
   <h1 class="title">The Nix™ Way of Life</h1>
 </section>
 
-<section class="slide level2">
-
+<section>
+<section id="intro" class="title-slide slide level1">
+<h1>Intro</h1>
 <style>
 .kinda-small {
   font-size: 80%;
 }
 </style>
-</section>
-<section>
-<section id="intro" class="title-slide slide level1">
-<h1>Intro</h1>
-
 </section>
 <section id="how-to-compile" class="slide level2">
 <h2>How to compile</h2>
@@ -361,6 +357,7 @@ appear to be installed/uninstalled
 <li class="fragment">Better security, principle of least privilege</li>
 <li class="fragment">Root-less → multiple environments
 (project-specific)</li>
+<li class="fragment">Private dependencies (wrapper scripts)</li>
 </ul>
 </div>
 </section>
@@ -508,8 +505,6 @@ imperativeness</li>
 <li>Impermanence</li>
 </ul>
 </div></li>
-<li class="fragment"><p>Nix supports both: <code>nix-env -i</code>, but
-why?</p></li>
 </ul>
 </div>
 </section>
@@ -550,12 +545,12 @@ class="title-slide slide level1">
 <h2>Pros</h2>
 <ul>
 <li>Manage packages in any language with the same package manager</li>
-<li>Have the exact same dev env on every system (Linux, MacOS, *BSD,
-WSL)</li>
+<li>Have the exact same dev env on every system (Linux, MacOS, WSL)</li>
+<li>Cache makes CI go brrr</li>
 </ul>
 </section>
 <section id="cons" class="slide level2">
-<h2>Cons:</h2>
+<h2>Cons</h2>
 <ul>
 <li>People have to install Nix to have your dev env</li>
 <li>Have to learn how to write Nix (small bit)</li>
@@ -564,6 +559,7 @@ WSL)</li>
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
+<div class="kinda-small">
 <ul>
 <li><p>Don’t already have Nix pkg manager? Follow <a
 href="https://install.determinate.systems/">Determinate Systems
@@ -572,12 +568,14 @@ installer</a></p></li>
 <code>nix flake --help</code></p>
 <ul>
 <li><p>If not NixOS, <span
-class="kinda-small"><code>echo "experimental-features = nix-command flakes" &gt;&gt; ~/.config/nix.conf</code></span></p></li>
+class="small"><code>echo "experimental-features = nix-command flakes" &gt;&gt; ~/.config/nix.conf</code></span></p></li>
 <li><p>If NixOS, add <span
-class="kinda-small"><code>nix.settings.experimental-features = [ "nix-command" "flakes" ];</code></span>
+class="small"><code>nix.settings.experimental-features = [ "nix-command" "flakes" ];</code></span>
 to your configuration</p></li>
 </ul></li>
+<li><p>No git or <code>git add -A</code></p></li>
 </ul>
+</div>
 </section>
 <section id="first-flake" class="slide level2">
 <h2>First Flake</h2>
@@ -606,6 +604,15 @@ class="sourceCode nix"><code class="sourceCode nix"><span id="cb3-1"><a href="#c
 <li>direnv</li>
 </ul>
 </section>
+<section id="apps-and-docker-images" class="slide level2">
+<h2>Apps and Docker images</h2>
+<ul>
+<li>Apps</li>
+<li>Docker images</li>
+<li><a href="https://github.com/uiuc-cs527-fa24/mp2-validator"
+class="uri">https://github.com/uiuc-cs527-fa24/mp2-validator</a></li>
+</ul>
+</section>
 <section id="garbage-collection" class="slide level2">
 <h2>Garbage collection</h2>
 <ul>
@@ -626,8 +633,8 @@ class="title-slide slide level1">
 <section id="pros-1" class="slide level2">
 <h2>Pros</h2>
 <ul>
-<li>Dotfiles can be generated programatically</li>
 <li>Dotfiles can come with packages/dependencies</li>
+<li>Dotfiles can be generated programatically</li>
 </ul>
 </section>
 <section id="cons-1" class="slide level2">
@@ -655,9 +662,9 @@ options</a></li>
 <li>Firefox with settings</li>
 <li>zsh with starship</li>
 <li>Examine <code>~/.zshrc</code></li>
-<li>Desktop bg image</li>
-<li><a
-href="Sam&#39;s%20dotfiles">https://github.com/charmoniumQ/dotfiles.nix</a></li>
+<li>Desktop bg image (adding options)</li>
+<li><a href="https://github.com/charmoniumQ/dotfiles.nix">Sam’s
+dotfiles</a></li>
 </ul>
 </section></section>
 <section>

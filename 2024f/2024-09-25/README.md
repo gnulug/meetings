@@ -2,14 +2,13 @@
 title: "The Nix™ Way of Life"
 ---
 
+# Intro
 
 <style>
 .kinda-small {
   font-size: 80%;
 }
 </style>
-
-# Intro
 
 ## How to compile
 
@@ -65,10 +64,12 @@ Then open `README.html` in browser.
 ## Why have root package managers?
 
 :::: {.incremental}
+
 - Poll: Do you use root to install packages (e.g., new Firefox)?
 - Unix FHS, "everything just works" [lmao]{.fragment}
 - Disk-space is expensive
 - Building packages is hard
+
 ::::
 
 ## Root-less package managers
@@ -105,6 +106,7 @@ Then open `README.html` in browser.
 - Each user can install their own pkgs
 - Better security, principle of least privilege
 - Root-less → multiple environments (project-specific)
+- Private dependencies (wrapper scripts)
 ::::
 
 ## Purity and cache
@@ -210,8 +212,6 @@ Do you have a moment to talk about our lord and savior, NixOS?
   - Impermanence
   ::::
 
-- Nix supports both: `nix-env -i`, but why?
-
 :::
 
 ## Imperative + Configuration manager
@@ -243,9 +243,10 @@ Declarative is:
 ## Pros
 
 - Manage packages in any language with the same package manager
-- Have the exact same dev env on every system (Linux, MacOS, *BSD, WSL)
+- Have the exact same dev env on every system (Linux, MacOS, WSL)
+- Cache makes CI go brrr
 
-## Cons:
+## Cons
 
 - People have to install Nix to have your dev env
 - Have to learn how to write Nix (small bit)
@@ -253,13 +254,18 @@ Declarative is:
 
 ## Setup
 
+:::: {.kinda-small}
+
 - Don't already have Nix pkg manager? Follow [Determinate Systems installer](https://install.determinate.systems/)
 
 - Already have Nix pkg manager? Make sure flakes are enabled `nix flake --help`
 
-  - If not NixOS, [`echo "experimental-features = nix-command flakes" >> ~/.config/nix.conf`]{.kinda-small}
+  - If not NixOS, [`echo "experimental-features = nix-command flakes" >> ~/.config/nix.conf`]{.small}
 
-  - If NixOS, add [`nix.settings.experimental-features = [ "nix-command" "flakes" ];`]{.kinda-small} to your configuration
+  - If NixOS, add [`nix.settings.experimental-features = [ "nix-command" "flakes" ];`]{.small} to your configuration
+- No git or `git add -A`
+
+::::
 
 ## First Flake
 
@@ -290,6 +296,12 @@ in
 - `nix develop --command zsh`
 - direnv
 
+## Apps and Docker images
+
+- Apps
+- Docker images
+- <https://github.com/uiuc-cs527-fa24/mp2-validator>
+
 ## Garbage collection
 
 - Simply remove pkg from flake.nix, no "uninstall step"
@@ -301,8 +313,8 @@ in
 
 ## Pros
 
-- Dotfiles can be generated programatically
 - Dotfiles can come with packages/dependencies
+- Dotfiles can be generated programatically
 
 ## Cons
 
@@ -320,8 +332,8 @@ in
 - Firefox with settings
 - zsh with starship
 - Examine `~/.zshrc`
-- Desktop bg image
-- [https://github.com/charmoniumQ/dotfiles.nix](Sam's dotfiles)
+- Desktop bg image (adding options)
+- [Sam's dotfiles](https://github.com/charmoniumQ/dotfiles.nix)
 
 # Using NixOS
 
