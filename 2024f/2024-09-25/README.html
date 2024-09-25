@@ -39,6 +39,19 @@
   <h1 class="title">The Nix™ Way of Life</h1>
 </section>
 
+<section class="slide level2">
+
+<style>
+.kinda-small {
+  font-size: 80%;
+}
+</style>
+</section>
+<section>
+<section id="intro" class="title-slide slide level1">
+<h1>Intro</h1>
+
+</section>
 <section id="how-to-compile" class="slide level2">
 <h2>How to compile</h2>
 <p>Compile me with:</p>
@@ -69,6 +82,46 @@ NixOS</strong></li>
 </ul>
 </div>
 </section>
+<section id="jargon-note" class="slide level2">
+<h2>Jargon note</h2>
+<div class="kinda-small">
+<ul>
+<li class="fragment">Nix language
+<ul>
+<li class="fragment">Manual: <a
+href="https://nixos.org/manual/nixos/stable"
+class="uri">https://nixos.org/manual/nixos/stable</a></li>
+<li class="fragment">Quick ref: <a
+href="https://learnxinyminutes.com/docs/nix/"
+class="uri">https://learnxinyminutes.com/docs/nix/</a></li>
+</ul></li>
+<li class="fragment">Nix package manager: use nix lang to define package
+recipes
+<ul>
+<li class="fragment">Manual: <a href="https://nix.dev/manual/nix/2.18/"
+class="uri">https://nix.dev/manual/nix/2.18/</a></li>
+</ul></li>
+<li class="fragment">NixOS: uses nix pkg mgr and nix lang
+<ul>
+<li class="fragment">Manual: <a
+href="https://nixos.org/manual/nixos/stable"
+class="uri">https://nixos.org/manual/nixos/stable</a></li>
+</ul></li>
+<li class="fragment">Nixpkgs repo: a set of recipes for nix pkg mgr
+<ul>
+<li class="fragment">Manual: <a
+href="https://nixos.org/manual/nixpkgs/stable/"
+class="uri">https://nixos.org/manual/nixpkgs/stable/</a></li>
+</ul></li>
+<li class="fragment">Home-manager (third-party)
+<ul>
+<li class="fragment">Manual: <a
+href="https://nix-community.github.io/home-manager/"
+class="uri">https://nix-community.github.io/home-manager/</a></li>
+</ul></li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="nix-pkg-manager" class="title-slide slide level1">
 <h1>Nix pkg manager</h1>
@@ -289,9 +342,9 @@ pandoc, etc.)</li>
 <li class="fragment"><p>Nix vs Conda:</p>
 <div>
 <ul>
-<li>Conda uses binary; Nix uses source with binary cache</li>
+<li>Conda uses bins; Nix uses source with bin cache</li>
 <li>Equally fast for common (cached) packages</li>
-<li>From-source is more flexible and long-term reliable</li>
+<li>From-source is more flexible and reliable</li>
 </ul>
 </div></li>
 </ul>
@@ -304,10 +357,14 @@ pandoc, etc.)</li>
 <ul>
 <li><a href="https://dl.acm.org/doi/abs/10.2807623/1145.2807591">The
 Spack Package Manager (Gamblin et al. 2015)</a></li>
-<li>Spack does SAT-solve (many installable versions)</li>
-<li>Nix has globally-consistent package set (one installable version)
+<li>Spack does SAT-solve:
+<code>spack install python@3.12.4 py-requests@3.5.6</code></li>
+<li>Nix has globally-consistent package set:
+<code>nix-env -i python pythonPackages.requests</code>
 <ul>
 <li>Select older revision of package set to get older versions</li>
+<li><a href="https://lazamar.co.uk/nix-versions/"
+class="uri">https://lazamar.co.uk/nix-versions/</a></li>
 </ul></li>
 <li>Nix has better hermeticity and cache</li>
 </ul></li>
@@ -323,6 +380,11 @@ Spack Package Manager (Gamblin et al. 2015)</a></li>
 <li>Nix lang + Bash vs Guile Scheme (Lisp)</li>
 </ul></li>
 </ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="https://repology.org/graph/map_repo_size_fresh.svg" /></p>
 </section></section>
 <section>
 <section id="nixos" class="title-slide slide level1">
@@ -337,11 +399,6 @@ data-src="https://pm1.aminoapps.com/6410/5987479a055e4f5cae60dff1581608840f365b9
 </section>
 <section id="imperative-vs-declarative" class="slide level2">
 <h2>Imperative vs declarative</h2>
-<style>
-.kinda-small {
-  font-size: 80%;
-}
-</style>
 <div class="kinda-small">
 <ul>
 <li class="fragment"><p>Imperative configuration</p>
@@ -397,7 +454,20 @@ declarative, when things go right</p></li>
 <section id="using-nix-pkg-manager-for-dev-env"
 class="title-slide slide level1">
 <h1>Using Nix pkg manager for dev env</h1>
-
+<ul>
+<li>Pros:
+<ul>
+<li>Manage packages in any language with the same package manager</li>
+<li>Have the exact same dev env on every system (Linux, MacOS, *BSD,
+WSL)</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>People have to install Nix to have your dev env</li>
+<li>Have to learn how to write Nix (small bit)</li>
+<li>Don’t have as wide choices available for package versions</li>
+</ul></li>
+</ul>
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
@@ -410,29 +480,31 @@ class="title-slide slide level1">
 <section id="using-nix-home-manager-for-dotfiles"
 class="title-slide slide level1">
 <h1>Using Nix home-manager for dotfiles</h1>
-
+<p>Pros: - Dotfiles can be generated programatically - Dotfiles can come
+with packages/dependencies - Cons: - Have to install Nix to deploy your
+dotfiles - Have to learn how to write Nix (small bit)</p>
 </section>
 <section id="setup-1" class="slide level2">
 <h2>Setup</h2>
+<ul>
+<li>You do not <strong>need</strong> NixOS</li>
+<li>You do need flakes</li>
+</ul>
 </section></section>
-<section>
 <section id="using-nixos" class="title-slide slide level1">
 <h1>Using NixOS</h1>
 <ul>
 <li>Pros:
 <ul>
-<li>Learn the true meaning of pain and suffering</li>
-<li>Feel like an idiot</li>
+<li>Roll-backable/reproducible state (at boot-time!)</li>
+<li>Use variables across your configs and machines</li>
 </ul></li>
 <li>Cons:
 <ul>
-<li>None</li>
+<li>Have to learn functional programming to upgrade Firefox</li>
 </ul></li>
 </ul>
 </section>
-<section id="setup-2" class="slide level2">
-<h2>Setup</h2>
-</section></section>
     </div>
   </div>
 

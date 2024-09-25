@@ -2,6 +2,15 @@
 title: "The Nix™ Way of Life"
 ---
 
+
+<style>
+.kinda-small {
+  font-size: 80%;
+}
+</style>
+
+# Intro
+
 ## How to compile
 
 Compile me with:
@@ -9,6 +18,8 @@ Compile me with:
 ```
 pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 ```
+
+Then open `README.html` in browser.
 
 ## Objectives
 
@@ -28,6 +39,24 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 - How to use Nix pkg manager → standard dev env? **Not NixOS**
 - How to use Nix home-manager → dotfiles? **Not NixOS**
 - How to use NixOS → roll-backable systems? **Yes NixOS**
+
+::::
+
+## Jargon note
+
+:::: {.kinda-small .incremental}
+
+- Nix language
+  - Manual: <https://nixos.org/manual/nixos/stable>
+  - Quick ref: <https://learnxinyminutes.com/docs/nix/>
+- Nix package manager: use nix lang to define package recipes
+  - Manual: <https://nix.dev/manual/nix/2.18/>
+- NixOS: uses nix pkg mgr and nix lang
+  - Manual: <https://nixos.org/manual/nixos/stable>
+- Nixpkgs repo: a set of recipes for nix pkg mgr
+  - Manual: <https://nixos.org/manual/nixpkgs/stable/>
+- Home-manager (third-party)
+  - Manual: <https://nix-community.github.io/home-manager/>
 
 ::::
 
@@ -111,9 +140,9 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 - Nix vs Conda:
 
   :::: {.nonincremental}
-  - Conda uses binary; Nix uses source with binary cache
+  - Conda uses bins; Nix uses source with bin cache
   - Equally fast for common (cached) packages
-  - From-source is more flexible and long-term reliable
+  - From-source is more flexible and reliable
   ::::
 
 ::::
@@ -122,9 +151,10 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 
 - Nix vs Spack:
   - [The Spack Package Manager (Gamblin et al. 2015)](https://dl.acm.org/doi/abs/10.2807623/1145.2807591)
-  - Spack does SAT-solve (many installable versions)
-  - Nix has globally-consistent package set (one installable version)
+  - Spack does SAT-solve: `spack install python@3.12.4 py-requests@3.5.6`
+  - Nix has globally-consistent package set: `nix-env -i python pythonPackages.requests`
     - Select older revision of package set to get older versions
+    - <https://lazamar.co.uk/nix-versions/>
   - Nix has better hermeticity and cache
 
 ## Other comparisons
@@ -134,8 +164,18 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
   - Same idea
   - Nix lang + Bash vs Guile Scheme (Lisp)
 
-# NixOS
+---
 
+![](https://repology.org/graph/map_repo_size_fresh.svg)
+
+# Repology.org
+
+- Nixpkgs unstable and latest Nixpkgs stable takes the cake for N packages and N up-to-date packages
+- Excluding $language package managers, they also win % up-to-date packages
+- <https://repology.org/repositories/statistics/pvulnerable>
+- N maintainers?
+
+# NixOS
 
 ---
 
@@ -144,12 +184,6 @@ pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2
 Do you have a moment to talk about our lord and savior, NixOS?
 
 ## Imperative vs declarative
-
-<style>
-.kinda-small {
-  font-size: 80%;
-}
-</style>
 
 :::: {.incremental .kinda-small}
 
