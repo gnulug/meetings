@@ -210,6 +210,8 @@ Do you have a moment to talk about our lord and savior, NixOS?
   - Impermanence
   ::::
 
+- Nix supports both: `nix-env -i`, but why?
+
 :::
 
 ## Imperative + Configuration manager
@@ -251,8 +253,51 @@ Declarative is:
 
 ## Setup
 
-- You do not **need** NixOS
-- You do need flakes
+- Don't already have Nix pkg manager? Follow [Determinate Systems installer](https://install.determinate.systems/)
+
+- Already have Nix pkg manager? Make sure flakes are enabled `nix flake --help`
+
+  - If not NixOS, `echo "experimental-features = nix-command flakes" >> ~/.config/nix.conf`
+
+  - If NixOS,  add `nix.settings.experimental-features = [ "nix-command" "flakes" ];` to your configuration
+
+## First Flake
+
+```sh
+nix flake --template github:numtide/flake-utils
+```
+
+```nix
+let
+  pkgs = nixpkgs.legacyPackages.${system};
+  python = pkgs.python312;
+  requirements = pypkgs: [ pkgs.panflute ];
+in
+{
+  devShells = {
+    default = pkgs.mkShell {
+      packages = [
+        (python.withPackages requirements)
+        pkgs.ruff
+        pkgs.pandoc
+      ];
+    };
+  };
+}
+```
+
+## Usage instructions
+
+- `nix develop`
+- `nix develop --command zsh`
+- direnv
+
+## Garbage collection
+
+- Simply remove pkg from flake.nix, no "uninstall step"
+- Could be in use by others
+- Solution: Take out the garbage
+  - Delete everything in the store not reachable from a gc-root
 
 # Using Nix home-manager for dotfiles
 
@@ -268,8 +313,17 @@ Declarative is:
 
 ## Setup
 
-- You do not **need** NixOS
-- You do need flakes
+- See setup of Nix pkg mgr with flakes from previous
+- [Home-manager manual > Nix Flakes](https://nix-community.github.io/home-manager/index.xhtml#ch-nix-flakes)
+
+## Writing the config
+
+- [Home-manager options](https://nix-community.github.io/home-manager/options.xhtml)
+- Firefox with settings
+- zsh with starship
+- Examine `~/.zshrc`
+- Desktop bg image
+- [https://github.com/charmoniumQ/dotfiles.nix](Sam's dotfiles)
 
 # Using NixOS
 
