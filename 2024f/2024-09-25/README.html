@@ -56,6 +56,7 @@
 <h2>How to compile</h2>
 <p>Compile me with:</p>
 <pre><code>pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2</code></pre>
+<p>Then open <code>README.html</code> in browser.</p>
 </section>
 <section id="objectives" class="slide level2">
 <h2>Objectives</h2>
@@ -380,11 +381,34 @@ class="uri">https://lazamar.co.uk/nix-versions/</a></li>
 <li>Nix lang + Bash vs Guile Scheme (Lisp)</li>
 </ul></li>
 </ul>
+</section></section>
+<section>
+<section id="nixpkgs-the-package-repository"
+class="title-slide slide level1">
+<h1>Nixpkgs, <em>the</em> package repository</h1>
+
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="https://repology.org/graph/map_repo_size_fresh.svg?xlimit=40000&amp;ylimit=20000" /></p>
 </section>
 <section class="slide level2">
 
 <p><img
 data-src="https://repology.org/graph/map_repo_size_fresh.svg" /></p>
+</section>
+<section id="repology.org" class="slide level2">
+<h2>Repology.org</h2>
+<ul>
+<li>Nixpkgs unstable and latest Nixpkgs stable takes the cake for N
+packages and N up-to-date packages</li>
+<li>Excluding $language package managers, they also win % up-to-date
+packages</li>
+<li><a href="https://repology.org/repositories/statistics/pvulnerable"
+class="uri">https://repology.org/repositories/statistics/pvulnerable</a></li>
+<li>N maintainers?</li>
+</ul>
 </section></section>
 <section>
 <section id="nixos" class="title-slide slide level1">
@@ -454,19 +478,22 @@ declarative, when things go right</p></li>
 <section id="using-nix-pkg-manager-for-dev-env"
 class="title-slide slide level1">
 <h1>Using Nix pkg manager for dev env</h1>
-<ul>
-<li>Pros:
+
+</section>
+<section id="pros" class="slide level2">
+<h2>Pros</h2>
 <ul>
 <li>Manage packages in any language with the same package manager</li>
 <li>Have the exact same dev env on every system (Linux, MacOS, *BSD,
 WSL)</li>
-</ul></li>
-<li>Cons:
+</ul>
+</section>
+<section id="cons" class="slide level2">
+<h2>Cons:</h2>
 <ul>
 <li>People have to install Nix to have your dev env</li>
 <li>Have to learn how to write Nix (small bit)</li>
 <li>Don’t have as wide choices available for package versions</li>
-</ul></li>
 </ul>
 </section>
 <section id="setup" class="slide level2">
@@ -480,9 +507,21 @@ WSL)</li>
 <section id="using-nix-home-manager-for-dotfiles"
 class="title-slide slide level1">
 <h1>Using Nix home-manager for dotfiles</h1>
-<p>Pros: - Dotfiles can be generated programatically - Dotfiles can come
-with packages/dependencies - Cons: - Have to install Nix to deploy your
-dotfiles - Have to learn how to write Nix (small bit)</p>
+
+</section>
+<section id="pros-1" class="slide level2">
+<h2>Pros</h2>
+<ul>
+<li>Dotfiles can be generated programatically</li>
+<li>Dotfiles can come with packages/dependencies</li>
+</ul>
+</section>
+<section id="cons-1" class="slide level2">
+<h2>Cons</h2>
+<ul>
+<li>Have to install Nix to deploy your dotfiles</li>
+<li>Have to learn how to write Nix (small bit)</li>
+</ul>
 </section>
 <section id="setup-1" class="slide level2">
 <h2>Setup</h2>
@@ -491,20 +530,40 @@ dotfiles - Have to learn how to write Nix (small bit)</p>
 <li>You do need flakes</li>
 </ul>
 </section></section>
+<section>
 <section id="using-nixos" class="title-slide slide level1">
 <h1>Using NixOS</h1>
-<ul>
-<li>Pros:
+
+</section>
+<section id="pros-2" class="slide level2">
+<h2>Pros</h2>
 <ul>
 <li>Roll-backable/reproducible state (at boot-time!)</li>
 <li>Use variables across your configs and machines</li>
-</ul></li>
-<li>Cons:
+<li>First class support for ZFS</li>
+<li>Impermanence</li>
+</ul>
+</section>
+<section id="cons-2" class="slide level2">
+<h2>Cons</h2>
+<ul>
+<li>The learning curve is a shear cliff
 <ul>
 <li>Have to learn functional programming to upgrade Firefox</li>
+<li>“infinite recursion encountered”</li>
+</ul></li>
+<li>In order for a program to run on NixOS it must be built or patched
+by nix
+<ul>
+<li>Proprietary software can be difficult</li>
+<li>If it’s not in nixpkgs, then you may have to write a derivation for
+it yourself</li>
 </ul></li>
 </ul>
 </section>
+<section class="slide level2">
+
+</section></section>
     </div>
   </div>
 

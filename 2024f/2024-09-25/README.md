@@ -164,11 +164,17 @@ Then open `README.html` in browser.
   - Same idea
   - Nix lang + Bash vs Guile Scheme (Lisp)
 
+# Nixpkgs, *the* package repository
+
+---
+
+![](https://repology.org/graph/map_repo_size_fresh.svg?xlimit=40000&ylimit=20000)
+
 ---
 
 ![](https://repology.org/graph/map_repo_size_fresh.svg)
 
-# Repology.org
+## Repology.org
 
 - Nixpkgs unstable and latest Nixpkgs stable takes the cake for N packages and N up-to-date packages
 - Excluding $language package managers, they also win % up-to-date packages
@@ -232,13 +238,16 @@ Declarative is:
 
 # Using Nix pkg manager for dev env
 
-- Pros:
-  - Manage packages in any language with the same package manager
-  - Have the exact same dev env on every system (Linux, MacOS, *BSD, WSL)
-- Cons:
-  - People have to install Nix to have your dev env
-  - Have to learn how to write Nix (small bit)
-  - Don't have as wide choices available for package versions
+## Pros
+
+- Manage packages in any language with the same package manager
+- Have the exact same dev env on every system (Linux, MacOS, *BSD, WSL)
+
+## Cons:
+
+- People have to install Nix to have your dev env
+- Have to learn how to write Nix (small bit)
+- Don't have as wide choices available for package versions
 
 ## Setup
 
@@ -247,12 +256,15 @@ Declarative is:
 
 # Using Nix home-manager for dotfiles
 
-Pros:
-  - Dotfiles can be generated programatically
-  - Dotfiles can come with packages/dependencies
-- Cons:
-  - Have to install Nix to deploy your dotfiles
-  - Have to learn how to write Nix (small bit)
+## Pros
+
+- Dotfiles can be generated programatically
+- Dotfiles can come with packages/dependencies
+
+## Cons
+
+- Have to install Nix to deploy your dotfiles
+- Have to learn how to write Nix (small bit)
 
 ## Setup
 
@@ -261,9 +273,20 @@ Pros:
 
 # Using NixOS
 
-- Pros:
-  - Roll-backable/reproducible state (at boot-time!)
-  - Use variables across your configs and machines
-- Cons:
-  - Have to learn functional programming to upgrade Firefox
+## Pros
 
+- Roll-backable/reproducible state (at boot-time!)
+- Use variables across your configs and machines
+- First class support for ZFS
+- Impermanence 
+
+## Cons
+
+- The learning curve is a shear cliff
+  - Have to learn functional programming to upgrade Firefox
+  - "infinite recursion encountered"
+- In order for a program to run on NixOS it must be built or patched by nix
+  - Proprietary software can be difficult
+  - If it's not in nixpkgs, then you may have to write a derivation for it yourself
+
+---
