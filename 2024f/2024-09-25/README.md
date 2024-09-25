@@ -257,9 +257,9 @@ Declarative is:
 
 - Already have Nix pkg manager? Make sure flakes are enabled `nix flake --help`
 
-  - If not NixOS, `echo "experimental-features = nix-command flakes" >> ~/.config/nix.conf`
+  - If not NixOS, [`echo "experimental-features = nix-command flakes" >> ~/.config/nix.conf`]{.kinda-small}
 
-  - If NixOS,  add `nix.settings.experimental-features = [ "nix-command" "flakes" ];` to your configuration
+  - If NixOS, add [`nix.settings.experimental-features = [ "nix-command" "flakes" ];`]{.kinda-small} to your configuration
 
 ## First Flake
 
@@ -274,14 +274,12 @@ let
   requirements = pypkgs: [ pkgs.panflute ];
 in
 {
-  devShells = {
-    default = pkgs.mkShell {
-      packages = [
-        (python.withPackages requirements)
-        pkgs.ruff
-        pkgs.pandoc
-      ];
-    };
+  devShells.default = pkgs.mkShell {
+    packages = [
+      (python.withPackages requirements)
+      pkgs.ruff
+      pkgs.pandoc
+    ];
   };
 }
 ```
@@ -342,5 +340,27 @@ in
 - In order for a program to run on NixOS it must be built or patched by nix
   - Proprietary software can be difficult
   - If it's not in nixpkgs, then you may have to write a derivation for it yourself
+
+## home-manager integration
+
+<style>
+  code {
+    background: #000000;
+  }
+</style>
+
+```nix
+programs.nushell = {
+  enable = true;
+  configFile.source = ../config/nushell/config.nu;
+  envFile.source = ../config/nushell/env.nu;
+  shellAliases = 
+    lib.attrsets.filterAttrs
+    (name: val: val != null)
+    osConfig.environment.shellAliases;
+    # ^ home-manager config is using 
+    # information from system-wide config
+};
+```
 
 ---
