@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>The Nix™ Way of Life</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">The Nix™ Way of Life</h1>
+</section>
+
+<section id="how-to-compile" class="slide level2">
+<h2>How to compile</h2>
+<p>Compile me with:</p>
+<pre><code>pandoc --standalone --to=revealjs --output=README.html README.md --slide-level=2</code></pre>
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<style>
+  .fragment.show-up {
+    display: none;
+  }
+  .fragment.show-up.visible {
+    display: inline;
+  }
+</style>
+<div>
+<ul>
+<li class="fragment"><span class="fragment strike">What is</span> <span
+class="fragment show-up">Why invent</span> Nix pkg manager?</li>
+<li class="fragment"><span class="fragment strike">What is</span> <span
+class="fragment show-up">Why invent</span> NixOS?</li>
+<li class="fragment">How to use Nix pkg manager → standard dev env?
+<strong>Not NixOS</strong></li>
+<li class="fragment">How to use Nix home-manager → dotfiles? <strong>Not
+NixOS</strong></li>
+<li class="fragment">How to use NixOS → roll-backable systems?
+<strong>Yes NixOS</strong></li>
+</ul>
+</div>
+</section>
+<section>
+<section id="nix-pkg-manager" class="title-slide slide level1">
+<h1>Nix pkg manager</h1>
+
+</section>
+<section id="why-have-root-package-managers" class="slide level2">
+<h2>Why have root package managers?</h2>
+<div>
+<ul>
+<li class="fragment">Poll: Do you use root to install packages (e.g.,
+new Firefox)?</li>
+<li class="fragment">Unix FHS, “everything just works” <span
+class="fragment">lmao</span></li>
+<li class="fragment">Disk-space is expensive</li>
+<li class="fragment">Building packages is hard</li>
+</ul>
+</div>
+</section>
+<section id="root-less-package-managers" class="slide level2">
+<h2>Root-less package managers</h2>
+<style>
+#pkg-mgr-matrix {
+  font-size: 4vh;
+}
+.highlight {
+  color: #A0FFA0;
+}
+</style>
+<table id="pkg-mgr-matrix">
+<thead>
+<tr>
+<th>
+Source?
+</th>
+<th>
+Unpriv?
+</th>
+<th>
+Dep solv?
+</th>
+<th>
+Examples
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+Distro pkg mgrs (XBPS, Pacman)
+</td>
+</tr>
+<tr>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+Distro pkg mgrs (APT, DNF, APK)
+</td>
+</tr>
+<tr class="highlight">
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+</td>
+</tr>
+<tr class="highlight">
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Conda
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td>
+</td>
+</tr>
+<tr class="highlight">
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td>
+Ports-inspired (pkgsrc, Portage, MacPorts, Home/Linuxbrew), Functional
+pkg mgrs (Nix, Guix)
+</td>
+</tr>
+<tr class="highlight">
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td>
+Spack, 0install, $lang-level
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="advantages-of-root-less" class="slide level2">
+<h2>Advantages of root-less</h2>
+<div>
+<ul>
+<li class="fragment">Can simply manipulate <code>$PATH</code>,
+<code>$PYTHON_PATH</code>, <code>$CLASSPATH</code> to make packages
+appear to be installed/uninstalled
+<ul>
+<li class="fragment">Must load something in shell:
+<code>source ./activate.sh</code> or <code>nix develop</code></li>
+</ul></li>
+<li class="fragment">Each user can install their own pkgs</li>
+<li class="fragment">Better security, principle of least privilege</li>
+<li class="fragment">Root-less → multiple environments
+(project-specific)</li>
+</ul>
+</div>
+</section>
+<section id="purity-and-cache" class="slide level2">
+<h2>Purity and cache</h2>
+<style>
+.small {
+  font-size: 3vh;
+}
+</style>
+<div>
+<ul>
+<li class="fragment">Nix code is pure</li>
+<li class="fragment">Build scripts run in sandbox (aka “hermetic” <a
+href="https://google.github.io/building-secure-and-reliable-systems/raw/ch14.html">Spradlin
+and Lodato 2020 (Google)</a>)</li>
+<li class="fragment">Much like <a
+href="https://www.pantsbuild.org/">Pants</a>, <a
+href="https://buck2.build/">Buck2</a>, <a
+href="https://bazel.build/">Bazel</a>, etc.</li>
+<li class="fragment">Cache (aka “nix store”): hash-of-inputs (Nix src +
+pkgs src) to files or directories
+<ul>
+<li class="fragment"><span
+class="small"><code>/nix/store/0a0khkw34v25q8k6p44ma1rqa479r1za-gnutar-1.35/</code></span></li>
+<li class="fragment"><span class="small">Has <code>.../bin/tar</code>
+and <code>.../share/man/man1/tar.1.gz</code></span></li>
+</ul></li>
+<li class="fragment">Used whenever the hash matches (purity)</li>
+<li class="fragment">Can be shared with other users and remote</li>
+</ul>
+</div>
+</section>
+<section id="other-comparisons" class="slide level2">
+<h2>Other comparisons</h2>
+<div>
+<ul>
+<li class="fragment"><p>Nix vs Pip/Virtualenv:</p>
+<ul>
+<li class="fragment">Both can create virtual environments</li>
+<li class="fragment">Nix can manage non-Python package (e.g., Ruff,
+pandoc, etc.)</li>
+</ul></li>
+<li class="fragment"><p>Nix vs Conda:</p>
+<div>
+<ul>
+<li>Conda uses binary; Nix uses source with binary cache</li>
+<li>Equally fast for common (cached) packages</li>
+<li>From-source is more flexible and long-term reliable</li>
+</ul>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="other-comparisons-1" class="slide level2">
+<h2>Other comparisons</h2>
+<ul>
+<li>Nix vs Spack:
+<ul>
+<li><a href="https://dl.acm.org/doi/abs/10.2807623/1145.2807591">The
+Spack Package Manager (Gamblin et al. 2015)</a></li>
+<li>Spack does SAT-solve (many installable versions)</li>
+<li>Nix has globally-consistent package set (one installable version)
+<ul>
+<li>Select older revision of package set to get older versions</li>
+</ul></li>
+<li>Nix has better hermeticity and cache</li>
+</ul></li>
+</ul>
+</section>
+<section id="other-comparisons-2" class="slide level2">
+<h2>Other comparisons</h2>
+<ul>
+<li>Nix vs Guix:
+<ul>
+<li>See <a href="https://arxiv.org/abs/1305.4584">Courtès 2013</a></li>
+<li>Same idea</li>
+<li>Nix lang + Bash vs Guile Scheme (Lisp)</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="nixos" class="title-slide slide level1">
+<h1>NixOS</h1>
+
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="https://pm1.aminoapps.com/6410/5987479a055e4f5cae60dff1581608840f365b9b_hq.jpg" /></p>
+<p>Do you have a moment to talk about our lord and savior, NixOS?</p>
+</section>
+<section id="imperative-vs-declarative" class="slide level2">
+<h2>Imperative vs declarative</h2>
+<style>
+.kinda-small {
+  font-size: 80%;
+}
+</style>
+<div class="kinda-small">
+<ul>
+<li class="fragment"><p>Imperative configuration</p>
+<div>
+<ul>
+<li>Machine has mutable state (files on disk)</li>
+<li>Run commands to change</li>
+</ul>
+</div></li>
+<li class="fragment"><p>Declarative configuration</p>
+<div>
+<ul>
+<li><a href="https://dl.acm.org/doi/abs/10.1145/1411204.1411255">NixOS:
+A purely functional linux distribution (Dolstra and Löh 2008)</a></li>
+<li>Program that generates immutable state (r.o. files on disk)</li>
+<li>Edit/re-execute program to change</li>
+<li>In practice, shunt what can’t be declarative into islands of
+imperativeness</li>
+<li>Impermanence</li>
+</ul>
+</div></li>
+</ul>
+</div>
+</section>
+<section id="imperative-configuration-manager" class="slide level2">
+<h2>Imperative + Configuration manager</h2>
+<ul>
+<li><p>“If … the playbook description of a system and the actual system
+state don’t agree, then Ansible will make whatever changes are necessary
+for the system to match the playbook.” – <a
+href="https://www.redhat.com/en/topics/automation/learning-ansible-tutorial">Learning
+Ansible basics by RedHat</a></p></li>
+<li><p>Imperative + Ansible/Chef/Puppet == Declarative?</p></li>
+<li><p>In my opinion, Imperative + Ansible/Chef/Puppet == sort of
+declarative, when things go right</p></li>
+</ul>
+</section>
+<section id="declarative-vs-imperative" class="slide level2">
+<h2>Declarative vs imperative</h2>
+<p>Declarative is:</p>
+<div>
+<ul>
+<li class="fragment">✅ Roll-backable (c.f. btrfs snapshots)</li>
+<li class="fragment">✅ Reproducible</li>
+<li class="fragment">✅ State is predictable</li>
+<li class="fragment">✅ Cachable</li>
+<li class="fragment">❌ Sometimes slow</li>
+<li class="fragment">❌ Harder to use</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="using-nix-pkg-manager-for-dev-env"
+class="title-slide slide level1">
+<h1>Using Nix pkg manager for dev env</h1>
+
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<ul>
+<li>You do not <strong>need</strong> NixOS</li>
+<li>You do need flakes</li>
+</ul>
+</section></section>
+<section>
+<section id="using-nix-home-manager-for-dotfiles"
+class="title-slide slide level1">
+<h1>Using Nix home-manager for dotfiles</h1>
+
+</section>
+<section id="setup-1" class="slide level2">
+<h2>Setup</h2>
+</section></section>
+<section>
+<section id="using-nixos" class="title-slide slide level1">
+<h1>Using NixOS</h1>
+<ul>
+<li>Pros:
+<ul>
+<li>Learn the true meaning of pain and suffering</li>
+<li>Feel like an idiot</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>None</li>
+</ul></li>
+</ul>
+</section>
+<section id="setup-2" class="slide level2">
+<h2>Setup</h2>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
