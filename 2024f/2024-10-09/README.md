@@ -107,7 +107,7 @@ Thanks to Sam for the template
 
 - Why be end-to-end?
     - End-to-end provisioning is useful in that they only need to fix a problem once, at the host, and the host is the device most able to appraise what an error is. Pouzin remained open to non-end-to-end solutions: "With experience gradually building up, and depending on trends in international standards, more stable characteristics will eventually emerge. By putting them at some lower system level, it will be possible to obtain higher efficiency and reduce duplication, at the cost of freezing a few more parameters."
-    - However, end-to-end solutions are slow, and not every problem that manifests at the host is mostly easily solved at the host--(e.g. the rapid adoption of ECN).
+    - However, end-to-end solutions are slow, and not every problem that manifests at the host is more easily solved at the host--(e.g. the rapid adoption of ECN).
 
 - Why use virtual circuits?
     - To Pouzin, freedom in routing packets.
