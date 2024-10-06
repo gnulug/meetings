@@ -14,7 +14,7 @@ Thanks to Sam for the template
 
 ## Opening
 
-- "I don't think it was an invention; it wasn't a theory breakthrough like Einstein. It was a collection of ideas that were around at the time. The computer people had always had blocks and lines were always around; that was nothing new ... So, those were pieces that we applied, but the real issue was to carry through and see that it was important and it was economic and it was going to have an influence and make sure it happened." - Larry Roberts
+- "I don't think it was an invention; it wasn't a theory breakthrough like Einstein. It was a collection of ideas that were around at the time. The computer people had always had blocks, and lines were always around; that was nothing new ... So, those were pieces that we applied, but the real issue was to carry through and see that it was important and it was economic and it was going to have an influence and make sure it happened." - Larry Roberts 
 
 ## Why care?
 
