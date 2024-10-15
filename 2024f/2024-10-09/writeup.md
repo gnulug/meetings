@@ -38,4 +38,14 @@ Duo now supports TOTP (TOTP is used by the [GitHub - SleepyLeslie/uiuc-auto-pass
 
 About the Python GIL
 
+Why have GIL? How does it slow us down: http://dabeaz.com/python/UnderstandingGIL.pdf
 
+What is hyperthreading: https://en.wikipedia.org/wiki/Hyperthreading
+
+Use different subinterpreter objects on different threads: https://realpython.com/python312-subinterpreters/
+
+Python with optional GIL (biased ref-counts and fine-grained locking): https://peps.python.org/pep-0703/
+
+Biased ref counting (from UIUC prof): https://dl.acm.org/doi/abs/10.1145/3243176.3243195
+
+Async programming in Python, which you can use today: https://realpython.com/python-async-features/
