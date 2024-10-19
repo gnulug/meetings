@@ -15,10 +15,18 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
@@ -32,6 +40,9 @@
   .reveal blockquote p {
     font-size: 0.8em;
   }
+  .scrollable {
+    overflow-y: auto;
+  }
   </style>
 </head>
 <body>
@@ -44,7 +55,7 @@
 
 <section id="how-to-compile" class="slide level2">
 <h2>How to compile</h2>
-<pre><code>pandoc --standalone -t revealjs -o telecom.html telecom.md --slide-level=2 -V theme=beige</code></pre>
+<pre><code>pandoc --standalone -t revealjs -o telecom.html telecom.md --slide-level=2 --include-in-header=slides.html</code></pre>
 <p>Thanks to Sam for the template</p>
 </section>
 <section id="why-care" class="slide level2">
@@ -88,50 +99,98 @@ was going to have an influence and make sure it happened.”</p>
 <p>This used to be literal. <img data-src="images/ENIAC.jpg"
 style="width:80.0%"
 alt="Betty Jennings and Fran Bilas operating the ENIAC" /></p>
-<!-- CUT FOR TIME -->
-<!-- 
-## Development in Electronics
-
-- As microelectronics became **cheaper and more reliable**, a distinction emerged:
-  - **I/O**: slow, complex, prone to mechanical failure
-  - **Mainframe**: fast, simple, less prone to mechanical failure
-
-## Strachey's Time-Sharing
-
-- In 1959, "time-sharing" emerged—arguably from multiple sources (McCarthy, 1983). 
-- In today's language, we may refer to it more like **interrupt-based multiprocessing**. 
-  - Slow I/O could **interrupt** the mainframe whenever it was done with its task.
-
-## Strachey on "Interactivity"
-
-- It's still batch processing, focused on debugging batch calculations.
-
-> "There will be three operator's consoles: an engineer's console for maintaining and testing the machine, a programme-testing console with various visual displays and at least an electric typewriter, and a main operator's console. All three will have fairly extensive facilities for intervening in the course of a calculation."
->
-> Christopher Strachey (Strachey, 1959)
-
-::: {.notes}
-- Strachey's time-sharing (Strachey, 1959) was more like concurrent batch processing. In his time, I/O devices would perform complex (expensive!) operations to read and write data from magnetic tape while the main computer had to wait. Now "interrupts" entered the lexicon, which caught on. As the cost of computing was driven down by the development of electronics, devices could be categorized as slow or fast; simple or complex.
-    - "There will be three operator's consoles: an engineer's console for maintaining and testing the machine, a programme-testing console with various visual displays and at least an electric typewriter, and a main operator's console. All three will have fairly extensive facilities for intervening in the course of a calculation." - Christopher Strachey, "Time Sharing in Large Fast Computers"
-    - "Who invented interrupts anyway? I thought of them, but I don't believe I mentioned the idea to anyone before I heard of them from other sources." - John McCarthy, Reminisces on the Theory of Time-Sharing
-:::
-
-## Changes in Interactivity
-
-- In 1962, just a few years after Strachey, time-sharing started to be about interactivity, a new principle concurrent with time-sharing. Again, the focus was on debugging.
-
-## Debugging
-
-> "Using current batch monitor techniques, as is done on most large computers, each program bug usually requires several hours to eliminate, if not a complete day. The only alternative presently available is for the programmer to attempt to debug directly at the computer, a process which is grossly wasteful of computer time and hampered seriously by the poor console communication usually available. Even if a typewriter is the console, there are usually lacking the sophisticated query and response programs which are vitally necessary to allow effective interaction."
->
-> Corbató et al. (Corbató et al., 1962)
--->
+</section>
+<section id="development-in-electronics" class="slide level2">
+<h2>Development in Electronics</h2>
+<ul>
+<li>As microelectronics became <strong>cheaper and more
+reliable</strong>, a distinction emerged:
+<ul>
+<li><strong>I/O</strong>: slow, complex, prone to mechanical
+failure</li>
+<li><strong>Mainframe</strong>: fast, simple, less prone to mechanical
+failure</li>
+</ul></li>
+</ul>
+</section>
+<section id="stracheys-time-sharing" class="slide level2">
+<h2>Strachey’s Time-Sharing</h2>
+<ul>
+<li>In 1959, “time-sharing” emerged—arguably from multiple sources
+(McCarthy, 1983).</li>
+<li>In today’s language, we may refer to it more like
+<strong>interrupt-based multiprocessing</strong>.
+<ul>
+<li>Slow I/O could <strong>interrupt</strong> the mainframe whenever it
+was done with its task.</li>
+</ul></li>
+</ul>
+</section>
+<section id="strachey-on-interactivity" class="slide level2">
+<h2>Strachey on “Interactivity”</h2>
+<ul>
+<li>It’s still batch processing, focused on debugging batch
+calculations.</li>
+</ul>
+<blockquote>
+<p>“There will be three operator’s consoles: an engineer’s console for
+maintaining and testing the machine, a programme-testing console with
+various visual displays and at least an electric typewriter, and a main
+operator’s console. All three will have fairly extensive facilities for
+intervening in the course of a calculation.”</p>
+<p>Christopher Strachey (Strachey, 1959)</p>
+</blockquote>
+<aside class="notes">
+<ul>
+<li>Strachey’s time-sharing (Strachey, 1959) was more like concurrent
+batch processing. In his time, I/O devices would perform complex
+(expensive!) operations to read and write data from magnetic tape while
+the main computer had to wait. Now “interrupts” entered the lexicon,
+which caught on. As the cost of computing was driven down by the
+development of electronics, devices could be categorized as slow or
+fast; simple or complex.
+<ul>
+<li>“There will be three operator’s consoles: an engineer’s console for
+maintaining and testing the machine, a programme-testing console with
+various visual displays and at least an electric typewriter, and a main
+operator’s console. All three will have fairly extensive facilities for
+intervening in the course of a calculation.” - Christopher Strachey,
+“Time Sharing in Large Fast Computers”</li>
+<li>“Who invented interrupts anyway? I thought of them, but I don’t
+believe I mentioned the idea to anyone before I heard of them from other
+sources.” - John McCarthy, Reminisces on the Theory of Time-Sharing</li>
+</ul></li>
+</ul>
+</aside>
+</section>
+<section id="changes-in-interactivity" class="slide level2">
+<h2>Changes in Interactivity</h2>
+<ul>
+<li>In 1962, just a few years after Strachey, time-sharing started to be
+about interactivity, a new principle concurrent with time-sharing.
+Again, the focus was on debugging.</li>
+</ul>
+</section>
+<section id="debugging" class="slide level2">
+<h2>Debugging</h2>
+<blockquote>
+<p>“Using current batch monitor techniques, as is done on most large
+computers, each program bug usually requires several hours to eliminate,
+if not a complete day. The only alternative presently available is for
+the programmer to attempt to debug directly at the computer, a process
+which is grossly wasteful of computer time and hampered seriously by the
+poor console communication usually available. Even if a typewriter is
+the console, there are usually lacking the sophisticated query and
+response programs which are vitally necessary to allow effective
+interaction.”</p>
+<p>Corbató et al. (Corbató et al., 1962)</p>
+</blockquote>
 </section>
 <section id="talking-to-your-computer" class="slide level2">
 <h2>Talking to Your Computer</h2>
 <ul>
-<li>In the 1960s, human computer interaction shifted from factory
-machine to having a phone call.</li>
+<li>In the 1960s, human computer interaction shifted from “operating a
+machine” to “having a phone call”.</li>
 </ul>
 <blockquote>
 <p>“The effect of this time-sharing is to allow a
@@ -148,10 +207,9 @@ very small amounts of computer time.”</p>
 <h1>Military Concerns</h1>
 
 </section>
-<section
-id="could-the-1960s-telephone-network-survive-a-nuclear-detonation"
+<section id="could-the-1960s-telephone-network-survive-a-nuclear-attack"
 class="slide level2">
-<h2>Could the 1960s telephone network survive a nuclear detonation?</h2>
+<h2>Could the 1960s telephone network survive a nuclear attack?</h2>
 <ul>
 <li>No, said Paul Baran of the RAND corporation.</li>
 </ul>
@@ -159,9 +217,6 @@ class="slide level2">
 <section id="how-does-one-create-a-resilient-network"
 class="slide level2">
 <h2>How does one create a resilient network?</h2>
-<ul>
-<li>Redundancy</li>
-</ul>
 <blockquote>
 <p>“We will soon be living in an era in which we cannot guarantee
 survivability of any single point. However, we can still design systems
@@ -180,7 +235,7 @@ be created by an intentional adversary.</li>
 <section id="implications-of-redundancy" class="slide level2">
 <h2>Implications of Redundancy</h2>
 <ul>
-<li>To Baran, packet switching seems like a natural outgrowth of a
+<li>To Baran, packet switching seemed like a natural outgrowth of a
 distributed, redundant network.</li>
 </ul>
 <blockquote>
@@ -190,42 +245,41 @@ optimized for the handling of data for many potential intermittent
 users…”</p>
 <p>Paul Baran (Baran, 1964)</p>
 </blockquote>
-</section>
-<section id="dividing-the-end-to-end-from-the-network"
-class="slide level2">
-<h2>Dividing the “End-to-End” from the “Network”</h2>
-<ul>
-<li>The main focus was still to establish a physical circuit for these
-switched networks–the primary advantage was interleaving.</li>
-<li>But if we’re being redundant, maybe we can be cheap and unreliable
-in normal operation.</li>
-</ul>
 </section></section>
 <section>
 <section id="combining-the-two" class="title-slide slide level1">
 <h1>Combining the Two</h1>
 
 </section>
-<section id="arpas-start" class="slide level2">
-<h2>ARPA’s Start</h2>
+<section id="networks-before-arpa" class="slide level2">
+<h2>Networks Before ARPA</h2>
 <ul>
-<li>The Advanced Research Projects Agency’s (ARPA) Information
-Processing Techniques Office (IPTO) wanted to connect universities
-supported by its funding.</li>
-<li>Larry Roberts deployed a 1200 bps phone line to connect two areas of
-Lincoln Labs, and everything worked well enough—except for the network
-itself, which was slow and unreliable. Getting around that constraint
-signified the main thrust of the ARPANET project.</li>
+<li>Devices were connected before ARPA (e.g. CTSS) but these were
+primarily TTYs (actual electro-mechanical typewriters, not video display
+terminals) connected to a mainframe.</li>
+<li>Remote connections between devices could happen over a “wide-area
+network.” Users could type messages onto a strip of tape, and send it
+encoded into Baudot code into receiver at the mainframe.</li>
 </ul>
 </section>
-<section id="bbns-start" class="slide level2">
-<h2>BBN’s Start</h2>
+<section id="what-is-unique-about-arpanet" class="slide level2">
+<h2>What is Unique About ARPANET?</h2>
 <ul>
-<li>In order to deploy a capable network, ARPA contracted Bolt, Beranek,
-and Newman (BBN) for the job.</li>
-<li>To this end they develoeped the IMP, a ruggedized Honeywell
-mini-computer with telephone modems attached.</li>
+<li>Host-to-Host</li>
+<li>Packet Switched</li>
+<li>Inter-“networked”</li>
 </ul>
+<!-- CUT FOR HISTORY -->
+<!--
+## ARPA's Start
+- The Advanced Research Projects Agency's (ARPA) Information Processing Techniques Office (IPTO) wanted to connect universities supported by its funding. 
+- Larry Roberts deployed a 1200 bps phone line to connect two areas of Lincoln Labs, and everything worked well enough—except for the network itself, which was slow and unreliable. Getting around that constraint signified the main thrust of the ARPANET project.
+
+## BBN's Start
+
+- In order to deploy a capable network, ARPA contracted Bolt, Beranek, and Newman (BBN) for the job.
+- To this end they develoeped the IMP, a ruggedized Honeywell mini-computer with telephone modems attached.
+-->
 </section></section>
 <section>
 <section id="early-arpanet" class="title-slide slide level1">
@@ -236,7 +290,7 @@ mini-computer with telephone modems attached.</li>
 <h2>Architecting the ARPANET</h2>
 <ul>
 <li>Architectural paradigms in the 60s-70s were dominated by the
-“Master/Slave” OS paradigm.</li>
+<strong>Master/Slave</strong> OS paradigm.</li>
 </ul>
 <blockquote>
 <p>“You try to connect two such devices together, two computers
@@ -245,7 +299,7 @@ master. Well, if one is the master, then the other must be the slave. We
 knew that we wanted a much more flexible vision in which the initiative
 could be at either site, and there would be a coordinated or cooperative
 model of communications.”</p>
-<p>John Crocker @ BBN (Pelkey, 2014, Section 4.5)</p>
+<p>John Crocker @ BBN (Pelkey, 2014, Section 6.5)</p>
 </blockquote>
 </section>
 <section id="host-host-and-ncp" class="slide level2">
@@ -269,7 +323,7 @@ RFNM is sent back to the sending HOST after the message has entered the
 receiving HOST. It is important to remember that there are 356 links in
 each direction and that <strong>no relationship among these is imposed
 by the network.</strong></p>
-<p>RFC 33 (emphasis mine)</p>
+<p>(emphasis mine)</p>
 </blockquote>
 </section>
 <section id="packet-switched" class="slide level2">
@@ -286,13 +340,6 @@ received at the following node.”</p>
 <p>Frank E. Heart (Heart et al., 1969)</p>
 </blockquote>
 </section>
-<section id="working-limitations" class="slide level2">
-<h2>Working Limitations</h2>
-<ul>
-<li>Universities could not work with these IMPs freely. It was a network
-for research, not a researchable network.</li>
-</ul>
-</section>
 <section id="kleinrock-on-working-with-bbn" class="slide level2">
 <h2>Kleinrock on Working with BBN</h2>
 <blockquote>
@@ -303,114 +350,159 @@ And they said: ‘No, there are no loops.’ But there are loops! They said:
 ‘No.’ So we simulated them and said: ‘Look, there’s loops.’ They said:
 ‘There are no loops.’ Then this four node network was implemented and we
 showed them loops, and the answer was; ‘Yes, there are loops.’”</p>
-<p>Len Kleinrock @ UCLA (Pelkey, 2014, Section 4.7)</p>
+<p>Len Kleinrock @ UCLA (Pelkey, 2014, Section 6.7)</p>
 </blockquote>
 </section>
-<section id="the-end-of-arpanet" class="slide level2">
-<h2>The End of ARPANET</h2>
+<section id="arpanet-into-tcpip" class="slide level2">
+<h2>ARPANET into TCP/IP</h2>
 <ul>
-<li>An incomplete conclusion could be that the ARPANET was doomed to
-fail.
+<li>Many lay-histories of the internet give complete continuity between
+ARPANET and TCP/IP, neglecting that many ARPANET designers moved towards
+X.25.</li>
+<li>This can also ignore how the needs of computer users fundamentally
+changed.</li>
+</ul>
+</section></section>
+<section>
+<section id="transformations-of-the-70s"
+class="title-slide slide level1">
+<h1>Transformations of the 70s</h1>
+
+</section>
+<section id="new-computing" class="slide level2">
+<h2>New Computing</h2>
 <ul>
-<li>Built off phone lines</li>
-<li>Designed explicitly for reliable routing</li>
-<li>Built with non-transparent gateways</li>
-</ul></li>
-<li>However, you could alternatively say that the opposition created
-between BBN and the academic community, as well as BBN’s own confused
-organization and strained relatioship to ARPA, stunted the possibility
-of ARPANET’s full development.</li>
+<li>Video display terminals became more common, giving end-users more
+powerful tools to interact with their computers.</li>
+<li>Minicomputers became financially reasonable for small companies,
+with personal computers on the way.</li>
 </ul>
 </section>
-<section id="arpanets-legacy" class="slide level2">
-<h2>ARPANET’s Legacy</h2>
+<section id="new-networking" class="slide level2">
+<h2>New Networking</h2>
 <ul>
-<li>Is it true that ARPANET was the direct ancestor of TCP/IP?</li>
+<li>Small institutions were now interested in buying their own
+mini-computer and setting up their own network.</li>
+<li>Computing now made sense for most institutions.</li>
 </ul>
 </section>
-<section id="other-influences" class="slide level2">
-<h2>Other influences</h2>
+<section id="inter-networking" class="slide level2">
+<h2>Inter-Networking</h2>
 <ul>
-<li><p>Not directly continuous.</p></li>
-<li><p>CYCLADES, a project by the French postal service, headed by Louis
-Pouzin, tried to finish what appeared lacking in ARPANET &gt; “[BBN]
-understood that I intended to build another network but they really
-didn’t believe it. They had this feeling that the Arpanet, this kind of
-complicated system, could only be implemented in a country like the
-States due to money, expertise and so on. They didn’t believe Europe
-could bring something like that up.” &gt; &gt; Louis Pouzin</p></li>
-</ul>
-</section>
-<section id="layering-in-cyclades" class="slide level2">
-<h2>Layering in CYCLADES</h2>
+<li>The INWG: IFIP Working Group 6.1 (WG 6.1) on Network Interconnection
+was formed to manage the concept of these inter-networks.</li>
+<li>Notable players were 3 protocol “families”:
 <ul>
-<li>CYCLADES was an intervening force for whom we now credit as the
-inventors of TCP/IP - Cerf, Kahn, and Metcalfe. CYCLADES had explicit
-layering by modeling to an application an end-to-end virtual circuit on
-top of an unreliable, best-effort network. With CYCLADES, modern
-networking concepts become recognizable</li>
-<li>Later, we would see the protocol wars come out of these
-delineations.</li>
-</ul>
-</section>
-<section id="end-to-end" class="slide level2">
-<h2>End-to-End?</h2>
-<ul>
-<li>Why be end-to-end?
-<ul>
-<li>End-to-end provisioning is useful in that they only need to fix a
-problem once, at the host, and the host is the device most able to
-appraise what an error is. Pouzin remained open to alternative
-solutions: “With experience gradually building up, and depending on
-trends in international standards, more stable characteristics will
-eventually emerge. By putting them at some lower system level, it will
-be possible to obtain higher efficiency and reduce duplication, at the
-cost of freezing a few more parameters.”</li>
-<li>However, end-to-end solutions are slow, and not every problem that
-manifests at the host is more easily solved at the host–(e.g. the rapid
-adoption of ECN).</li>
-</ul></li>
-<li>Why use virtual circuits?
-<ul>
-<li>To Pouzin, freedom in routing packets.</li>
-<li>“Although various groups call for a DG [datagram] interface, the
-carriers are opposed to it. Four carriers are rushing a VC [virtual
-circuit, to Pouzin this means an exclusively carrier-operated network
-that requires user subscription to that network] protocol through CCITT
-[Consultative Committee for International Telephony and Telegraphy, a
-committee in the International Telegraphers Union]. The carrier’s goal
-is to take over terminal handling, and gradually other processing
-functions. DG’s would leave too much freedom to the customer. The
-political implications of the carrier policy suggest that better
-boundaries be drawn up between carriers and data processing.”</li>
+<li>X.25</li>
+<li>CYCLADES</li>
+<li>TCP</li>
 </ul></li>
 </ul>
 </section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
+<section id="x.25" class="slide level2">
+<h2>X.25</h2>
 <ul>
-<li>Hopefully, this presentation has illustrated that the development of
-the (more or less) modern internet was not just a rational adoption of
-design principles, but rather a process that was marked by nuclear war,
-academic contention, disorganization, and political visions for an ideal
-internet.</li>
-<li>Apparent “givens” in design like the end-to-end principle and
-layering were contingents of a decades-long development in
-human-computer interaction.</li>
+<li>The standard proposed by international postal, telegraph, and
+telephone services (PTT).</li>
+<li>Developed to use connection-oriented virtual circuits.</li>
+<li>Provided its own reliability guarantees through LAPB, its link-layer
+protocol.</li>
 </ul>
 </section>
-<section id="discussion" class="slide level2">
-<h2>Discussion</h2>
+<section id="cyclades" class="slide level2">
+<h2>CYCLADES</h2>
 <ul>
-<li>Is the end-to-end principle still applicable?</li>
-<li>What assumptions made by early designers ended up violated over
-time, if any?</li>
-<li>Can the internet realistically be changed? If so, to what
-extent?</li>
+<li>CYCLADES, headed by Louis Pouzin, tried to finish what appeared
+lacking in ARPANET.</li>
+</ul>
+<blockquote>
+<p>“[BBN] understood that I intended to build another network but they
+really didn’t believe it. They had this feeling that the ARPANET, this
+kind of complicated system, could only be implemented in a country like
+the States due to money, expertise and so on. They didn’t believe Europe
+could bring something like that up.”</p>
+<p>Louis Pouzin (Pelkey, 2014, Section 8.3)</p>
+</blockquote>
+</section>
+<section id="tcpip" class="slide level2">
+<h2>TCP/IP</h2>
+<ul>
+<li>Through its conflict with CYCLADES, TCP refined itself into TCP/IP,
+a layered, best-effort, end-to-end set of protocols designed to promote
+internetworking.</li>
+</ul>
+</section></section>
+<section>
+<section id="principles-of-tcpip" class="title-slide slide level1">
+<h1>“Principles” of TCP/IP</h1>
+<ul>
+<li>Datagrams</li>
+<li>Layering</li>
+<li>End-to-End Design</li>
+<li>Best-Effort</li>
 </ul>
 </section>
-<section id="sources" class="slide level2">
-<h2>Sources</h2>
+<section id="what-ties-these-together" class="slide level2">
+<h2>What ties these together?</h2>
+<ul>
+<li>Minimizing the importance of the network.</li>
+<li>Bringing functionality to the network meant dealing with the postal,
+telegraph, and telephone services, which were a thorn in the side of the
+inter-networking standards group.</li>
+</ul>
+</section>
+<section id="cerf-on-datagrams" class="slide level2">
+<h2>Cerf on Datagrams</h2>
+<blockquote>
+<p>“[PTT and INWG] used to fight tooth and nail with each other, and I
+was out there fighting too. I was beating the table saying: ’God damn
+it, it had to be datagrams because that required less of a network and
+you had to do things end-to-end anyway, because you wanted to have the
+mainframes assure the other end that they had really gotten the data,
+and not just that the network thinks that you got it…”</p>
+<p>Vint Cerf (Pelkey, 2014, Section 8.4)</p>
+</blockquote>
+</section>
+<section id="pouzin-on-layering" class="slide level2">
+<h2>Pouzin on Layering</h2>
+<blockquote>
+<p>“The second thing is [TCP version 1] mingled – it actually handled in
+the very same protocol, matters that belong to the transport level, and
+matters that belong to the end-to-end protocol. That kind of coupling
+was politically unacceptable, because these two levels of system were
+handled by two different worlds: The PTTs and the other world, the
+computer people. So obviously it was not acceptable in terms of
+technical sociology. You could not sell something that involves the
+consensus of these two different worlds.”</p>
+<p>Louis Pouzin (Pelkey, 2014, Section 8.4)</p>
+</blockquote>
+</section>
+<section id="pouzin-on-end-to-end-design" class="slide level2">
+<h2>Pouzin on End-to-End Design</h2>
+<ul>
+<li>Pouzin was open to non-end-to-end solutions to problems, provided
+that the solutions were emergent and not dictated by the PTT.</li>
+</ul>
+<blockquote>
+<p>“With experience gradually building up, and depending on trends in
+international standards, more stable characteristics will eventually
+emerge. By putting them at some lower system level, it will be possible
+to obtain higher efficiency and reduce duplication, at the cost of
+freezing a few more parameters.”</p>
+<p>Louis Pouzin (Pouzin, 1973)</p>
+</blockquote>
+</section>
+<section id="what-do-these-mean-now" class="slide level2">
+<h2>What do these Mean Now?</h2>
+<ul>
+<li>In the era of microservices, computing clusters, and smart fridges
+replicating the internet on one device, should we reconsider these
+assumptions?</li>
+</ul>
+</section></section>
+<section id="sources" class="title-slide slide level1">
+<h1>Sources</h1>
+<div class="scrollable">
 <ul>
 <li><a
 href="https://www.rand.org/content/dam/rand/pubs/papers/2005/P2626.pdf">Paul
@@ -418,12 +510,6 @@ Baran - On Distributed Communications Networks - 1962</a></li>
 <li><a
 href="https://www.rand.org/pubs/research_memoranda/RM3420.html">Paul
 Baran - On Distributed Communications - 1964</a></li>
-<li><a
-href="https://d1bcsfjk95uj19.cloudfront.net/files/2009-designed-for-change.pdf">Richard
-Bennett - Designed for Change</a></li>
-<li><a
-href="http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf">David
-Clark - The Design Philosophy of the DARPA Internet Protocols</a></li>
 <li><a
 href="http://larch-www.lcs.mit.edu:8001/~corbato/sjcc62/">Fernando
 Corbato et al. - An Experimental Time-Sharing System - 1962</a></li>
@@ -436,20 +522,21 @@ Network - 1969</a></li>
 <li><a
 href="http://jmc.stanford.edu/computing-science/timesharing.html">John
 McCarthy - Reminiscences on the Theory of Time-Sharing - 1983</a></li>
-<li><a
-href="https://web.archive.org/web/20210617093154/https://www.historyofcomputercommunications.info/Book/6/6.3-CYCLADESNetworkLouisPouzin1-72.html">James
-Pelkey - Entrepreneurial Capitalism and Innovation: A History of
-Computer Communications 1968-1988 - 2014</a></li>
-<li><a href="https://dl.acm.org/doi/pdf/10.1145/61975.66916">Larry
-Roberts - The ARPANET and Computer Networks</a></li>
+<li><a href="https://historyofcomputercommunications.info/">James Pelkey
+- Entrepreneurial Capitalism and Innovation: A History of Computer
+Communications 1968-1988 - 2014</a></li>
 <li><a
 href="https://ia804601.us.archive.org/0/items/large-fast-computers/Image070917171847.pdf">Christopher
 Strachey - Time Sharing in Large Fast Computers - 1959</a></li>
 <li><a
 href="http://archive.computerhistory.org/resources/access/text/2013/04/102746626-05-01-acc.pdf">Larry
 Roberts - Interview by James L. Pelkey - 1988</a></li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/800280.811034">Louis
+Pouzin - Presentation on the Major Design Aspects of the CYCLADES
+Computer Network - 1973</a></li>
 </ul>
-</section></section>
+</div>
+</section>
     </div>
   </div>
 
