@@ -1,0 +1,7 @@
+- [Sam's prelim (motivation)](https://github.com/charmoniumQ/thesis/blob/main/prelim_pres/main.html)
+- [Library interposition (`LD_PRELOAD`) GLUG presentation](https://github.com/gnulug/meetings/tree/master/2022f/2022-11-16)
+- [Address-space layout randomization is not as good as you think](https://arxiv.org/pdf/2408.15107)
+- [setarch](https://www.man7.org/linux/man-pages/man8/setarch.8.html) and [personality](https://www.man7.org/linux/man-pages/man2/personality.2.html)
+- [Snakemake Paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC8114187/)
+- [Reinhart-Rogoff Excel spreadsheet error](https://theconversation.com/the-reinhart-rogoff-error-or-how-not-to-excel-at-economics-13646)
+- [Zpoline (replacing syscall with funccall)](https://www.usenix.org/system/files/atc23-yasukata.pdf)
