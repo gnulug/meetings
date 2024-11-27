@@ -228,13 +228,22 @@ This used to be literal.
 # Sources 
 <div class="scrollable">
 - [Paul Baran - On Distributed Communications Networks - 1962](https://www.rand.org/content/dam/rand/pubs/papers/2005/P2626.pdf)
+
 - [Paul Baran - On Distributed Communications - 1964](https://www.rand.org/pubs/research_memoranda/RM3420.html)
+
 - [Fernando Corbato et al. - An Experimental Time-Sharing System - 1962](http://larch-www.lcs.mit.edu:8001/~corbato/sjcc62/)
+
 - [Donald Davies - Proposal for a Digital Communication Network - 1966](https://www.dcs.gla.ac.uk/~wpc/grcs/Davies05.pdf)
+
 - [Frank Heart et al. - The Interface Message Processor for the ARPA Computer Network - 1969](https://www.walden-family.com/public/1970-imp-afips.pdf)
+
 - [John McCarthy - Reminiscences on the Theory of Time-Sharing - 1983](http://jmc.stanford.edu/computing-science/timesharing.html)
+
 - [James Pelkey - Entrepreneurial Capitalism and Innovation: A History of Computer Communications 1968-1988 - 2014](https://historyofcomputercommunications.info/)
+
 - [Christopher Strachey - Time Sharing in Large Fast Computers - 1959](https://ia804601.us.archive.org/0/items/large-fast-computers/Image070917171847.pdf)
+
 - [Larry Roberts - Interview by James L. Pelkey - 1988](http://archive.computerhistory.org/resources/access/text/2013/04/102746626-05-01-acc.pdf)
+
 - [Louis Pouzin - Presentation on the Major Design Aspects of the CYCLADES Computer Network - 1973](https://dl.acm.org/doi/pdf/10.1145/800280.811034)
 </div>
