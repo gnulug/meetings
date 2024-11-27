@@ -6,8 +6,8 @@
 | 2024-09-11 | Linux Installfest | - | - |
 | 2024-09-18 | Network Address Translation: A practical guide | Leslie | - |
 | 2024-09-25 | reproducibility and nix, a gentle introduction | Sam & Jenna | - |
-| 2024-10-02 | Linux Jeopardy | - | test your linux knowledge with some trivia |
-| 2024-10-09 | Technical Evolution of Networking | [pngdeity](https://github.com/pngdeity) & evan2 | - |
+| 2024-10-02 | Linux Quizbowl | - | test your linux knowledge with some trivia |
+| 2024-10-09 | Evolution of Telecom | pngdeity & evan2 | - |
 | 2024-10-16 | Understanding the Data Plane Development Kit (dpdk) | hickhackz | - |
 | 2024-10-23 | {Free,Open}BSD and Linux | Jenna | - |
 | 2024-10-30 | Russel's talk | Russel | - |
