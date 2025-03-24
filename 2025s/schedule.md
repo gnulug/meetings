@@ -11,7 +11,7 @@
 | 2025-03-05 | | | |
 | 2025-03-12 | Open source game night | N/A | Bring a mouse! |
 | 2025-03-19 | **No Meeting** | N/A | Spring Break |
-| 2025-03-26 | FPGA networking stack | Cole | |
+| 2025-03-26 | Wikipedia: The Last Standing Web 2.0 website | pngdeity | |
 | 2025-04-02 | GNU Hurd (+shepherd +guix maybe) | Theta | |
 | 2025-04-09 | Screen readers | Evan | |
 | 2025-04-16 | Infecting the cloud with ArchLinux | cosine | |
