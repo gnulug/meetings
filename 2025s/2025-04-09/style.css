@@ -1,0 +1,23 @@
+.remark-container h1 {
+    font-size: 30px;
+}
+
+.remark-slide-content {
+    font-size: 18px;
+}
+
+.remark-container img {
+    max-width: 90%;
+}
+
+.remark-container table,td {
+    border: 1px solid black;
+}
+
+.remark-container code {
+    font-family: monospace;
+    background: lightgray;
+    border-radius: .25em;
+}
+
+.remark-slide-content { padding: 1em; }

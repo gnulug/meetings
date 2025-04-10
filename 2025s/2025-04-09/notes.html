@@ -1,0 +1,86 @@
+# Screen Readers
+
+- Screen readers present text on screen as speech or braille
+
+<img src="braille.jpg" alt="refreshable braille device" height="300px"/>
+
+- Use accessibility APIs that are specific to the environment
+  - e.g. UI Automation (JAWS/NVDA, Windows)
+  - Accessibility API (VoiceOver, OSX), 
+  - Assistive Technology Service Provider Interface (AT-SPI, Orca GNOME)
+  
+---
+
+# Screen Reader Marketshare
+
+| Reader    | Platform | License     |
+|-----------|----------|-------------|
+| JAWS      | Windows  | Proprietary |
+| NVDA      | Windows  | GPL2        |
+| VoiceOver | OSX      | Proprietary |
+| ORCA      | Linux    | LGPL2       |
+
+<img src="marketshare.png" alt="screen reader marketshare" height="300px"/>
+
+Evolving landscape, but most vision-impaired use Windows + JAWS/NVDA.
+
+[webaim.org](https://webaim.org/projects/screenreadersurvey10/)
+
+---
+
+# Accessibility Bus (AT-SPI Registry)
+
+- Widgets advertised on accessibility bus (DBUS) as navigable hierarchy of elements
+
+![GTK AT-SPI Diagram](gtkatspi.webp)
+
+- Most modern GUI toolkits have screen-reader-accessible built-in widgets
+
+---
+
+# Web Accessibility
+
+- HTML tags (and especially modern HTML5 tags) have rich semantic meaning already
+  - Simple websites are accessible if correct tags are used
+
+- *Web Accessibility Initiative – Accessible Rich Internet Applications*
+
+- Example: Website search box
+    - No ARIA role: 
+        - `<input type="search" name="q" placeholder="Search query" />`
+    - ARIA-tagged element: 
+        - `<input type="search" name="q" placeholder="Search query" role="search"/>`
+    - Semantic HTML5 Element:
+        - `<search><form>... <input type="search" name="q" placeholder="Search query" /></form>`
+        
+<img src="calpicker.png" alt="calendar picker applet" height="200px"/>
+
+---
+      
+# Most Common Web Issues
+
+![Graph of most common accessibility issues](issues.png)
+
+- Many common issues are easily fixable:
+  - Missing image alt text description: `<img src="..." alt="A banana"/>`
+  - Missing form descriptions: `<label for="cheesecheck">Do you like cheese?</label> <input type="checkbox" name="cheese" id="cheese" />`
+  - Bad headings: `<h1>Page Title</h1> <h3>Subsection 1</h3>`
+
+[webaim.org/projects/million](https://webaim.org/projects/million/)
+
+---
+
+# Example Shortcuts and Demo
+
+<img src="shortcuts.png" alt="shortcuts table" width="100%"/>
+
+<!-- - `1`/`Shift+1` - next/prev h1 heading -->
+<!-- - `2`/`Shift+2` - next/prev h1 heading -->
+<!-- - ... -->
+<!-- - `→`/`←` - read next/prev letter -->
+<!-- - `↓`/`↑` - read next/prev line -->
+
+
+
+<script src="https://evidlo.github.io/roboslides/remark.js"></script>
+<link href="style.css" rel="stylesheet" />
