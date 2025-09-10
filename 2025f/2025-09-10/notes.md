@@ -91,3 +91,4 @@
   - In [IndieWebAuth](https://indieweb.org/IndieAuth), you can authenticate to arbitary web services by proving you own a domain-name, no keys or passwords involved. When would this be sufficient, and when would you want something more?
     - Indeed BlueSky, while not implementing IndieWebAuth, lets you use a [verified domain name as your account name](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial).
     - Likewise, WKD and DNS-based Authentication of Named Entities (DANE) utilize DNS as a delegatable naming authority.
+
