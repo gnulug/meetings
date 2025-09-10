@@ -24,6 +24,7 @@
       - [stronk set](https://web.archive.org/web/20200621062831/https://pgp.cs.uu.nl/plot/)
       - Inherent cons:
         - [OpenPGP Certificate Flooding](https://dkg.fifthhorseman.net/blog/openpgp-certificate-flooding.html)
+        - [Good paper](https://dl.acm.org/doi/pdf/10.1145/3524458.3548488)
         - [Long-term keys/no forward secrecy](https://www.latacora.com/blog/2019/07/16/the-pgp-problem/)
         - Leaks metadata on "who signs who"
         - How well did you verify their identity?
@@ -65,11 +66,14 @@
       - > `minisign`/`signify` - AFAIK the tools and their formats do not support streamed verification, thus they cannot simply be used together with age in command or library form in streaming use cases. It means requiring more storage/passes and opening for TOCTOU vulnerabilities. --- [GitHub issue 51 comment](https://github.com/FiloSottile/age/issues/51#issuecomment-569843004)
     - This comment on HN comes dangerously close to realizing why we had WoT in the first place.
         
-      > > The big problem is there are no really good ways to deal with this problem fully.
+      > > The big problem is there are no really good ways to deal with this problem [the switcharoo problem] fully.
       > If you use digital signatures, you have to have a trusted method of distributing the verification keys.
       >
       > If you have a secure method of distributing keys, you could also just distribute the encrypted file (or its hash) via that secure method.
       > --- [Hackernews comment](https://news.ycombinator.com/item?id=32998851)
+
+      Of course, the last syllogism is false. A and B could have established a secure channel a long time ago, B and C (not necessarily afterwards), C and D, A can rececive D's key with authenticity, but there was never a secure channel from A to D directly.
+
   - E2e messaging:
     - [Matrix](https://matrix.org), requires always-online server
       - Could be used for more than just chat
@@ -84,4 +88,6 @@
     - [The Ecosystem is Moving by Moxie Marlinspike of Signal (2016)](https://signal.org/blog/the-ecosystem-is-moving/)
     - [On Privacy versus Freedom by Matthew Hodgson of Matrix (2020)](https://matrix.org/blog/2020/01/02/on-privacy-versus-freedom/)
   - Is it even possible to get perfect forward secrecy for a static thing, without servers?
-  - In [IndieWebAuth](https://indieweb.org/IndieAuth), you can authenticate to arbitary web services by proving you own a domain-name, no keys or passwords involved. When would this be sufficient, and when would you want something more? Indeed BlueSky, while not implementing IndieWebAuth, lets you use a [verified domain name as your account name](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial).
+  - In [IndieWebAuth](https://indieweb.org/IndieAuth), you can authenticate to arbitary web services by proving you own a domain-name, no keys or passwords involved. When would this be sufficient, and when would you want something more?
+    - Indeed BlueSky, while not implementing IndieWebAuth, lets you use a [verified domain name as your account name](https://bsky.social/about/blog/4-28-2023-domain-handle-tutorial).
+    - Likewise, WKD and DNS-based Authentication of Named Entities (DANE) utilize DNS as a delegatable naming authority.
