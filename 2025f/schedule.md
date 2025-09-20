@@ -6,7 +6,7 @@
 | 2025-09-10 | GPG Intro/Debate | many | - |
 | 2025-09-17 | Installfest/key-signing | - | - |
 | 2025-09-24 | Intro to NixOS | jenna | - |
-| 2025-10-01 | Distributed Storage (CEPH) | krish | - |
+| 2025-10-01 | Distributed Storage (Ceph) | krishnan | - |
 | 2025-10-08 |  | - | - |
 | 2025-10-15 | shells, compare and contrast | orbital | - |
 | 2025-10-22 | postscript night | evan | - |
