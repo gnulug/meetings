@@ -13,7 +13,7 @@
 | 2025-10-29 | self-hosting | many  | - |
 | 2025-11-05 | Open Source Networking | leslie | - |
 | 2025-11-12 | Blu-Ray Hacks | evan | - |
-| 2025-11-19 |  | - | - |
+| 2025-11-19 | Retrotech Collab | - | details TBD |
 | 2025-11-26 | **Thanksgiving Week** | - | No Meeting |
 | 2025-12-03 |  | - | - |
 | 2025-12-10 | Open Source game night | - | - |
