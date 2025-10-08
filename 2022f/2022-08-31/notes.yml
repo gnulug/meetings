@@ -1,46 +1,43 @@
 Website: https://lug.acm.illinois.edu/
 Meeting Info: See website
 Date: 2022-08-31
-
 Talks:
-
-  - |
-    # Welcome to GLUG/GNULUG/LUG/SIG GLUG by Samuel Grayson
-    - What to expect during meetings?
-      - Fun, interactive talks
-      - Have UNIX system handy if you want to experiment (MacOS will usually work)
-    - Also: We will do projects.
-    - Ultimately, this club belongs to you all.
-    - ACM open house is tomorrow (free pizza). Want to help?
-
-  - |
-    # The OSS revolution (Part 1)
-    - Beginnings of UNIX at AT&T.
-    - BSD := rewrite UNIX but free
-    - Linux := make a UNIX-like OS, collaborate on the internet.
-      - People can make proprietary extensions.
-      - People can have proprietary drivers in the kernel as binary BLOBs.
-    - GNU := make a totally free OS.
-      - It's really hard to make a kernel (we tried with GNU Hurd); let's just use Linux as the kernel and our software on top.
-      - Even if OS is free, firmware is usually proprietary
-        - Coreboot is trying to fix this.
-      - Even if OS and firmware is free, Intel Management Engine runs in the CPU, can read all RAM, and can talk to the network!
-        - RISC-V could fix this?
-    - Copyleft vs permissive :=
-      - Permissive := anyone can get the source code for free (free as in beer) and use for any purpose (free as in speech).
-        - MIT license, BSD license are permissive
-      - Copyleft := anyone can get the source code for free AND if you use copyleft software, you have to make your software copyleft.
-        - Copyleft has been called "virus" since if your software uses an "infected" component, it becomes infected, and has to be copyleft.
-        - GNU Public License (GPL) is copyleft
-        - Mozilla Public License (MPL) is somewhere in between. The MPL software can be used as-is in non-free software, but any improvements to MPL software have to be contributed back to the community.
-    - Open-source business models :=
-      - Freemium := properitary extensions to an open-source base.
-        - RHEL is a proprietary extension of Linux.
-      - Pay for technical support := RedHat is a good example
-      - Pay for hosting := Google Kubernetes is open source, but pay Google for compute power to host.
-        - ShareLatex, RocketChat, etc.
-    - [RANT] Open source software is a revolution. Computing should be for the users not mega-corporations. Making money is important, but the current world is biased so far in favor of corporations that users don't have basic freedoms (right to repair, privacy rights, etc.). Our computers have become digital jails, preventing us from using them in certain ways. Open source software puts power back in the hands of the users. Anyone can create, improve, or distribute software, and it has created a vibrant self-sustaining community. [/RANT]
-
+  Big Talks:
+    Welcome to GLUG/GNULUG/LUG/SIG GLUG by Samuel Grayson: |
+      - What to expect during meetings?
+        - Fun, interactive talks
+        - Have UNIX system handy if you want to experiment (MacOS will usually work)
+      - Also: We will do projects.
+      - Ultimately, this club belongs to you all.
+      - ACM open house is tomorrow (free pizza). Want to help?
+  
+    The OSS revolution (Part 1): |
+      - Beginnings of UNIX at AT&T.
+      - BSD := rewrite UNIX but free
+      - Linux := make a UNIX-like OS, collaborate on the internet.
+        - People can make proprietary extensions.
+        - People can have proprietary drivers in the kernel as binary BLOBs.
+      - GNU := make a totally free OS.
+        - It's really hard to make a kernel (we tried with GNU Hurd); let's just use Linux as the kernel and our software on top.
+        - Even if OS is free, firmware is usually proprietary
+          - Coreboot is trying to fix this.
+        - Even if OS and firmware is free, Intel Management Engine runs in the CPU, can read all RAM, and can talk to the network!
+          - RISC-V could fix this?
+      - Copyleft vs permissive :=
+        - Permissive := anyone can get the source code for free (free as in beer) and use for any purpose (free as in speech).
+          - MIT license, BSD license are permissive
+        - Copyleft := anyone can get the source code for free AND if you use copyleft software, you have to make your software copyleft.
+          - Copyleft has been called "virus" since if your software uses an "infected" component, it becomes infected, and has to be copyleft.
+          - GNU Public License (GPL) is copyleft
+          - Mozilla Public License (MPL) is somewhere in between. The MPL software can be used as-is in non-free software, but any improvements to MPL software have to be contributed back to the community.
+      - Open-source business models :=
+        - Freemium := properitary extensions to an open-source base.
+          - RHEL is a proprietary extension of Linux.
+        - Pay for technical support := RedHat is a good example
+        - Pay for hosting := Google Kubernetes is open source, but pay Google for compute power to host.
+          - ShareLatex, RocketChat, etc.
+      - [RANT] Open source software is a revolution. Computing should be for the users not mega-corporations. Making money is important, but the current world is biased so far in favor of corporations that users don't have basic freedoms (right to repair, privacy rights, etc.). Our computers have become digital jails, preventing us from using them in certain ways. Open source software puts power back in the hands of the users. Anyone can create, improve, or distribute software, and it has created a vibrant self-sustaining community. [/RANT]
+  
 Next Meeting Topics:
   - Install fest (5)
   - "Compare: Dual-booting Linux, WSL, VirtualBox, Docker, MacOS (3) (Russel, Sam)"

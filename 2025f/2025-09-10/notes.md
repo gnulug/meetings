@@ -1,3 +1,5 @@
+# GPG vs next-generation crypto
+
 - What problems does GPG/friends solve?
   - Certifying authorship of source code (git commit signing)
   - Certifying authenticity of packages for package managear

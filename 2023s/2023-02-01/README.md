@@ -1,4 +1,4 @@
-## GLUG Cloud Hardware Night
+# GLUG Cloud Hardware Night
 
 ### Overview
    **GOAL:** 

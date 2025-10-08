@@ -43,5 +43,5 @@ Meeting Sections:
    - emacs: evil-mode (again)
 
 Talks:
-  - Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
-  - Jon Schipp and Jon Klem: Web hosting with Docker containers
+  Devin Akman: C debugging and profiling tools gdb, valgrind, gprof
+  Jon Schipp and Jon Klem: Web hosting with Docker containers

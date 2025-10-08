@@ -11,7 +11,7 @@
   
 ---
 
-# Screen Reader Marketshare
+## Screen Reader Marketshare
 
 | Reader    | Platform | License     |
 |-----------|----------|-------------|
@@ -28,7 +28,7 @@ Evolving landscape, but most vision-impaired use Windows + JAWS/NVDA.
 
 ---
 
-# Accessibility Bus (AT-SPI Registry)
+## Accessibility Bus (AT-SPI Registry)
 
 - Widgets advertised on accessibility bus (DBUS) as navigable hierarchy of elements
 
@@ -38,7 +38,7 @@ Evolving landscape, but most vision-impaired use Windows + JAWS/NVDA.
 
 ---
 
-# Web Accessibility
+## Web Accessibility
 
 - HTML tags (and especially modern HTML5 tags) have rich semantic meaning already
   - Simple websites are accessible if correct tags are used
@@ -57,7 +57,7 @@ Evolving landscape, but most vision-impaired use Windows + JAWS/NVDA.
 
 ---
       
-# Most Common Web Issues
+## Most Common Web Issues
 
 ![Graph of most common accessibility issues](issues.png)
 
@@ -70,7 +70,7 @@ Evolving landscape, but most vision-impaired use Windows + JAWS/NVDA.
 
 ---
 
-# Example Shortcuts and Demo
+## Example Shortcuts and Demo
 
 <img src="shortcuts.png" alt="shortcuts table" width="100%"/>
 

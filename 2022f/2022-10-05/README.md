@@ -1,5 +1,5 @@
 ---
-title: GNULUG Oct 5 meeting: FUSE!
+title: 'GNULUG Oct 5 meeting: FUSE!'
 author: Samuel Grayson
 ########
 # Note #

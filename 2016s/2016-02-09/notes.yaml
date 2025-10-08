@@ -37,11 +37,13 @@ Meeting Sections:
 
 Talks:
   Small Talks:
-    Title: Package content verification
-    - Verify the contents of a package using checksums for RPM and DEB.
+    - Title: Package content verification
+      Body:
+        - Verify the contents of a package using checksums for RPM and DEB.
 
-    Title: Prelinking
-    - Describe and demo prelinking
+    - Title: Prelinking
+      Body:
+        - Describe and demo prelinking
 
   Big Talks:
     TBA:
