@@ -1,6 +1,11 @@
 # Shkype
 
-- [Repository](https://github.com/Evidlo/shkype/)
+![](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/950/210/datas/gallery.jpg)
+
+![](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/951/604/datas/gallery.jpg)
+
+- [Source code](https://github.com/Evidlo/shkype/)
+- [Devpost](https://devpost.com/software/shkype)
 
 # Ricing shell demo
 

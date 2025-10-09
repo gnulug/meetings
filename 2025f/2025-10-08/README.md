@@ -1,0 +1,24 @@
+---
+title: Trip down memory lane
+---
+
+- All notes from past meetings can be found in our [README](../../README.md)
+- Some of our (audience and Sam's) favorite hits:
+  - [FUSE](../../2022f/2022-10-05). The code still runs like new.
+  - [Shkype](../../2023f/2023-09-06/README.md)
+  - [Package Managers](../../2024s/2024-03-20/README.md)
+    - We didn't talk about [Repology's graph](https://repology.org/repositories/graphs) and [table](https://repology.org/repositories/statistics)
+- Other stuff
+  - [Largest Wikipedia language communities by number of articles](https://en.wikipedia.org/wiki/List_of_Wikipedias)
+  - [Flock Security](https://www.flocksafety.com/) makes automated license plate readers (ALPRs) for many cities in the US.
+    - [Map of Flock Cameras near Chambanavoy](https://deflock.me/map#map=13/40.123503/-88.258839)
+    - [Flock's transparency portal for Champaign IL PD ](https://transparency.flocksafety.com/champaign-il-pd)
+    - Flock can get used to track people down for stuff that's only a crime in [other states](https://archive.is/tRg61)
+    - FOIA'ed datasets
+      - [Flock Safety search audits, network sharing, and general order (Yakima Police Department)](https://www.muckrock.com/foi/yakima-8574/flock-safety-search-audits-network-sharing-and-general-order-yakima-police-department-186567/?key=844UPCMM93PE9SLQURS9T1L7)
+      - [Flock Safety search audits, network sharing, and general order (Prosser Police Department)](https://www.muckrock.com/foi/prosser-8485/flock-safety-search-audits-network-sharing-and-general-order-prosser-police-department-186565/?key=9T4VSTX2JUYZ5381HZFE8OFS)
+      - [Flock Safety ALPR Audits 2025 (Mount Prospect Police Department)](https://www.muckrock.com/foi/mount-prospect-8189/flock-safety-alpr-audits-2025-mount-prospect-police-department-186694/)
+      - North Carolina newspaper published data on Flock Transparency Portals they found [here](https://github.com/mcclatchy-southeast/private_eyes)
+  - Electronic Freedom Frontier (EFF) is a good advocate for internet privacy, right-to-repair, etc.
+    - [How to fix the internet podcast series](https://www.eff.org/deeplinks/2025/09/podcast-episode-building-and-preserving-library-everything)
+  - [Privacy Cell](https://f-droid.org/en/packages/com.stoutner.privacycell/) tells you when you are using insecure cellular protocols (e.g., downgrade attacks)

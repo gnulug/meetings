@@ -144,14 +144,26 @@ get_titles_format = {
 }
 
 
+def replace_autogen_section(
+        source: str,
+        begin_autogen_tag: str,
+        end_autogen_tag: str,
+        autogen_body: str,
+) -> str:
+    begin_autogen_idx = source.index(begin_autogen_tag) + len(begin_autogen_tag)
+    end_autogen_idx = source.index(end_autogen_tag, begin_autogen_idx)
+    return source[:begin_autogen_idx] + autogen_body + source[end_autogen_idx:]
+
+
 if __name__ == "__main__":
     root_dir = pathlib.Path()
     no_title_found = []
-    document = []
-    for year, semester, semester_dir in get_semester_dirs(root_dir):
-        document.append(f"# {year} {semester.name.lower().capitalize()}")
+    autogen_markdown = []
+    semester_dirs = sorted(get_semester_dirs(root_dir), reverse=True)
+    for year, semester, semester_dir in semester_dirs:
+        autogen_markdown.append(f"# {year} {semester.name.lower().capitalize()}")
         semester_links = []
-        for date, event_dir in get_event_dirs(semester_dir):
+        for date, event_dir in sorted(get_event_dirs(semester_dir), reverse=True):
             main_notes = get_main_notes(event_dir)
             if main_notes is not None:
                 titles = get_titles(main_notes)
@@ -160,10 +172,18 @@ if __name__ == "__main__":
                         semester_links.append(f"- [{title}](./{main_notes})")
                 else:
                     no_title_found.append(main_notes)                
-        document.extend(semester_links)
-    print("\n".join(document))
+        autogen_markdown.extend(semester_links)
 
-    
+    readme_path = root_dir / "README.md"
+    readme_path.write_text(
+        replace_autogen_section(
+            readme_path.read_text(),
+            "\n<!-- BEGIN_AUTOGEN -->\n",
+            "\n<!-- END_AUTOGEN -->\n",
+            "\n".join(autogen_markdown)
+        )
+    )
+
 
     print("\n\nNo title found:")
     for file in no_title_found:
