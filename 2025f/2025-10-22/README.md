@@ -1,3 +1,3 @@
-# Postscript
+# PostScript
 
-Intro to Postscript, the printer language.
+Intro to PostScript, the printer language.
