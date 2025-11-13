@@ -1,7 +1,6 @@
 import collections
 import datetime
 import enum
-import itertools
 import pathlib
 import re
 import warnings
