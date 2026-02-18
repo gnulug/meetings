@@ -5,7 +5,7 @@
 | 2026-01-28 | First Meeting | - | |
 | 2026-02-04 | GLUG Server Setup | - | |
 | 2026-02-11 | Software Reproducibility from an OS Level | Sam | |
-| 2026-02-18 | TBD | Orbital | |
+| 2026-02-18 | New and rethunk system tools | Orbital | |
 | 2026-02-25 | Rust in the Linux Kernel | Adhi | |
 | 2026-03-04 | X11 vs. Wayland (Tips/Tricks/Complaining) | - | |
 | 2026-03-11 | Python Packaging | Sam | |
