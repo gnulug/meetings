@@ -1,3 +1,5 @@
+# Open source games
+
 - SuperTuxKart
   - Resembles another "kart" racing game with a certain Itallian plumber
   - `nix-shell -p superTuxKart`

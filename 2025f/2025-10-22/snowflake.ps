@@ -1,0 +1,65 @@
+%!
+% Evan Widloski - 2017-09-28
+% Quadratic Koch Snowflake
+
+/inch {72 mul} def
+
+% center of page
+/center_x 4.25 def
+/center_y 5.5 def
+
+% fractal depth
+/depth 4 def
+
+% length, width of each segment
+/length center_y 4 depth exp div def
+/width length 5 div def
+
+% recursive function for drawing generic squiggle
+/forward {
+    depth 0 gt
+    /depth depth 1 sub def
+    {
+        forward
+        % turn left
+        90 rotate
+        forward
+        % turn right
+        -90 rotate
+        forward
+        % turn right
+        -90 rotate
+        forward
+        forward
+        % turn left
+        90 rotate
+        forward
+        % turn left
+        90 rotate
+        forward
+        % turn right
+        -90 rotate
+        forward
+    }
+    {
+        0 length inch rlineto
+    }
+    ifelse
+    /depth depth 1 add def
+
+} def
+
+% draw four branches at 90 degree angles
+gsave
+0 180 360 {
+    newpath
+    grestore
+    gsave
+    center_x inch center_y inch moveto
+    rotate
+    forward
+    width setlinewidth
+    stroke
+} for
+
+showpage

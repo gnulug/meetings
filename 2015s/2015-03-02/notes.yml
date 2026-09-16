@@ -29,17 +29,17 @@ Meeting Sections:
   Proc Period:
   - TBA
 
-  SSH Section:
-  ###Wilcards in SSH
-  '? Matches exactly one character: ?????.foo.bar.com'
-  '* Matches Zero or more characters: *.foo.bar.com'
-  ###Works for IP addresses too!
-  'Address 192.168.0.1?'
-  OR
-  '192.168.0.*'
-  ###You can also use ! to negate things - not supported everywhere. check your distribution.
-  'host !*.foo.bar.com'
-  'host !*.super.foo.bar.com *.bar.com'
+  SSH Section: |
+    ###Wilcards in SSH
+    '? Matches exactly one character: ?????.foo.bar.com'
+    '* Matches Zero or more characters: *.foo.bar.com'
+    ###Works for IP addresses too!
+    'Address 192.168.0.1?'
+    OR
+    '192.168.0.*'
+    ###You can also use ! to negate things - not supported everywhere. check your distribution.
+    'host !*.foo.bar.com'
+    'host !*.super.foo.bar.com *.bar.com'
 
   Shell Space:
   - 'file is a standard Unix program for recognizing the type of data contained in a computer file: <http://www.computerhope.com/unix/ufile.htm>'

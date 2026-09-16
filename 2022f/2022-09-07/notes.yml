@@ -3,8 +3,9 @@ Meeting Info: See website
 Date: 2022-09-07
 
 Talks:
-  - ./options_for_running_linux.md
-  - ./dotfiles.md
+  Big Talks:
+    Options for running linux: See ./options_for_running_linux.md
+    Dotfiles: See ./dotfiles.md
 
 Next Meeting Topics:
   - topic: Remote access

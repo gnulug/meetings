@@ -1,0 +1,30 @@
+%!
+
+% translate page origin
+300 400 translate
+
+% --- concentric circles ---
+% loop over range
+% equivalent to linspace(0, 500, 10)
+0 10 500 {
+    % assign loop variable
+    % (top of stack) to x
+    /x exch def
+    % draw a circle at (0, 0) with
+    % radius 150+x
+    0 0 150 x add 0 360 arc stroke
+} for
+
+
+% --- overlapping circles ---
+72 {
+    % rotate page under cursor
+    5 rotate
+    % save cursor pos. and page orientation
+    gsave
+    0 50 translate
+    0 0 100 0 360 arc stroke
+    grestore
+} repeat
+
+showpage

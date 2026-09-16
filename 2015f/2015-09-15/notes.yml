@@ -38,10 +38,11 @@ Meeting Sections:
 Talks:
   Small Talks:
 
-    Fun with Binary Files: 1 - PNGs (lb)
-    - Messing with binary files, image headers, etc.
+    Fun with Binary Files:
+      - PNGs (lb)
+      - Messing with binary files, image headers, etc.
 
   Big Talks:
 
-  Jekyll Intro (@jonathonklem):
+    Jekyll Intro (@jonathonklem):
     - An overview of Jekyll and why static content generators are awesome

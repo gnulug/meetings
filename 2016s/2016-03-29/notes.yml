@@ -25,7 +25,7 @@ Meeting Sections:
 
   Shell:
   - convenient parameter expansions for scripting (lbontu)
-  - `set -o physical` (lbontu)
+  - '`set -o physical` (lbontu)'
 
   Containers:
   - TBA

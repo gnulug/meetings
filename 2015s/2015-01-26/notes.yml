@@ -27,7 +27,8 @@ Meeting Sections:
 
   SSH Section:
   - Fastest cipher: -o Cipher=arcfour
-  - Compression: uses gzip levels 1-9 (def: 6), ~/.ssh/config
+  - Compression: |
+      uses gzip levels 1-9 (def: 6), ~/.ssh/config
       Compression      yes
       CompressionLevel 9
 

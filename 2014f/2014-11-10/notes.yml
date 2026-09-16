@@ -39,19 +39,19 @@ Meeting Sections:
   - Tunneling insecure protocols over SSH: ssh -L 9999:192.168.1.1:3389 -N
 
   Shell Space:
-  - getent:
-    if ! getent passwd $USER 1>/dev/null
-    then
-        adduser --disabled-login --gecos "" --shell $SHELL $USER
-        echo "$USER:$PASS" | chpasswd
-    fi
-    getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
-    getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
+  - getent: |
+      if ! getent passwd $USER 1>/dev/null
+      then
+          adduser --disabled-login --gecos "" --shell $SHELL $USER
+          echo "$USER:$PASS" | chpasswd
+      fi
+      getent passwd cuckoo 1>/dev/null        || adduser --disabled-password  --gecos "" --shell /bin/bash cuckoo
+      getent group vboxusers | grep -q cuckoo || usermod -G vboxusers cuckoo
   - Bash debugging:
     - '<http://wiki.bash-hackers.org/scripting/debuggingtips#making_xtrace_more_useful>'
     - bash -v | set -o verbose # Print commands as they're executed
     - bash -x | set -o xtrace  # Trace
-    - bash -n 		        			# Syntax check
+    - bash -n                  # Syntax check
   - Portability:
     - '<http://www.in-ulm.de/~mascheck/various/echo+printf/>'
     - '<https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo>'

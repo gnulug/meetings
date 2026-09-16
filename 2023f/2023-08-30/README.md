@@ -1,5 +1,5 @@
-### A plush introduction to cluster computing,
-#### Using [Engineering a Beowulf-style Compute Cluster](https://webhome.phy.duke.edu/~rgb/Beowulf/beowulf_book/beowulf_book/beowulf_book.html) as a guide and reference
+# A plush introduction to cluster computing,
+## Using [Engineering a Beowulf-style Compute Cluster](https://webhome.phy.duke.edu/~rgb/Beowulf/beowulf_book/beowulf_book/beowulf_book.html) as a guide and reference
 
 Although the text is nearly old enough as your average freshman, it retains its value by its simplicity, its breadth, and coherency (mostly).
 * Simple -> Refers to himself as a "Sears" Computer Scientist

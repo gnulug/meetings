@@ -1,7 +1,3 @@
-# UIUC GNULUG
-
-Meeting info on [website](https://lug.acm.illinois.edu/)
-
 # Possible project proposal?
 
 - https://github.com/charmoniumQ/merkle-tree-file-system
