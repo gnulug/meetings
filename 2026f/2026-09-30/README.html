@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Meshtastic: off-grid communication</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^5/dist/theme/black.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Meshtastic: off-grid communication</h1>
+</section>
+
+<section class="slide level2">
+
+<p>View <a
+href="https://htmlpreview.github.io/?url=https://github.com/gnulug/meetings/2026f/2026-2026-09-30/README.html">rendered</a></p>
+<p>View <a
+href="https://github.com/gnulug/meetings/2026f/2026-2026-09-30/README.html">source</a></p>
+<pre><code># Compile me locally with:
+pandoc --standalone --to=revealjs --output=README.html README.md</code></pre>
+</section>
+<section id="problems-of-centralized-communication"
+class="slide level2">
+<h2>Problems of centralized communication</h2>
+<ul>
+<li>Single point-of-failure</li>
+<li>Surveillance</li>
+<li>Coverage</li>
+</ul>
+<p>In contrast, Meshtastic is decentralized</p>
+</section>
+<section id="use-cases" class="slide level2">
+<h2>Use cases</h2>
+<ul>
+<li>Fun around town</li>
+<li>Road trips</li>
+<li>Hiking</li>
+<li>Emergencies?
+<ul>
+<li>Compare with Ham (UWF/VHF/HF)</li>
+</ul></li>
+<li>IOT</li>
+<li>Protests</li>
+</ul>
+</section>
+<section id="lora-protocol" class="slide level2">
+<h2>LoRA protocol</h2>
+<ul>
+<li>LoRA “chirps”</li>
+</ul>
+<p><img
+data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSJNWLgGya9lAMyZUIS3P9PQU-hQIZqU-pU39i-FJSNf2kebGLW3tg-PIhvnR-_TWGECMG7T4FE53dMdB2aCq9NcGLOuYOPaG6kAQdp311R4uo7dhxNyU6vdgRyw7l5MavdpxCUGbUh5-b/s640/LoRa_Symbols_01.png"
+height="200" /> <img data-src="https://meshtastic.org/img/logo.svg"
+height="200" /></p>
+</section>
+<section id="meshtastic-protocol" class="slide level2">
+<h2>Meshtastic protocol</h2>
+<ul>
+<li>Every node <em>can</em> be a repeater</li>
+<li>But proto smartly chooses when to repeat (node role + listen
+first)</li>
+<li>Flood routing</li>
+<li>Max hop count</li>
+<li>Crypto built-in!</li>
+</ul>
+</section>
+<section id="meshtastic-protocol-1" class="slide level2">
+<h2>Meshtastic protocol</h2>
+<ul>
+<li>Channels
+<ul>
+<li>Symmetric encryption</li>
+<li>Message delivery status: nobody, somebody, (no ‘everybody’)</li>
+</ul></li>
+<li>DMs
+<ul>
+<li>Asymmetric encryption</li>
+<li>Message delivery status: nobody, somebody, that person</li>
+</ul></li>
+<li>Remote administration</li>
+<li>Other data packets</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img
+data-src="https://adrelien.com/content/images/2026/01/meshtastic-topology.webp" /></p>
+</section>
+<section id="hardware" class="slide level2">
+<h2>Hardware</h2>
+<p><img
+data-src="https://lilygo.cc/cdn/shop/files/LILYGO-T-ECHO-PLUS_6.jpg?v=1761720181&amp;width=990"
+height="300" /> <img
+data-src="https://heltec.org/wp-content/uploads/2025/09/v4001.png"
+height="300" /></p>
+<p>nRF52 vs ESP32</p>
+<p>Battery life?</p>
+</section>
+<section id="cool-tricks" class="slide level2">
+<h2>Cool tricks</h2>
+<ul>
+<li>MQTT</li>
+<li><a href="https://meshmap.net/"
+class="uri">https://meshmap.net/</a></li>
+</ul>
+</section>
+<section id="local-big-nodes" class="slide level2">
+<h2>Local big nodes</h2>
+<ul>
+<li>South: Riggs, Meijer, and Vine/McHenry</li>
+<li>North: 5 points, King’s Court</li>
+<li>Middle: Currently lacking, Family Dollar coming soon</li>
+<li>Potential future nodes
+<ul>
+<li>Bongard grain silo?</li>
+<li>IMC</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><img data-src="./local-map.png" /></p>
+<p><a
+href="https://umap.openstreetmap.fr/en/map/semi-permanent-meshtastic-nodes-in-central-illinoi_1364119#11/40.072574/-88.300896">source</a></p>
+</section>
+<section id="local-mesh-community" class="slide level2">
+<h2>Local Mesh community</h2>
+<ul>
+<li><a href="https://cu2600.org/">CU 2600</a></li>
+<li><a href="https://discord.gg/j4gf8Msah">Central IL Mesh
+Discord</a></li>
+<li><a href="https://matrix.to/#/#meshtastic:hax0rbana.org">Central IL
+Mesh Matrix</a>
+<ul>
+<li><a
+href="https://matrix.to/#/#meshtastic_longfast:hax0rbana.org">Public
+chatroom mirror</a></li>
+</ul></li>
+<li><a href="https://chicagolandmesh.org/">ChicagoLandMesh</a></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^5/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^5/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
