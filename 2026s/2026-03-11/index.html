@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <title>Python pkgs | Why'd you have to go and make things so complicated</title>
+		<meta name="author" content="Samuel Grayson" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css"
+            integrity="sha512-gCJkkUMGTe73+FMwog6gIBCVJIMXRoc21l6/IPCuzxCex/1sxvO8ctb6Zd4/WWs2UMqmtnDrAdhJht5pEY0LXg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+		<link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css"
+            integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.min.css"
+            integrity="sha512-5w6AICFraU3+mkD1dTmad4vXyyJ1nZM/KA2TG8oQ5yiyTYAXssxPk930O1upFxeC7ml4CxyXC1QBzthu26ZxZg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <section>
+                        <h1>Python packaging</h1>
+                        <p>Why'd you have to go and make things so complicated</p>
+                    </section>
+                    <section>
+                        <h2>Case study</h2>
+                        <p>What happened on <a href="https://github.com/pypa/setuptools/issues/4910">March 14, 2025</a>?</p>
+                    </section>
+				    <section>
+                        <h2>Goals</h2>
+                        <ul>
+                            <li>Why is it so hard?</li>
+                            <li>Learn from history</li>
+                            <li>Avoid system package managers that also do Python</li>
+                        </ul>
+                    </section>
+				    <section>
+                        <h2>History</h2>
+                        <ul class="fragment">
+                            <li>wget</li>
+                            <li>distutils</li>
+                            <li>setuptools</li>
+                            <li>setup.py</li>
+                            <li>setup.cfg</li>
+                            <li>MANIFEST.in</li>
+                            <li>pyproject.toml</li>
+                            <li>Eggs</li>
+                            <li>easy_install</li>
+                            <li>pip</li>
+                        </ul>
+                    </section>
+				    <section>
+                        <h2>Phases</h2>
+                        <ul>
+                            <li>dependency solve</li>
+                            <li>building</li>
+                            <li>installing</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Building</h2>
+                    </section>
+                    <section>
+                        <h2>Manual → setup.py</h2>
+                        <ul>
+                            <li>Place [only] necessary files on the PYTHONPATH</li>
+                            <li><code>python setup.py [install | sdist | bdist_wininst]</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>setup.py (distutils → seuptools)</h2>
+                        <p>
+                            <blockquote>
+                                Because of its place in the standard library, many updates can only be released with a major release, and users cannot rely on particular fixes being available.
+                            </blockquote>
+                        </p>
+                    </section>
+                    <section>
+                        <pre><code>
+                        from setuptools import setup
+                        from Cython.Build import cythonize
+
+                        setup(
+                            ext_modules = cythonize("helloworld.pyx")
+                        )
+                        </code></pre>
+
+                    </section>
+                    <section>
+                        <h2>setup.py → pep517</h2>
+                        <ul>
+                            <li>What if <code>setup.py</code> needs deps to run?</li>
+                            <li>Just have <code>pyproject.toml</code> with <code>[build-system]</code></li>
+                            <li><code>setup.py</code> deprecated?<a href="https://packaging.python.org/en/latest/discussions/setup-py-deprecated/">No</a>, but invoking it is</li>
+                            <li><a href="https://dublog.net/blog/so-many-python-package-managers/">https://dublog.net/blog/so-many-python-package-managers/</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Building from source</h2>
+                        <ul>
+                            <li><code>pip install matplotlib==1.5.3</code></li>
+                            <li>BYO dependencies</li>
+                            <li>Arbitrary code execution</li>
+                            <li>Trusted compute base</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Egg → Wheel</h2>
+                        <ul>
+                            <li><a href="https://packaging.python.org/en/latest/discussions/package-formats/">Eggs vs Wheels</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Installing</h2>
+                        <img src="https://imgflip.com/i/amdxfe" />
+                    </section>
+                    <section>
+                        <h2>Dep solve</h2>
+                        <img src="https://i.imgflip.com/ame06v.jpg" />
+                        <ul>
+                            
+                            <li>NP-complete (<a href="https://research.swtch.com/version-sat#proof">proof</a>)</li>
+                            <li><a href="https://web.archive.org/web/20160328001757/http://algebraicthunk.net/~dburrows/blog/entry/package-management-sudoku-2/">Sudoku in apt-get</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>easy_install → pip</h2>
+                        <ul>
+                            <li><a href="https://packaging.python.org/en/latest/discussions/pip-vs-easy-install/">Pip vs easy_install</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>pip</h2>
+                        <ul>
+                            <li>No DB of installed packages</li>
+                            <li>Pip 20 does sat solve, but only in 1 cmd</li>
+                            <li><code>pip install pandas && pip install xarray==0.20</code> vs <code>pip install a b</code></li>
+                            <li><a href="https://pip.pypa.io/en/stable/ux-research-design/research-results/">Pip UX</a></li>
+                            <li>Specfile vs lockfile</li>
+                            <li>One right way?</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Source vs binary</h2>
+                        <ul>
+                            <li>Prefer wheels, fallback to sdist</li>
+                            <li><a href="https://github.com/pypa/pip/issues?q=label%3A%22resolution%3A+wrong+project%22+subprocess-exited-with-error">Closed with reason: wrong project</a></li>
+                            <li><a href="https://pypackaging-native.github.io/key-issues/native-dependencies/blas_openmp/">BLAS/OpenMP</a></li>
+                            <li>Portability?</li>
+                            <img src="./venn_diagram.svg" style="background-color: white; padding: 50px;"/>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Metadata</h2>
+                        <ul>
+                            <li>Contained in wheel</li>
+                            <li>Have to download (or build!) wheel to get</li>
+                            <li><code>pip install --dry-run</code> executes code [<a href="https://moyix.blogspot.com/2022/09/someones-been-messing-with-my-subnormals.html">src</a>]</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Orthogonal issues</h2>
+                    </section>
+                    <section>
+                        <h2>Version caps (Hyrum's Law)</h2>
+                        <ul>
+                            <img
+                                src="https://imgs.xkcd.com/comics/workflow_2x.png"
+                                style="height: 500px;"
+                                title="There are probably children out there holding down spacebar to stay warm in the winter! YOUR UPDATE MURDERS CHILDREN."
+                            />
+                            <li>&gt;=x.y.z,&lt;x+1</li>
+                            <li><a href="https://iscinumpy.dev/post/bound-version-constraints/">version constraints</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Environments</h2>
+                        <ul>
+                            <li><a href="https://stackoverflow.com/questions/75608323/how-do-i-solve-error-externally-managed-environment-every-time-i-use-pip-3">error: externally-managed-environment</a></li>
+                            <li><a href="https://discuss.python.org/t/pep-582-python-local-packages-directory/963/"><code>./__pypackages__/</code></a></li>
+                            <li>
+                                <img
+                                    src="https://imgs.xkcd.com/comics/python_environment_2x.png"
+                                    style="height: 600px;"
+                                    title="The Python environmental protection agency wants to seal it in a cement chamber, with pictorial messages to future civilizations warning them about the danger of using sudo to install random Python packages."
+                                /></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Comparative study</h2>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Self-lang or not
+                                <ul>
+                                    <li>In stdlib or separate <ul>
+                                        <li>How to declare build-deps</li>
+                                    </ul></li>
+                                </ul></li>
+                            <li>Source or binaries</li>
+                            <li>Get just metadata</li>
+                            <li>Run tests in CI</li>
+                            <li>Defaults to env</li>
+                            <li>Private dependencies</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Other issues</h2>
+                        <ul>
+                            <li><a href="https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/">Package name vs. import name</a></li>
+                            <li><a href="https://iscinumpy.dev/post/bound-version-constraints/">To constrain or not</a></li>
+                            <li>Jupyter notebooks</li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.js"
+            integrity="sha512-Lm56evpRekkMu27GQD7sLCWNPUJt0YQT/BfVj2kIQifrTHhsVl/lJ05xTsp7qoKjCU7QkNa4PPBK+8vP1LL32g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+         /*<![CDATA[*/
+         Reveal.initialize({
+             // Add the current slide number to the URL hash so that reloading the
+             // page/copying the URL will return you to the same slide
+             "hash": true,
+
+
+             // Display the page number of the current slide
+             // - true:  Show slide number
+             // - false:   Hide slide number
+             // - "h.v":   Horizontal . vertical slide number (default)
+             // - "h/v":   Horizontal / vertical slide number
+             // - "c":   Flattened slide number
+             // - "c/t":   Flattened slide number / total slides
+             // - function(slideObject) -> [n1, delimiter, n2]
+             "slideNumber": "c/t",
+
+             // none
+             // fade
+             // slide
+             // convex
+             // concave
+             // zoom
+             "transition": "none",
+
+             // The "normal" size of the presentation, aspect ratio will
+             // be preserved when the presentation is scaled to fit different
+             // resolutions. Can be specified using percentage units.
+             width: "1618",
+             height: "1000",
+             
+             // Factor of the display size that should remain empty around
+             // the content
+             margin: 0.04,
+         });
+         /*]]*/
+        </script>
+    </body>
+</html>
